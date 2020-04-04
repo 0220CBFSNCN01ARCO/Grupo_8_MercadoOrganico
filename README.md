@@ -15,5 +15,5 @@ Una tienda on-line donde se venderán productos de dietetica y también producto
 
 - https://www.dieteticastomy.com.ar/
 
-### Url wireframe - XD
+### Url wireframe con XD
 https://xd.adobe.com/view/e20c1b25-d50c-4335-4e8c-2ddd25f94ff7-943d/
