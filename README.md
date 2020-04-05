@@ -44,7 +44,7 @@ Todos estos sitios web fueron seleccionados por la similitud al publico objetivo
 
 - [Formulario de Registro](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/screen/7ef5497d-c400-4a70-b158-ac87043a7ad9/Mesa-de-trabajo-5)
 
-- Formulario de Carga del Producto (Para el Administrador)
+- Formulario de Carga del Producto (Para el Administrador) - proximamente
 
 ## Logo
 ![Logo de la Pagina Web](https://github.com/0220CBFSNCN01ARCO/Grupo_8_MercadoOrganico/blob/master/Imagenes/Mercado%20Org%C3%A1nico%20-%205.png?raw=true)
