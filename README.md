@@ -35,3 +35,9 @@ Todos estos sitios web fueron seleccionados por la similitud al publico objetivo
 ### Url wireframe con XD
 
 [Boceto del Sitio Web](https://xd.adobe.com/view/e20c1b25-d50c-4335-4e8c-2ddd25f94ff7-943d/)
+
+## Logo
+![](https://github.com/0220CBFSNCN01ARCO/Grupo_8_MercadoOrganico/blob/master/Posibles%20Logos/Mercado%20Org%C3%A1nico%20-%203.png?raw=true)
+
+## Tipografía
+[Poppins](https://fonts.google.com/specimen/Poppins)
