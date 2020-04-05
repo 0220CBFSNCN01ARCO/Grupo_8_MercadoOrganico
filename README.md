@@ -32,9 +32,9 @@ Celíacos y todas aquellas personas interesadas en cuidar su salud.
 
 Todos estos sitios web fueron seleccionados por la similitud al publico objetivo que tienen y por los productos brindados. De ellos sacaremos distintas ideas para implementar en nuestra página web. Tales como, estilo, promociones, carritos, secciones, entre otras.
 
-### Url wireframe con XD
+## Boceto de la Página Web
 
-[Boceto del Sitio Web](https://xd.adobe.com/view/e20c1b25-d50c-4335-4e8c-2ddd25f94ff7-943d/)
+[Url wireframe con XD](https://xd.adobe.com/view/e20c1b25-d50c-4335-4e8c-2ddd25f94ff7-943d/)
 
 ## Logo
 ![Logo de la Pagina Web](https://github.com/0220CBFSNCN01ARCO/Grupo_8_MercadoOrganico/blob/master/Imagenes/Mercado%20Org%C3%A1nico%20-%203.png?raw=true)
