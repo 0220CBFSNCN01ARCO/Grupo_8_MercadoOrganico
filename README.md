@@ -51,4 +51,8 @@ Todos estos sitios web fueron seleccionados por la similitud al publico objetivo
 ![Paleta de Colores de la Pagina Web](https://github.com/0220CBFSNCN01ARCO/Grupo_8_MercadoOrganico/blob/master/Imagenes/Paleta%20de%20Colores%20-%201.png?raw=true)
 
 ## Tipografía
-[Poppins](https://fonts.google.com/specimen/Poppins)
+- [Poppins](https://fonts.google.com/specimen/Poppins)
+
+- [Montserrat](https://fonts.google.com/specimen/Montserrat)
+
+- [Quicksand](https://fonts.google.com/specimen/Quicksand)
