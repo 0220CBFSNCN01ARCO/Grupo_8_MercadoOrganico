@@ -34,7 +34,15 @@ Todos estos sitios web fueron seleccionados por la similitud al publico objetivo
 
 ## Boceto de la Página Web
 
-[Url wireframe con XD](https://xd.adobe.com/view/e20c1b25-d50c-4335-4e8c-2ddd25f94ff7-943d/)
+- [Home](https://xd.adobe.com/view/e20c1b25-d50c-4335-4e8c-2ddd25f94ff7-943d/screen/80ad0443-45c5-47e5-b44d-a57aac70d2cf/Web-1920-1)
+
+- Detalle del Producto
+
+- Carrito de Compras
+
+- Formulario de Registro
+
+- Formulario de Carga del Producto (Para el Administrador)
 
 ## Logo
 ![Logo de la Pagina Web](https://github.com/0220CBFSNCN01ARCO/Grupo_8_MercadoOrganico/blob/master/Imagenes/Mercado%20Org%C3%A1nico.png?raw=true)
