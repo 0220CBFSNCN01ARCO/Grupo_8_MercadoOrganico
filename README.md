@@ -30,15 +30,17 @@ Celíacos y todas aquellas personas interesadas en cuidar su salud.
 
 - https://www.dieteticastomy.com.ar/
 
+- https://naturaldieteticaonline.com.ar/
+
 Todos estos sitios web fueron seleccionados por la similitud al publico objetivo que tienen y por los productos brindados. De ellos sacaremos distintas ideas para implementar en nuestra página web. Tales como, estilo, promociones, carritos, secciones, entre otras.
 
 ## Boceto de la Página Web
 
 - [Home](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/)
 
-- Detalle del Producto
+- Detalle del Producto (https://xd.adobe.com/view/4ca14b7d-b19c-483f-5046-1be72fc71002-3a90/screen/30a38534-1186-40cb-9687-7f1a371c90b6/Detalle-del-producto)
 
-- Carrito de Compras
+- Carrito de Compras (https://xd.adobe.com/view/4ca14b7d-b19c-483f-5046-1be72fc71002-3a90/screen/fd07fcc8-b4fc-4880-8b0e-2149b0459904/Carrito-de-compras)
 
 - Formulario de Registro (https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/)
 
