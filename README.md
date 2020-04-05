@@ -36,13 +36,13 @@ Todos estos sitios web fueron seleccionados por la similitud al publico objetivo
 
 ## Boceto de la Página Web
 
-- [Home](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/)
+- [Home](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/screen/80ad0443-45c5-47e5-b44d-a57aac70d2cf/Web-1920-1)
 
-- Detalle del Producto (https://xd.adobe.com/view/4ca14b7d-b19c-483f-5046-1be72fc71002-3a90/screen/30a38534-1186-40cb-9687-7f1a371c90b6/Detalle-del-producto)
+- [Detalle del Producto](https://xd.adobe.com/view/4ca14b7d-b19c-483f-5046-1be72fc71002-3a90/screen/30a38534-1186-40cb-9687-7f1a371c90b6/Detalle-del-producto)
 
-- Carrito de Compras (https://xd.adobe.com/view/4ca14b7d-b19c-483f-5046-1be72fc71002-3a90/screen/fd07fcc8-b4fc-4880-8b0e-2149b0459904/Carrito-de-compras)
+- [Carrito de Compras](https://xd.adobe.com/view/4ca14b7d-b19c-483f-5046-1be72fc71002-3a90/screen/fd07fcc8-b4fc-4880-8b0e-2149b0459904/Carrito-de-compras)
 
-- Formulario de Registro (https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/)
+- [Formulario de Registro](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/screen/7ef5497d-c400-4a70-b158-ac87043a7ad9/Mesa-de-trabajo-5)
 
 - Formulario de Carga del Producto (Para el Administrador)
 
