@@ -45,7 +45,7 @@ Todos estos sitios web fueron seleccionados por la similitud al publico objetivo
 - Formulario de Carga del Producto (Para el Administrador)
 
 ## Logo
-![Logo de la Pagina Web](https://github.com/0220CBFSNCN01ARCO/Grupo_8_MercadoOrganico/blob/master/Imagenes/Mercado%20Org%C3%A1nico.png?raw=true)
+![Logo de la Pagina Web](https://github.com/0220CBFSNCN01ARCO/Grupo_8_MercadoOrganico/blob/master/Imagenes/Mercado%20Org%C3%A1nico%20-%205.png?raw=true)
 
 ## Paleta de Colores
 ![Paleta de Colores de la Pagina Web](https://github.com/0220CBFSNCN01ARCO/Grupo_8_MercadoOrganico/blob/master/Imagenes/Paleta%20de%20Colores%20-%201.png?raw=true)
