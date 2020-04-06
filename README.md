@@ -36,13 +36,13 @@ Todos estos sitios web fueron seleccionados por la similitud al publico objetivo
 
 ## Boceto de la Página Web
 
-- [Home](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/)
+- [Home](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/screen/80ad0443-45c5-47e5-b44d-a57aac70d2cf/Web-1920-1)
 
-- [Detalle del Producto](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/)
+- [Detalle del Producto](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/screen/2d699a87-f0d1-48a2-b3ea-02dae8735a0a/Mesa-de-trabajo-8)
 
-- [Carrito de Compras](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/)
+- [Carrito de Compras](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/screen/6914a04e-1da6-4c1f-ab6f-4b45e9a4f0d7/Mesa-de-trabajo-9)
 
-- [Formulario de Registro](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/)
+- [Formulario de Registro](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/screen/7ef5497d-c400-4a70-b158-ac87043a7ad9/Mesa-de-trabajo-5/)
 
 - Formulario de Carga del Producto (Para el Administrador) - proximamente
 
