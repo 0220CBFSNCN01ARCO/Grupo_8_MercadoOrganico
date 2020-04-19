@@ -44,8 +44,9 @@ Todos estos sitios web fueron seleccionados por la similitud al publico objetivo
 
 - [Formulario de Registro](https://xd.adobe.com/view/f6cc5dad-342c-4adb-5756-f89237b96788-80fd/screen/7ef5497d-c400-4a70-b158-ac87043a7ad9/Mesa-de-trabajo-5/)
 
-- [Formulario de Carga del Producto (Para el Administrador)] - (https://xd.adobe.com/view/7a0df39a-711c-4b2d-4142-eca2272617ea-0c3c/
-## Logo)
+- [Formulario de Carga del Producto (Para el Administrador)](https://xd.adobe.com/view/7a0df39a-711c-4b2d-4142-eca2272617ea-0c3c/screen/7ab07305-0ddc-454d-8f4d-29fe1ae245ff/Mesa-de-trabajo-9)
+
+## Logo
 
 ![Logo de la Pagina Web](https://github.com/0220CBFSNCN01ARCO/Grupo_8_MercadoOrganico/blob/master/Imagenes/Mercado%20Org%C3%A1nico%20-%205.png?raw=true)
 
