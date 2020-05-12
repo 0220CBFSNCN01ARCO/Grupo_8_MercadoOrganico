@@ -53,58 +53,26 @@ header{
     top: 4px;
     right: 1px;
   }
-  
-  
 
-
-body {
+  body {
     font-family: 'Poppins', sans-serif;
     background-color:#F0E9DA;
 
 }
 
-.titulo{
-    font-size: 25px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.price {
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.button {
-    border: 1px;
-    border-color: black;
-}
-
-.contenido {
-    color: #6F6565;
-}
-
-
-.card-img-top {
-    position: relative;
-    align-self: center;
-}
-
-.boton1, .boton2, .boton3{
-    list-style: none;
-    padding: 0%;
-}
-
-.footer{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    text-align: start;
-    justify-content: space-around;
-    margin-bottom: 20px;
-    border: 1px;
-    height: 100px;
-    
-}
-
 .img-circle{
-    border-radius: 50%
+  border-radius: 50%
 }
+
+  .boton1{
+      float: left;
+  }
+
+  .boton2{
+      float: right;
+  }
+
+  .botones{
+        padding-left: 177px;
+        padding-right: 177px;
+  }
