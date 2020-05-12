@@ -9,26 +9,37 @@
 <body>
     <div class="container">
         <form action="index.html" method="POST">
+            <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" class="form-control" name="usuario" id="usuario" required>
+            </div>
 
-            <label for="usuario">Usuario</label>
-            <input type="text" name="usuario" id="usuario" required>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" name="nombre" id="nombre">
+            </div>
 
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre">
+            <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" class="form-control" name="apellido" id="apellido"> 
+            </div>
 
-            <label for="apellido">Apellido</label>
-            <input type="text" name="apellido" id="apellido">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+            </div>
 
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
+            <div class="form-group">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" class="form-control" name="password" id="password" required>
+            </div>
 
-            <label for="contraseña">Contraseña</label>
-            <input type="password" name="password" id="password" required>
+            <div class="form-group">
+                <label for="confirmar-contraseña">Confirmar Contraseña</label>
+                <input type="password-confirm" class="form-control" name="password-confirm" id="password-confirm" required>
+            </div>
 
-            <label for="confirmar-contraseña">Confirmar Contraseña</label>
-            <input type="password-confirm" name="password-confirm" id="password-confirm" required>
-
-            <input type="submit" value="Crear Cuenta">
+            <button type="submit" class="btn btn-primary mb-2">Crear Cuenta</button>
 
         </form>
     </div>
