@@ -1,0 +1,106 @@
+/* PARTE DEL HEADER */
+
+a{
+    text-decoration: none;
+}
+
+.contenedor{
+    display: flex;
+    flex-flow: row wrap;
+}
+  
+header{
+    width: 100%;
+    background-color: #D8EBB5;
+    padding: 10px;
+  
+    /*Flex-box*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+  
+.logo img{
+    width: 100px;
+}
+  
+.end nav{
+   
+    /*Flex-box*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+  
+.end nav a{
+    padding: 10px;
+    text-align: center;
+    color:#2B580C   
+}
+  
+  /*Buscador*/
+  .center form{
+    position: relative;
+  }
+  
+  .center form input{
+    width: 500px;
+    
+  }
+  .center form button{
+    position: absolute;
+    top: 4px;
+    right: 1px;
+  }
+  
+  
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color:#F0E9DA;
+
+}
+
+.titulo{
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.button {
+    border: 1px;
+    border-color: black;
+}
+
+.contenido {
+    color: #6F6565;
+}
+
+
+.card-img-top {
+    position: relative;
+    align-self: center;
+}
+
+.boton1, .boton2, .boton3{
+    list-style: none;
+    padding: 0%;
+}
+
+.footer{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border: 1px;
+    height: 100px;
+    
+}
