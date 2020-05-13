@@ -1,24 +1,24 @@
-/* PARTE DEL HEADER 
+/* PARTE DEL HEADER */
 
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .contenedor{
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
   
 header{
-    width: 100%;
-    background-color: #D8EBB5;
-    padding: 10px;
+  width: 100%;
+  background-color: #D8EBB5;
+  padding: 10px;
   
-    /*Flex-box
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-flow: row wrap;
+/*Flex-box*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
 }
   
 .logo img{
@@ -27,7 +27,7 @@ header{
   
 .end nav{
    
-    /*Flex-box
+    /*Flex-box*/
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -39,60 +39,69 @@ header{
     color:#2B580C   
 }
   
-  /*Buscador
-  .center form{
-    position: relative;
-  }
+/*Buscador*/
+.center form{
+  position: relative;
+}
   
-  .center form input{
-    width: 500px;
-    
-  }
-  .center form button{
-    position: absolute;
-    top: 4px;
-    right: 1px;
-  }
-  */
-  
- .bg-light {
-  background-color: #D9BF77!important;
-}
-.navbar-light .navbar-nav .active>.nav-link{
-  color: #2B580C;
+.center form input{
+  width: 500px;  
 }
 
-.card-group{
-  margin-top: 10px;
+.center form button{
+  position: absolute;
+  top: 4px;
+  right: 1px;
 }
 
-.card-group .card{
- border: none;
- padding: 10px;
-}
-.dropdown-menu{
-  background-color: #D8EBB5;
-}
-
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color:#F0E9DA;
-
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color:#F0E9DA;
 }
 
 .img-circle{
   border-radius: 50%
 }
 
-  .boton1{
-      float: left;
-  }
+.boton1{
+  float: left;
+}
 
-  .boton2{
-      float: right;
-  }
+.boton2{
+  float: right;
+}
 
-  .botones{
-        padding-left: 177px;
-        padding-right: 177px;
-  }
+.botones{
+  padding-left: 177px;
+  padding-right: 177px;
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
+footer{
+  background-color: #D8EBB5;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0%;
+}
+
+.nav-footer-copyright{
+  align-self: flex-start
+}
+
+h4{
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.botonborrar{
+  margin-right: 70px;
+}
+
+.clasetotal{
+  margin-top: 60px;
+  margin-right: 70px;
+}

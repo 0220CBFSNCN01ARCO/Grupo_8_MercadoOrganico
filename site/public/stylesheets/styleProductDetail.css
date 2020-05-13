@@ -91,31 +91,35 @@ body {
 .boton1, .boton2, .boton3{
     list-style: none;
     padding: 0%;
+    margin-left: 30px;
+    margin-bottom: 25px;
+    margin-top: 10px;
 }
 
-.footer{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    text-align: start;
-    justify-content: space-around;
-    margin-bottom: 20px;
-    border: 1px;
-    height: 100px;
-    
+.boton2, .boton3{
+    margin-top: 25px;
 }
+
 
 .img-circle{
     border-radius: 50%
 }
 
+.row {
+    margin-top: 40px;
+}
+
 footer{
-    height: 100px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    margin-top: 100px;
+    margin-bottom: 0px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
-    flex-flow: row wrap;
     background-color: #D8EBB5;
+    padding: 0%;
+}
+
+.botonancho{
+    
+    width: 200px;
 }
