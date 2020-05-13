@@ -25,6 +25,7 @@ Se decidió hacer una retrospectiva al finalizar el primer Sprint. Haciendo menc
 
 ## Less Of
 
+* Commitear cambios muy grandes en el código.
 
 ## Stop Doing
 
