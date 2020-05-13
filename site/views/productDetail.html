@@ -9,24 +9,72 @@
 </head>
 <body>  
 
-    <div class="container-flex">
-      <header>
-        <div class="logo">
-            <a href="#"><img src="../public/images/Mercado Orgánico - 3.png" alt="Logo-Mercado-Organico" class="img-circle"></a>
-        </div>
-        <div class="center">
-          <form action="buscar">
-            <input type="search" id="buscar" placeholder="Buscar...">
+  <div class="container-flex">
+    <header>
+      <!--
+         <div class="logo">
+          <a href="#"><img src="./img/Mercado Orgánico - 5.png" alt="Logo-Mercado-Organico"></a>
+      </div>
+      <div class="center">
+        <form action="buscar">
+          <input type="search" id="buscar" placeholder="Buscar...">
+          
+        </form>  
+      </div>
+      <div class="end">
+          <nav class="menu">
+            <a href="#">Iniciar Sesión</a>
+            <a href="#">Carrito</a>
+            <a href="#">Contacto</a>
+          </nav>
+      </div> 
+      -->
+      <div class="contenedor1">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img class="logo-inicio" src="../public/images/Mercado Orgánico - 3.png" width="100" height="100" alt="" loading="lazy"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!--Barrra de busqueda-->
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="../public/images/img-home/search.png" width="20px" alt=""></button>
           </form>
+
+        <!--menu de navegacion-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Usuario
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="login.html">Iniciar Sesión</a>
+                <a class="dropdown-item" href="tarjeta.html">Tarjetas</a>
+                <a class="dropdown-item" href="#">Salir</a>
+               
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Compras
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Mis Compras</a>
+                <a class="dropdown-item" href="#">Seguridad</a>
+            </li>
+          </ul>
+                      
         </div>
-        <div class="end">
-            <nav class="menu">
-              <a href="#">Iniciar Sesión</a>
-              <a href="#">Carrito</a>
-              <a href="#">Contacto</a>
-            </nav>
-        </div>
-      </header>
+           
+      </nav>
+      <marquee><img src="../public/images/img-home/bike.png" alt=""> Habilitamos los Envíos! #QuedateEnCasa <a href="#">Ver más</a></marquee>
+      </div>
+      
+     
+    </header>
 
         <div class="row">
             <div class="col-2 botones">
