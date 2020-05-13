@@ -22,3 +22,10 @@ Se decidió hacer una retrospectiva al finalizar el primer Sprint. Haciendo menc
 * Animar al grupo, insentivar a realizar el proyecto.
 * Estar siempre dispuesto ayudar.
 * Clima de confianza y respeto.
+
+## Less Of
+
+
+## Stop Doing
+
+* Procastinar.
