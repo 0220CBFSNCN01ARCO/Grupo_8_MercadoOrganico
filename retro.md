@@ -19,3 +19,6 @@ Se decidió hacer una retrospectiva al finalizar el primer Sprint. Haciendo menc
 
 * División de Tareas
 * Comunicación continua.
+* Animar al grupo, insentivar a realizar el proyecto.
+* Estar siempre dispuesto ayudar.
+* Clima de confianza y respeto.
