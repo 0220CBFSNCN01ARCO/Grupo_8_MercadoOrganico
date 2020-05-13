@@ -14,3 +14,8 @@ Se decidió hacer una retrospectiva al finalizar el primer Sprint. Haciendo menc
 * División de Tareas.
 * Comunicación continua.
 * Subir a GitHub todo el avance realizado.
+
+## Keep Doing
+
+* División de Tareas
+* Comunicación continua.
