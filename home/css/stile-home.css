@@ -1,0 +1,100 @@
+
+  body{
+    
+    font-family: Poppins;
+  }
+   /*--------
+  a{
+    text-decoration: none;
+  }
+ 
+  header{
+    width: 100%;
+    background-color: #D9BF77;
+    padding: 10px;
+  
+    /*Flex-box
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .logo img{
+    width: 100px;
+  }
+  
+  .end nav{
+   
+    /*Flex-box
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .end nav a{
+    padding: 10px;
+    text-align: center;
+    color:#2B580C   
+  }
+  
+  /*Buscador
+  .center form{
+    position: relative;
+  }
+  
+  .center form input{
+    width: 500px;
+    
+  }
+  .center form button{
+    position: absolute;
+    top: 4px;
+    right: 1px;
+  }
+ Slider------------*/
+
+ .bg-light {
+  background-color: #D9BF77!important;
+}
+.navbar-light .navbar-nav .active>.nav-link{
+  color: #2B580C;
+}
+
+.card-group{
+  margin-top: 10px;
+}
+
+.card-group .card{
+ border: none;
+ padding: 10px;
+}
+.dropdown-menu{
+  background-color: #D8EBB5;
+}
+
+.nav-footer .icon-footer{
+  padding: 5px;
+  color: #2B580C;
+}
+
+.icon-footer h3{
+  color: #2B580C;
+
+}
+
+
+
+footer{
+    height: 100px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-flow: row wrap;
+    background-color: #D9BF77;
+}
+
+.nav-footer-copyright{
+  align-self: flex-start
+}
