@@ -1,0 +1,2 @@
+# Retrospectiva
+Se decidió hacer una retrospectiva al finalizar el primer Sprint. Haciendo mención tanto de los puntos positivos como de los negativos para, reforzar y mejorar respectivamente.
