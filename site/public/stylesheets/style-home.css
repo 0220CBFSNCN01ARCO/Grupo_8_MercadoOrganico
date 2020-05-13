@@ -3,22 +3,24 @@
     
     font-family: Poppins;
   }
-   /*--------
+  /*--------
   a{
     text-decoration: none;
   }
  
-  header{
+  header{ 
     width: 100%;
     background-color: #D9BF77;
     padding: 10px;
   
-    /*Flex-box
-    display: flex;
-    justify-content: space-between;
+   
+    display: flex !important;
+    justify-content: space-between !important;
     align-items: center;
     flex-flow: row wrap;
   }
+  
+   
   .logo img{
     width: 100px;
   }
@@ -52,9 +54,12 @@
     right: 1px;
   }
  Slider------------*/
+nav .navbar-brand .logo-inicio{
+  border-radius: 50%;
+}
 
  .bg-light {
-  background-color: #D9BF77!important;
+  background-color:  #D8EBB5!important;
 }
 .navbar-light .navbar-nav .active>.nav-link{
   color: #2B580C;
@@ -92,7 +97,7 @@ footer{
     justify-content: space-between;
     align-items: flex-end;
     flex-flow: row wrap;
-    background-color: #D9BF77;
+    background-color: #D8EBB5;
 }
 
 .nav-footer-copyright{

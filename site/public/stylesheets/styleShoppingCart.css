@@ -1,4 +1,4 @@
-/* PARTE DEL HEADER */
+/* PARTE DEL HEADER 
 
 a{
     text-decoration: none;
@@ -14,7 +14,7 @@ header{
     background-color: #D8EBB5;
     padding: 10px;
   
-    /*Flex-box*/
+    /*Flex-box
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +27,7 @@ header{
   
 .end nav{
    
-    /*Flex-box*/
+    /*Flex-box
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -39,7 +39,7 @@ header{
     color:#2B580C   
 }
   
-  /*Buscador*/
+  /*Buscador
   .center form{
     position: relative;
   }
@@ -53,6 +53,26 @@ header{
     top: 4px;
     right: 1px;
   }
+  */
+  
+ .bg-light {
+  background-color: #D9BF77!important;
+}
+.navbar-light .navbar-nav .active>.nav-link{
+  color: #2B580C;
+}
+
+.card-group{
+  margin-top: 10px;
+}
+
+.card-group .card{
+ border: none;
+ padding: 10px;
+}
+.dropdown-menu{
+  background-color: #D8EBB5;
+}
 
   body {
     font-family: 'Poppins', sans-serif;
