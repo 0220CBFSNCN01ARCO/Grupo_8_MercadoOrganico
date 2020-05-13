@@ -7,3 +7,10 @@ Se decidió hacer una retrospectiva al finalizar el primer Sprint. Haciendo menc
 * Utilizar la funcionalidad Branch de Git.
 * Realizar reuniones más frecuentes.
 * Atomizar los Commits.
+
+## More Of
+
+* Atomizar los Commits.
+* División de Tareas.
+* Comunicación continua.
+* Subir a GitHub todo el avance realizado.
