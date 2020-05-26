@@ -4,101 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras</title>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/stylesheets/styleShoppingCart.css">
+    <link rel="stylesheet" href="../public/stylesheets/style-home.css">
 </head>
 
 
 <body>
    
-<div class="container-flex">
-    <header>
-        <div class="logo">
-            <a href="#"><img src="../public/images/Mercado Orgánico - 3.png" alt="Logo-Mercado-Organico" class="img-circle"></a>
-        </div>
-        <div class="center">
-          <form action="buscar">
-            <input type="search" id="buscar" placeholder="Buscar...">
-          </form>
-        </div>
-        <div class="end">
-            <nav class="menu">
-              <a href="#">Iniciar Sesión</a>
-              <a href="#">Carrito</a>
-              <a href="#">Contacto</a>
-            </nav>
-        </div>
-      </header>
-    <div class="row">
-        <div class="col-12">
-            <h4>CARRITO DE COMPRAS</h4>
-        </div>
-        <div class="col-4">
-        </div>
-        <div class="col-2">
-            <p class="text-right font-weight-bold">Cantidad </p>
-        </div>
-        <div class="col-2">
-            <p class="text-right font-weight-bold">Precio </p>
-        </div>
-        <div class="col-2">
-            <p class="text-right font-weight-bold"> Subtotal </p>
-        </div>
-        <div class="col-2">
-        </div>
-        <div class="col-12">
-            <hr>
-        </div> 
-        </div>
-    </div>
-</div>
+    <div class="container">
+        <header>
+          
+          <div class="contenedor1">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img class="logo-inicio" src="../public/images/Mercado Orgánico - 3.png" width="100" height="100" alt="" loading="lazy"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <!--Barrra de busqueda-->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="../public/images/img-home/search.png" width="20px" alt=""></button>
+              </form>
+  
+            <!--menu de navegacion-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Usuario
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="login.html">Iniciar Sesión</a>
+                    <a class="dropdown-item" href="tarjeta.html">Tarjetas</a>
+                    <a class="dropdown-item" href="#">Salir</a>
+                   
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-cart-plus"></i> Compras
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Mis Compras</a>
+                    <a class="dropdown-item" href="#">Seguridad</a>
+                </li>
+              </ul>
+                          
+            </div>
+               
+          </nav>
+          <marquee><img src="../public/images/img-home/bike.png" alt=""> Habilitamos los Envíos! #QuedateEnCasa <a href="#">Ver más</a></marquee>
+          </div>
 
-<div class="container-flex">
-    <div class="row">
-        <div class="col-4">
-            <ul>
-                <li class="list-unstyled">Granola artesanal Beepure x 300gr.</li>
-            </ul>
-        </div>
-        <div class="col-2">
-            <p class="text-right">1 </p>
-        </div>
-        <div class="col-2">
-            <p class="text-right"> $279,99 </p>
-        </div>
-        <div class="col-2">
-            <p class="text-right"> $279,99 </p>
-        </div>
-        <div class="col-2 text-right">
-            <button type="button" class="btn btn-outline-dark botonborrar">
-                <i class="fas fa-trash-alt"></i> 
-            </button>       
-        </div>
-        <div class="col-12">
-            <hr>
-        </div>
-        <div class="col-12">
-            <p class="text-right clasetotal">Total: <span id="total"></span>&#36; 279,99</p>
-        </div> 
-        <div class="row-12">
-            <hr>
-        </div>  
-        </div>
-    </div>
-</div>
+         
+        </header>
+        
+        <div class="container2">
+            <div class="row">
+                <div class="col-12">Carrito de Compras</div>
+            </div>
+            <div class="row costos">
+                <div class="col-sm-12 col-lg-3  col-xl-3 texto">
+                    <img src="../public/images/BEEPURE_Granola-Frasco.jpg" alt="..." width="150px">
+                    <p>Granola artesanal Beepure x 300gr.</p>
+                </div>
 
-<div class="row">
-    <div class="col-12 botones">
-        <button type="button" class="btn btn-outline-dark boton1">SEGUIR COMPRANDO</button>
-        <button type="button" class="btn btn-outline-dark boton2">INICIAR COMPRA</button>
-    </div>
+                <div class="col-sm-12 col-lg-3  col-xl-3 texto">Cantidad
+                    <p>Numero</p>  
+                </div>
+                <div class="col-sm-12 col-lg-3  col-xl-3 texto">Precio
+                    <p>Numero</p>
+                </div>
+                <div class="col-sm-12 col-lg-3  col-xl-3 texto">Subtotal
+                    <p>Numero</p>
+                </div>
 
-</div>
+                <div class="col-12">
+                    <p class="text-right clasetotal">Total: <span id="total"></span>&#36; 279,99</p>
+                </div>
+
+                <div class="col-sm-12  botones">
+                    <button type="button" class="btn btn-outline-dark boton1">SEGUIR COMPRANDO</button>
+                    <button type="button" class="btn btn-outline-dark boton2">INICIAR COMPRA</button>
+                    
+                        <button type="button" class="btn btn-outline-dark botonborrar">
+                            <i class="fas fa-trash-alt"></i> 
+                        </button>       
+                    </div>
+            </div>
+        </div>
+
+        
+         
+            
+    
+
            
-
-
-<footer>
-    <a class="icon-footer" href="index.html"><h3>Mercado Organico</h3></a>
+<footer class="container">
+    <a class="icon-footer" href="index.html"><p>Mercado Organico</p></a>
     <small class="nav-footer-copyright">Copyright ©&nbsp;1999-2020 MercadoOrganico S.R.L.</small>
     <nav class="nav-footer">
       <a class="icon-footer" href="https://twitter.com/?lang=es"><img src="../public/images/img-home/twitter.png" alt=""></a>
@@ -106,8 +112,8 @@
       <a class="icon-footer" href="https://web.whatsapp.com/"><img src="../public/images/img-home/whatsapp.png" alt=""></a>
       <a class="icon-footer" href="https://www.instagram.com"><img src="../public/images/img-home/instagram.png" alt=""></a>
     </nav>
-  </footer>
-
+  </footer> 
+</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
