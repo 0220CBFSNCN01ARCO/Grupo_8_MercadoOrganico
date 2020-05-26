@@ -3,57 +3,7 @@
     
     font-family: Poppins;
   }
-  /*--------
-  a{
-    text-decoration: none;
-  }
- 
-  header{ 
-    width: 100%;
-    background-color: #D9BF77;
-    padding: 10px;
   
-   
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center;
-    flex-flow: row wrap;
-  }
-  
-   
-  .logo img{
-    width: 100px;
-  }
-  
-  .end nav{
-   
-    /*Flex-box
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  
-  .end nav a{
-    padding: 10px;
-    text-align: center;
-    color:#2B580C   
-  }
-  
-  /*Buscador
-  .center form{
-    position: relative;
-  }
-  
-  .center form input{
-    width: 500px;
-    
-  }
-  .center form button{
-    position: absolute;
-    top: 4px;
-    right: 1px;
-  }
- Slider------------*/
 nav .navbar-brand .logo-inicio{
   border-radius: 50%;
 }
@@ -65,14 +15,7 @@ nav .navbar-brand .logo-inicio{
   color: #2B580C;
 }
 
-.card-group{
-  margin-top: 10px;
-}
 
-.card-group .card{
- border: none;
- padding: 10px;
-}
 .dropdown-menu{
   background-color: #D8EBB5;
 }
@@ -81,10 +24,76 @@ nav .navbar-brand .logo-inicio{
   padding: 5px;
   color: #2B580C;
 }
+@media tv and (max-width: 700px)  { 
+.carousel{
+  display: none;
+}
+  
 
+ }
+
+/*--Products Style --*/
+
+.row1{
+  margin: 60px 0px;
+}
+.card-img-top{
+  width: 100%;
+  height: 70%;
+}
+
+a .card-img-top{
+  width: 100%;
+  height: 70%;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  font-size:50px;
+  font-family:Poppins;
+  
+  color:#71d90b;
+  text-transform:uppercase;
+}
+.parpadea {
+  
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo{  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {  
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+/*--Footer Style--*/
 .icon-footer h3{
   color: #2B580C;
 
+}
+
+hr{
+  border:solid 1px #2B580C;
 }
 
 

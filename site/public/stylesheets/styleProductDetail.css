@@ -4,8 +4,11 @@ body {
     background-color:#F0E9DA;
 
 }
-
-nav .navbar-brand .logo-inicio{
+nav li a .compras{
+  width: 20px;
+}
+nav a img{
+  width: 100px;
     border-radius: 50%;
   }
   
@@ -98,4 +101,7 @@ footer{
 .botonancho{
     
     width: 200px;
+}
+footer a img{
+  width: 20px;
 }
