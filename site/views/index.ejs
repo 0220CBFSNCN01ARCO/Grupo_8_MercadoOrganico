@@ -8,20 +8,18 @@
 
       <!-- Lógica para Mostrar los diferentes Productos -->
 
-      <article class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 nav-item card">
-				<div class="photo-container">
-					<img class="card-img-top" src="images/img-pdto-3.jpg" alt="pdto 03">
-					<img class="special" src="images/img-descuento.png" alt="descuento efectivo">
-					<div class="overlay">
-						<a class="zoom font-weight-bold" href="#">AMPLIAR FOTO</a>
-					</div>
-				</div>
-				<div class="card-body">
-					<h2 class="card-title font-weight-bold">Lorem ipsum amet</h2>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
-					<a class="btn btn-secondary" href="#">ver más</a>
-				</div>
-			</article>
+      <% listadoProductos.forEach(producto => { %>
+        <article class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 nav-item card">
+          <div class="photo-container">
+            <img class="card-img-top" src="images/<%= producto.image %>" alt="pdto 03">
+          </div>
+          <div class="card-body">
+            <h2 class="card-title font-weight-bold"> <%= producto.name %> </h2>
+            <p class="card-text"> <%= producto.description %> </p>
+            <a class="btn btn-secondary" href="#">ver más</a>
+          </div>
+        </article>
+      <% }) %>
 
       <%- include('./partials/footer') %>
     </div>
