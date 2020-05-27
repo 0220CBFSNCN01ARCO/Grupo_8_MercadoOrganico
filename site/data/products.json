@@ -5,6 +5,7 @@
         "marca": "Sin Marca",
         "categoria": "Harina",
         "descripcion": "lorem ipsum dolor sit amet consectetur adipiscing elit sed diam nonummy nibh euismod tincidunt ut",
-        "price": "120"
+        "price": "120",
+        "image": "harina-de-centeno.jpg"
     }
 ]
