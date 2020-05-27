@@ -7,19 +7,20 @@
       <%- include('./partials/carousel') %>
 
       <!-- Lógica para Mostrar los diferentes Productos -->
-
-      <% listadoProductos.forEach(producto => { %>
-        <article class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 nav-item card">
-          <div class="photo-container">
-            <img class="card-img-top" src="/images/products/<%= producto.image %>" alt="Imagen del Producto">
-          </div>
-          <div class="card-body">
-            <h2 class="card-title font-weight-bold"> <%= producto.name %> </h2>
-            <p class="card-text"> <%= producto.description %> </p>
-            <a class="btn btn-secondary" href="#">ver más</a>
-          </div>
-        </article>
-      <% }) %>
+      <div class="row">
+        <% listadoProductos.forEach(producto => { %>
+          <article class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 nav-item card">
+            <div class="photo-container">
+              <img class="card-img-top" src="/images/products/<%= producto.image %>" alt="Imagen del Producto">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title font-weight-bold"> <%= producto.name %> </h2>
+              <p class="card-text"> <%= producto.description %> </p>
+              <a class="btn btn-secondary" href="#">ver más</a>
+            </div>
+          </article>
+        <% }) %>
+      </div>
 
       <%- include('./partials/footer') %>
     </div>
