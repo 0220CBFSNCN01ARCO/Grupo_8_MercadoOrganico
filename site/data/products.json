@@ -7,5 +7,14 @@
         "descripcion": "lorem ipsum dolor sit amet consectetur adipiscing elit sed diam nonummy nibh euismod tincidunt ut",
         "price": "120",
         "image": "harina-de-centeno.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Miel Beepure Cremosa",
+        "marca": "Beepure",
+        "categoria": "Miel",
+        "descripcion": "lorem ipsum dolor sit amet consectetur adipiscing elit sed diam nonummy nibh euismod tincidunt ut",
+        "price": "150",
+        "image": "miel-beepure-cremosa-x-900.jpg"
     }
 ]
