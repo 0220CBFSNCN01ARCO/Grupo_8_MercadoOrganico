@@ -11,4 +11,4 @@ const mainController = {
     },
 };
 
-module.exports = controller;
+module.exports = mainController;
