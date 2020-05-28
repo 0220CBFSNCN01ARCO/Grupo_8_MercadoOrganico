@@ -13,6 +13,7 @@ const storage = multer.diskStorage({
     }
   });
 
+const upload = multer({ storage: storage });
 
 router.get('/', productsController.root);
 router.get('/detail/:id', productsController.detallarProducto);
