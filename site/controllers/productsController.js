@@ -10,7 +10,14 @@ const productsController = {
         res.render('products', {title: 'Productos', listadoProductos: products});
     },
     detallarProducto: (req, res, next) => {
-
+        const id = req.params.id;
+        const productoSolicitado = products.find( producto => {
+            return producto.id = id;
+        });
+        res.render('productDetail', {
+            title: productoSolicitado.name,
+            producto: productoSolicitado
+        })
     },
 };
 
