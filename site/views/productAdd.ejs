@@ -6,7 +6,7 @@
             <%- include('./partials/header') %>
         </div>
         <div class="container">
-            <form class="" action="" method="POST" enctype="multipart/form-data">
+            <form action="" method="POST" enctype="multipart/form-data">
 
                 <div class="form-group">
                     <label for="nombre-producto">Nombre del Producto</label>
@@ -42,7 +42,7 @@
                 <!-- FALTA INSERTAR IMAGEN -->
                 <div class="form-group">
                     <label for="exampleFormControlFile1"></label>
-                    <input type="file" name="imagenProducto" class="form-control-file" id="Subirarchivo">
+                    <input type="file" name="imagenProducto" class="form-control-file" id="Subirarchivo" accept="image/x-png,image/gif,image/jpeg">
                 </div>
 
                 <button type="submit" class="btn btn-primary mb-2">Registrar Producto</button>
