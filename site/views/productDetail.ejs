@@ -5,6 +5,76 @@
         <div class="container">
             <%- include('./partials/header') %>
             <!-- Detallar el producto -->
+            <div class="row productdetail">
+                <div class="col-sm-12 col-lg-4 col-xl-4">
+                    <div>
+                      <ul class="boton1">
+                        <li>
+                          <div class="btn-group">
+                          <button class="btn btn-outline-dark btn-sm dropdown-toggle botonancho" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PRODUCTOS
+                          </button>
+                          <div class="dropdown-menu">
+                            cereales
+                            especias
+                            frutas
+                            frutos secos
+                            granola
+                          </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <ul class="boton2">
+                        <li>
+                          <div class="btn-group">
+                          <button class="btn btn-outline-dark btn-sm dropdown-toggle botonancho" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            MARCAS
+                          </button>
+                          <div class="dropdown-menu">
+                            Beepure
+                            Felices las vacas
+                          </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <ul class="boton3">
+                        <li>
+                          <div class="btn-group">
+                          <button class="btn btn-outline-dark btn-sm dropdown-toggle botonancho" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            COSTOS DE ENVIO
+                          </button>
+                          <div class="dropdown-menu">
+                            ...
+                          </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                </div>
+
+                    <div class="col-sm-12 col-lg-4  col-xl-4">
+                      <div class="card m-auto" style="width: 18rem;">
+                          <img src="/images/products/<%= producto.image %>" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+
+                    <div class="col-sm-12 col-lg-4  col-xl-4">
+                      <p class="titulo font-weight-bold"><%= producto. name %></p>
+                      <p class="contenido"> <%= producto.description %> </p>
+                      <p class="price">$279,99</p>
+
+                      <button type="button" class="btn btn-outline-dark botoncomprar">
+                          <i class="fas fa-cart-plus"></i> COMPRAR
+                      </button>
+                    </div>
+            </div>
             <%- include('./partials/footer') %>
         </div>
         <%- include('./partials/scriptsBootstrap') %>
