@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <body>
+    <div class="container">
+      <div class="row">
+          <form class="" action="index.html" method="POST">
+
+          <div class="form-group">
+              <label for="usuario">Usuario</label>
+              <input type="text" class="form-control" name="usuario" id="usuario" required>
+          </div>
+
+          <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" name="nombre" id="nombre">
+          </div>
+
+          <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input type="text" class="form-control" name="apellido" id="apellido">
+          </div>
+
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="email" id="email" required>
+          </div>
+
+          <div class="form-group">
+              <label for="contraseña">Contraseña</label>
+              <input type="password" class="form-control" name="password" id="password" required>
+          </div>
+
+          <div class="form-group">
+              <label for="confirmar-contraseña">Confirmar Contraseña</label>
+              <input type="password" class="form-control" name="password-confirm" id="password-confirm" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary mb-2">Crear Cuenta</button>
+
+        </form>
+      </div>
+    </div>
+    <%- include('./partials/scriptsBootstrap')>
+  </body>
+</html>
