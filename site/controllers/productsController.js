@@ -28,7 +28,7 @@ const productsController = {
         const nuevoID = cantidadProductos + 1;
         const nuevoProducto = {
             id: nuevoID,
-            name: body.nombre,
+            name: body.nombreProducto,
             brand: body.marca,
             category: body.categoria,
             discount: 0,
