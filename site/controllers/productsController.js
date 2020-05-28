@@ -21,6 +21,9 @@ const productsController = {
     },
     agregarProducto: (req, res) => {
         res.render('productAdd', {title: 'Agregar Producto'})
+    },
+    registrarProducto: (req, res) => {
+        
     }
 };
 
