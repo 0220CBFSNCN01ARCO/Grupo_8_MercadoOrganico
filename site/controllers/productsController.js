@@ -23,7 +23,22 @@ const productsController = {
         res.render('productAdd', {title: 'Agregar Producto'})
     },
     registrarProducto: (req, res) => {
-        
+        const body = req.body;
+        const cantidadProductos = products.length;
+        const nuevoID = cantidadProductos + 1;
+        const nuevoProducto = {
+            id: nuevoID,
+            name: body.nombre-producto,
+            brand: body.marca,
+            category: body.categoria,
+            discount: 0,
+            description: body.descripcion,
+            price: body.precio,
+            image: req.file.filename,
+        }
+        products.push(nuevoProducto);
+        fs.writeFileSync('data/products.json', JSON.stringify(products));
+        res.res('El registro del producto fue exitoso');
     }
 };
 
