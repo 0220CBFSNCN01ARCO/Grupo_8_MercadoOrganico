@@ -12,7 +12,10 @@ const usersController = {
         res.render('login', {title: 'Login'});
     },
     register: (req, res) => {
-        res.render('register', {title: 'Registrar Usuario'})
+        res.render('register', {title: 'Registrar Usuario'});
+    },
+    card: (req, res) => {
+        res.render('tarjeta', {title: 'Registrar Tarjeta'});
     }
 };
 

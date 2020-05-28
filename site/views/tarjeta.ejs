@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/stylesheets/style-tarjeta.css">
+    <body>
+        <div id="area">
+            <div class="master-card">
+              <div class="card">
+                <div class="title">Tarjeta Credito/Debito</div>
+                <div class="input-number"><span class="title-number">Numero de Tarjeta</span>
+                  <div class="inputs-number">
+                    <input type="text" maxlength="4" name="number-card" placeholder="0000" required="required"/>
+                    <input type="text" maxlength="4" name="number-card" placeholder="0000" required="required"/>
+                    <input type="text" maxlength="4" name="number-card" placeholder="0000" required="required"/>
+                    <input type="text" maxlength="4" name="number-card" placeholder="0000" required="required"/>
+                  </div>
+                  <div class="selects-date selecters">
+                    <div class="day-select"><span>Día</span>
+                      <select id="dates">
+                          <% for( let index = 1; index < 31; index++ ) { %>
+                            <option value=""> <%= index %> </option>
+                          <% } %>
+                      </select>
+                    </div>
+                    <div class="year-select"><span>Año</span>
+                      <select id="dates">
+                          <% for( let index = 16; index < 27; index++ ) { %>
+                            <option value=""> <%= index %></option>
+                          <% } %>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="mark-gold">
+                  <div class="round">
+                    <div class="circles">
+                      <div class="circle-1"> </div>
+                      <div class="circle-2"> </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="name"><span>Nombre Apellido</span></div>
+                <input type="text" maxlength="4" name="number-card" placeholder="Nombre" required="required"/>
+              </div>
+              <div class="card-back">
+                <div class="tire"></div>
+                <div class="secret-area">
+                  <input type="text" maxlength="3" name="number-card" placeholder="000" required="required"/>
+                </div>
+                <div class="chip-card"></div>
+              </div>
+            </div>
+            <div class="button-sent">
+              <button id="back"><a href="index.html"></a>Volver</button>
+              <button id="continue">Continuar</button>
+            </div>
+        </div>
+        <%- include('./partials/footer') %>
+        <%- include('./partials/scriptsBootstrap') %>
+    </body>
+</html>
