@@ -38,7 +38,7 @@ const productsController = {
         };
         products.push(nuevoProducto);
         fs.writeFileSync('data/products.json', JSON.stringify(products));
-        res.res('El registro del producto fue exitoso');
+        res.send('El registro del producto fue exitoso');
     }
 };
 
