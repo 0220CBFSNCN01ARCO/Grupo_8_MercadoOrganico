@@ -12,7 +12,7 @@ const usersController = {
         res.render('login', {title: 'Login'});
     },
     register: (req, res) => {
-        
+        res.render('register', {title: 'Registrar Usuario'})
     }
 };
 
