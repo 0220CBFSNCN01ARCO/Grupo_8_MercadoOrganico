@@ -4,11 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    background:url(../images/login.jpg);
+    background:url('/images/login.jpg');
     background-size: cover ;
-    
-    
-    
 }
 
 .contenedor-form
