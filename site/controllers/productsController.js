@@ -19,6 +19,9 @@ const productsController = {
             producto: productoSolicitado
         });
     },
+    agregarProducto: (req, res) => {
+        res.render('productAdd', {title: 'Agregar Producto'})
+    }
 };
 
 module.exports = productsController;
