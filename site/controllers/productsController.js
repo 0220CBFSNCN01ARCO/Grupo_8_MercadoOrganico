@@ -35,7 +35,7 @@ const productsController = {
             description: body.descripcion,
             price: body.precio,
             image: req.file.filename,
-        }
+        };
         products.push(nuevoProducto);
         fs.writeFileSync('data/products.json', JSON.stringify(products));
         res.res('El registro del producto fue exitoso');
