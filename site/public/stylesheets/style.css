@@ -9,32 +9,46 @@ nav .navbar-brand .logo-inicio{
   border-radius: 50%;
   width: 100px;
 }
-
- .bg-light {
-  background-color:  #D8EBB5!important;
+.navbar{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
 }
-.navbar-light .navbar-nav .active>.nav-link{
+.navbar a{
   color: #2B580C;
 }
 
 marquee{
-  margin-top: 16px;
+  margin-top: 150px;
 }
 
 .dropdown-menu{
   background-color: #D8EBB5;
 }
 
+/*Carousel--*/
+
+.container1{
+  padding: 0px;
+}
 
 
 /*--- Style Products Detail--*/
-
+.card{
+  border: none;
+}
 .row {
+  margin-top: 20px;
   justify-content: space-between;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+.photo-container img{
+  
+  
+  height: 250px;
 }
 
 .producdetail{
