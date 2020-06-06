@@ -154,3 +154,33 @@ footer {
 .nav-footer-copyright{
   align-self: flex-start
 }
+
+/*---Carga de productos--*/
+
+.contenedor-padre{
+
+  background: #D8EBB5;
+  display: flex;
+  justify-content: center;
+}
+
+.container-1{
+  margin: 20px;
+  padding: 10px;
+  height: 100vh;
+  width: 500px;
+  background:  #2B580C;
+  box-shadow: 2px 20px 30px 10px rgba(8, 8, 8, 0.5);
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.formulario{
+  width:400px;
+  height: 300px;
+  color: white ;
+}
