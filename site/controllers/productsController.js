@@ -42,7 +42,9 @@ const productsController = {
     },
     editarProducto: (req, res) => {
         let idProducto = req.params.idProduct;
-        let productoAEditar = products[idProducto - 1];
+        let productoAEditar = products.find( producto => {
+            return producto.id = idProducto;
+        });
         res.send(productoAEditar);
     },
     carrito: (req, res) => {
