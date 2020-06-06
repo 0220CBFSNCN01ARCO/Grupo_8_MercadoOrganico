@@ -21,4 +21,6 @@ router.get('/add', productsController.agregarProducto);
 router.post('/add', upload.single('imagen-producto'), productsController.registrarProducto);
 router.get('/carrito', productsController.carrito);
 
+/* COMENTARIO */
+
 module.exports = router;
