@@ -45,7 +45,10 @@ const productsController = {
         let productoAEditar = products.find( producto => {
             return producto.id = idProducto;
         });
-        res.send(productoAEditar);
+        res.render('productEdit', {
+            title: productoAEditar.name,
+            producto: productoAEditar
+        });
     },
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
