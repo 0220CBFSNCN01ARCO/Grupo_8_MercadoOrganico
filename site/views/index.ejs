@@ -25,7 +25,15 @@
 
       <%- include('./partials/footer') %>
     </div>
-    <%- include('./partials/jQuery') %>
     <%- include('./partials/scriptsBootstrap') %>
+    <script>
+      $(window).scroll(function(){
+          if($("#menu").offset().top > 50){
+              $("#menu").addClass("bg-inverse");
+        }else{
+            $("#menu").removeClass("bg-inverse")
+        }
+      })
+    </script>
   </body>
 </html>
