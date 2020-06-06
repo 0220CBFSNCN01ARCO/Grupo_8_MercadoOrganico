@@ -40,6 +40,9 @@ const productsController = {
         fs.writeFileSync('data/products.json', JSON.stringify(products));
         res.send('El registro del producto fue exitoso');
     },
+    editarProducto: (req, res) => {
+
+    },
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
     },
