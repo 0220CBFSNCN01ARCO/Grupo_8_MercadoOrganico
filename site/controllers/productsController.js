@@ -41,7 +41,9 @@ const productsController = {
         res.send('El registro del producto fue exitoso');
     },
     editarProducto: (req, res) => {
-
+        let idProducto = req.params.idProduct;
+        let productoAEditar = products[idProducto - 1];
+        res.send(productoAEditar);
     },
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
