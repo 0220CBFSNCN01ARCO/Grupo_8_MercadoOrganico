@@ -16,7 +16,10 @@ const usersController = {
     },
     card: (req, res) => {
         res.render('tarjeta', {title: 'Registrar Tarjeta'});
-    }
+    },
+    crearcuenta: (req, res) => {
+        res.render('/crearcuenta', {title: 'Crear Cuenta'});
+    },
 };
 
 module.exports =  usersController;
