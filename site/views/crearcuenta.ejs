@@ -1,10 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="">
+<body>
+    <style>
+        body{
+            background-color:burlywood;
+        }
+        label{
+            width: 100px;
+            display: inline-block;
+        }
+    </style>
 <div class="formulario">
     <h2>Crear Cuenta</h2>
-    <form action="">
-        <input type="text" placeholder="Usuario" required>
-        <input type="password" placeholder="Contraseña" required>
-        <input type="email" placeholder="Correo Electronico" required>
-        <input type="text" placeholder="Telefono">
-        <input type="submit" value="Registrarse">
+    <form action="" method="POST">
+
+        <label for="nombre_usuario">Nombre de Usuario</label>
+        <input type="text" id="nombre_usuario" name="nombre_usuario" placeholder="Ingrese nombre de usuario" required> <br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Ingrese correo electronico" required> <br>
+
+        <label for="telefono">Teléfono</label>
+        <input type="text" id="telefono" name="telefono" placeholder="Ingrese su telefono"> <br>
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Ingrese contraseña" required> <br>
+
+        <label for="repeat_password">Repetir contraseña</label>
+        <input type="password" name="repeat_password"  placeholder="Repita su Contraseña"required> <br>
+
+        <label for="avatar">Imagen</label>
+        <input type="file" name="avatar" required accept="image/x-png,image/gif,image/jpeg"> <br>
+
+         <button type="submit">REGISTRARSE</button>
     </form>
 </div>
+</body>
+</html>

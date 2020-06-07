@@ -8,5 +8,6 @@ router.get('/register', usersController.register);
 router.get('/login', usersController.login);
 router.get('/card', usersController.card);
 router.get('/login/crearcuenta', usersController.crearcuenta);
+router.post('/login/crearcuenta', usersController.registrarcuenta);
 
 module.exports = router;
