@@ -50,6 +50,11 @@ const productsController = {
             producto: productoAEditar
         });
     },
+    actualizarProducto: (req, res) => {
+        const idProducto = req.params.idProduct;
+        const body = req.body;
+        res.send(idProducto);
+    },
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
     },
