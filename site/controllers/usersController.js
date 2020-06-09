@@ -24,13 +24,15 @@ const usersController = {
     },
     registrarCuenta: (req, res) => {
         const body = req.body;
-        console.log(req.file);
+        const cantidadUsuarios = users.length;
+        const nuevoID = cantidadUsuarios + 1;
         //comparacion de contraseñas
         if(body.password != body.repeat_password){
             return res.render('contrasenaNoCoincide');
         };
         //datos que llegan en la peticion
         const usuarioAGuardar = {
+            id: nuevoID,
             nombre: body.nombre_usuario,
             email: body.email,
             telefono: body.telefono,

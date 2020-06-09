@@ -19,6 +19,7 @@ router.get('/', usersController.root);
 router.get('/register', usersController.register);
 router.get('/login', usersController.login);
 router.get('/card', usersController.card);
+
 router.get('/login/crearcuenta', usersController.crearCuenta);
 router.post('/login/crearcuenta', upload.single('avatar'), usersController.registrarCuenta);
 
