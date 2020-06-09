@@ -53,7 +53,18 @@ const productsController = {
     actualizarProducto: (req, res) => {
         const idProducto = req.params.idProduct;
         const body = req.body;
-        res.send(idProducto);
+        products.map( producto => {
+            if(producto.id == idProducto){
+                producto.name = body.nombreProducto,
+                producto.brand = body.marca,
+                producto.category = body.categoria,
+                producto.description = body.descripcion,
+                producto.price = body.precio,
+                producto.image = req.file.filename
+            };
+        });
+        fs.writeFileSync('data/products.json', JSON.stringify(products));
+        res.send('HOLA');
     },
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
