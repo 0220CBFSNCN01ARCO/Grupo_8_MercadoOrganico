@@ -39,7 +39,7 @@ marquee{
 }
 .row {
   margin-top: 20px;
-  justify-content: space-between;
+  
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
