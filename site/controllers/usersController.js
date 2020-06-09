@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
-const multer = require('multer');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -40,7 +39,7 @@ const usersController = {
             avatar: req.file.filename
         };
         users.push(usuarioAGuardar);
-        fs.writeFileSync('data/users.json', JSON.stringify(usuarioAGuardar) + '\n');
+        fs.writeFileSync('data/users.json', JSON.stringify(usuarioAGuardar));
         return res.render('usuarioExitoso');
     }
 };
