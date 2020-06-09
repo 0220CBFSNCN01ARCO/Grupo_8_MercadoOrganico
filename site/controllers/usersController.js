@@ -23,12 +23,11 @@ const usersController = {
     },
     registrarCuenta: (req, res) => {
         const body = req.body;
-        const cantidadUsuarios = users.length;
-        const nuevoID = cantidadUsuarios + 1;
-        //comparacion de contraseñas
         if(body.password != body.repeat_password){
             return res.render('contrasenaNoCoincide');
         };
+        const cantidadUsuarios = users.length;
+        const nuevoID = cantidadUsuarios + 1;
         //datos que llegan en la peticion
         const usuarioAGuardar = {
             id: nuevoID,
@@ -39,9 +38,9 @@ const usersController = {
             avatar: req.file.filename
         };
         users.push(usuarioAGuardar);
-        fs.writeFileSync('data/users.json', JSON.stringify(usuarioAGuardar));
-        return res.render('usuarioExitoso');
-    }
+        fs.writeFileSync('data/users.json', JSON.stringify(users));
+        res.render('usuarioExitoso');
+    },
 };
 
 module.exports =  usersController;
