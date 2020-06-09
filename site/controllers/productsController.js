@@ -68,7 +68,13 @@ const productsController = {
         res.redirect('/products');
     },
     eliminarProducto: (req, res) => {
-        
+        let idProductoBuscado = req.params.id;
+        let productosSinProductoBuscado = products.filter( product =>{
+            return product.id != idProductoBuscado;
+        });
+        let nuevosProductos = JSON.stringify(productosSinProductoBuscado,'utf-8');
+        fs.writeFileSync(productsPath, nuevosProductos);
+        res.redirect("/products")
     },
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
