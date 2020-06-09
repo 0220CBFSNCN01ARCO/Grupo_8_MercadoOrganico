@@ -67,6 +67,9 @@ const productsController = {
         fs.writeFileSync('data/products.json', JSON.stringify(products));
         res.redirect('/products');
     },
+    eliminarProducto: (req, res) => {
+        
+    },
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
     },
