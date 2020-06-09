@@ -38,7 +38,7 @@ const productsController = {
         };
         products.push(nuevoProducto);
         fs.writeFileSync('data/products.json', JSON.stringify(products));
-        res.send('El registro del producto fue exitoso');
+        res.render('products');
     },
     editarProducto: (req, res) => {
         let idProducto = req.params.idProduct;
@@ -52,6 +52,7 @@ const productsController = {
     },
     actualizarProducto: (req, res) => {
         const idProducto = req.params.idProduct;
+        console.log(idProducto)
         const body = req.body;
         products.map( producto => {
             if(producto.id == idProducto){
@@ -64,7 +65,7 @@ const productsController = {
             };
         });
         fs.writeFileSync('data/products.json', JSON.stringify(products));
-        res.send('HOLA');
+        res.redirect('/products');
     },
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
