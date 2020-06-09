@@ -1,3 +1,7 @@
-[
-    
-]
+
+{"nombre":"karina","email":"karinasalvucci@yahoo.com.ar","telefono":"351763543","password":"$2b$10$C6K9BRgGgeW31USZMEqQGOC68jP3GYT9463ppE238/UnFApuYS7TS"}
+{"nombre":"jorfe","email":"jorge@gmail.com","telefono":"563847","password":"$2b$10$IrW1ezZpFVnld/XLDFfNie0TYPhEg8CkC99jeZW7CKIRH6jXhD00i"}
+{"nombre":"daniel","email":"daniel@gmail.com","telefono":"12343455","password":"$2b$10$F4v2vJ9gOls/qIpncYfGt.vXzCHBYayUIRWZt56wPMYw8Hfwn8DLm"}
+{"nombre":"martin","email":"martin@gmail.com","telefono":"48948483","password":"$2b$10$iJ3Dr0eAHcc/RhujaIagVuDnSw5NEwfwZxYD4slSd4ElGP70t4HeG"}
+{"nombre":"test1","email":"test@gmail.com","telefono":"4938383","password":"$2b$10$TX.LYSnbUoF7QVfEGRCY8Ojq4zh7EEUbOV9vUW2F1TEiHYjNhfKCa"}
+{"nombre":"test2","email":"valentinabreda.s@gmail.com","telefono":"3517684374","password":"$2b$10$AtMo7p3Nc05F9QHU8gqaHeShU0fQ00inUknSXp/ZQu4k8sw/25naO"}
