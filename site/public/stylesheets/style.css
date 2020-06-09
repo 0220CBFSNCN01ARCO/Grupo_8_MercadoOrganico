@@ -4,7 +4,10 @@ body{
   padding: 0%;
   font-family: 'Montserrat', 'Poppins', 'Quicksand', sans-serif;
 }
-
+nav {
+  display: flex;
+  justify-content: space-between;
+}
 nav .navbar-brand .logo-inicio{
   border-radius: 50%;
   width: 100px;
