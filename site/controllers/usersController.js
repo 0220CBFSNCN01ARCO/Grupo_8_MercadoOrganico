@@ -21,10 +21,10 @@ const usersController = {
     card: (req, res) => {
         res.render('tarjeta', {title: 'Registrar Tarjeta'});
     },
-    crearcuenta: (req, res) => {
+    crearCuenta: (req, res) => {
         res.render('crearcuenta', {title: 'Crear Cuenta'});
     },
-    registrarcuenta: (req, res) => {
+    registrarCuenta: (req, res) => {
         const body = req.body;
         console.log(req.file);
 

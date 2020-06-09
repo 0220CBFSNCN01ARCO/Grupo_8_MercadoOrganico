@@ -11,15 +11,15 @@ var storage = multer.diskStorage({
       cb(null, file.fieldname + '-' + Date.now() + '.png')
     }
   });
-   
-  var upload = multer({ storage: storage })
+
+var upload = multer({ storage: storage })
 
 /* GET users listing. */
 router.get('/', usersController.root);
 router.get('/register', usersController.register);
 router.get('/login', usersController.login);
 router.get('/card', usersController.card);
-router.get('/login/crearcuenta', usersController.crearcuenta);
-router.post('/login/crearcuenta', upload.single('avatar'), usersController.registrarcuenta);
+router.get('/login/crearcuenta', usersController.crearCuenta);
+router.post('/login/crearcuenta', upload.single('avatar'), usersController.registrarCuenta);
 
 module.exports = router;
