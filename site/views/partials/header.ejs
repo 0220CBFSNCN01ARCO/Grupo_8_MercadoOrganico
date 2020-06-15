@@ -1,51 +1,49 @@
   <header>
-  <div class="container">
-    <nav id="menu" class="navbar navbar-expand-lg fixed-top container" style="background-color:#D8EBB5;">
-    <a class="navbar-brand" href="#"><img class="logo-inicio" src="/images/Mercado Orgánico - 5.png" width="100" height="100" alt="" loading="lazy"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <!--Barrra de busqueda-->
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="/images/img-home/search.png" width="20px" alt=""></button>
-      </form>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" >
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img class="logo-inicio" src="/images/Mercado Orgánico - 5.png" width="100" height="100" alt="" loading="lazy"></a>
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto">
 
-    <!--menu de navegacion-->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Usuario
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/users/login">Iniciar Sesión</a>
+              <a class="dropdown-item" href="#">Tarjetas</a>
+              <a class="dropdown-item" href="#">Salir</a>
+            </div>
+          </li>
+  
+          <li class="nav-item">
+           <a class="nav-link" href="#">Contacto</a>
+          </li>
+  
+          <li class="nav-item dropdown"  >
+            <a  onclick="javascript:CambiarEstilo()" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-cart-plus" ></i> Compras
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Mis Compras</a>
+              <a class="dropdown-item" href="#">Seguridad</a>
+            </div>
+          </li>
+  
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Usuario
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/users/login">Iniciar Sesión</a>
-            <a class="dropdown-item" href="#">Tarjetas</a>
-            <a class="dropdown-item" href="#">Salir</a>
-          </div>
-        </li>
-
-        <li class="nav-item">
-         <a class="nav-link" href="#">Contacto</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-cart-plus"></i> Compras
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Mis Compras</a>
-            <a class="dropdown-item" href="#">Seguridad</a>
-          </div>
-        </li>
-
-      </ul>
-    </div>
-  </nav>
 
   <marquee><img src="/images/img-home/bike.png" alt=""> Habilitamos los Envíos! #QuedateEnCasa <a href="#">Ver más</a></marquee>
-
-  </div>
+ 
+ 
 </header>
