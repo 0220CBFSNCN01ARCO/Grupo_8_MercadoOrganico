@@ -38,7 +38,7 @@ const productsController = {
         };
         products.push(nuevoProducto);
         fs.writeFileSync('data/products.json', JSON.stringify(products));
-        res.render('products');
+        res.redirect('/products');
     },
     editarProducto: (req, res) => {
         let idProducto = req.params.idProduct;
@@ -64,7 +64,7 @@ const productsController = {
                 producto.image = req.file.filename
             };
         });
-        fs.writeFileSync('data/products.json', JSON.stringify(products));
+        fs.writeFileSync(productsFilePath, JSON.stringify(products));
         res.redirect('/products');
     },
     eliminarProducto: (req, res) => {
@@ -73,7 +73,7 @@ const productsController = {
             return product.id != idProductoBuscado;
         });
         let nuevosProductos = JSON.stringify(productosSinProductoBuscado,'utf-8');
-        fs.writeFileSync(productsPath, nuevosProductos);
+        fs.writeFileSync(productsFilePath, nuevosProductos);
         res.redirect("/products")
     },
     carrito: (req, res) => {

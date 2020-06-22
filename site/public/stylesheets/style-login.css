@@ -2,9 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', 'Poppins', 'Quicksand', sans-serif;
 }
 
-
+a{
+    color: #2B580C;
+    text-transform: none;
+  }
 .contenedor-form
 {
     position: relative;
@@ -58,8 +62,8 @@
 .contenedor-form input[type="text"],
 .contenedor-form input[type="password"],
 .contenedor-form input[type="email"]{
-ounline: none;
-display: block;
+ 
+ display: block;
     width: 100%;
     padding: 10px 15px;
     margin: 0 0 20px 0;
@@ -109,7 +113,7 @@ display: block;
 
 .contenedor-form .reset-password a {
     color: #fff;
-    text-decoration: none;
+    text-transform: none;
     font-size: 16px;
 }
 
