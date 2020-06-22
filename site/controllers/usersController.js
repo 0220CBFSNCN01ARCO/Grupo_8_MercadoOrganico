@@ -38,7 +38,7 @@ const usersController = {
             avatar: req.file.filename
         };
         users.push(usuarioAGuardar);
-        fs.writeFileSync('data/users.json', JSON.stringify(users));
+        fs.writeFileSync('data/users.json', JSON.stringify(users)) + '\n';
         res.render('usuarioExitoso');
     },
 };
