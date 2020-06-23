@@ -8,7 +8,7 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-nav .navbar-brand .logo-inicio{
+nav .navbar-brand {
   border-radius: 50%;
   width: 100px;
 }
