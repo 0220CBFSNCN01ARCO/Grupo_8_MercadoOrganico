@@ -3,6 +3,7 @@ body{
   margin: 0;
   padding: 0%;
   font-family: 'Montserrat', 'Poppins', 'Quicksand', sans-serif;
+  background-color: #EBEBE9;
 }
 nav {
   display: flex;
@@ -126,13 +127,16 @@ a .card-img-top{
 /*--Footer Style--*/
 
 footer {
-
   background-color: #E3E6DA;
 }
 
 .text-uppercase {
   font-weight: bold;
   text-align: center ;
+}
+
+.links{
+  color: #253628;
 }
 
 .list-unstyled {
