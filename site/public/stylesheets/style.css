@@ -124,39 +124,16 @@ a .card-img-top{
   100% { opacity: 1.0; }
 }
 /*--Footer Style--*/
-.icon-footer h3{
-  color: #2B580C;
-
-}
-.nav-footer .icon-footer{
-  padding: 5px;
-  color: #2B580C;
-}
-
-hr{
-  border:solid 1px #2B580C;
-}
-
-footer a img{
-  width: 15px;
-}
 
 footer {
-  margin: 10px 0px;
-  margin-bottom: -1px;
-  height: 40px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  display: flex;
-  justify-content: space-around;
-  
-  flex-flow: row wrap;
-  background-color: #D8EBB5;
+
+  background-color: #E3E6DA;
 }
 
 .nav-footer-copyright{
   align-self: flex-start
 }
+
 
 /*---Carga de productos--*/
 
