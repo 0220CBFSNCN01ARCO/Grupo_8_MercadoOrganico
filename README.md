@@ -51,7 +51,7 @@ Todos estos sitios web fueron seleccionados por la similitud al publico objetivo
 ![Logo de la Pagina Web](https://github.com/0220CBFSNCN01ARCO/Grupo_8_MercadoOrganico/blob/master/Imagenes/logo-mercado-organico.png)
 
 ## Paleta de Colores
-![Paleta de Colores de la Pagina Web](https://github.com/0220CBFSNCN01ARCO/Grupo_8_MercadoOrganico/blob/master/Imagenes/NuevaPaleta.jpeg)
+![Paleta de Colores de la Pagina Web](https://github.com/0220CBFSNCN01ARCO/Grupo_8_MercadoOrganico/blob/master/site/public/images/imagenes-generales/Captura%20de%20Pantalla%202020-06-27%20a%20la(s)%2020.34.37.png)
 
 ## Tipografía
 - [Poppins](https://fonts.google.com/specimen/Poppins)
