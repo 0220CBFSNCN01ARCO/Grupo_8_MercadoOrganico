@@ -130,6 +130,15 @@ footer {
   background-color: #E3E6DA;
 }
 
+.text-uppercase {
+  font-weight: bold;
+  text-align: center ;
+}
+
+.list-unstyled {
+  text-align: center;
+}
+
 .nav-footer-copyright{
   align-self: flex-start
 }
