@@ -3,34 +3,41 @@
     <%- include('./partials/head') %>
     <link rel="stylesheet" href="/stylesheets/style-login.css">
 <body>
+
+<div class="containerlogin">
+    <div class="brandlogin">
+        <a class="navbar-brand" href="/site/views/index.ejs">
+            <img class="logo-inicio" src="/images/imagenes-generales/logo-mercado-organico.png" width="80" height="80"
+            height="100" alt="" loading="lazy">
+        </a>
+      
+      
+    </div>
     <div class="contenedor-form">
+    
         <div class="toggle">
-            <a href="/users/login/crearcuenta">Crear Cuenta</a>
+            <a href="/users/login/crearcuenta" style="text-decoration: none; color:#253628">Crear Cuenta</a>
         </div>
         <div class="formulario">
         <h2>Iniciar Sesión</h2>
-        <form action="">
+        <form  action="">
             <input type="text" placeholder="Usuario" required>
             <input type="password" placeholder="Contraseña" required>
             <input type="submit" value="Iniciar Sesión">
         </form>
 
         </div>
-        <div class="formulario">
-            <h2>Crear Cuenta</h2>
-            <form action="">
-                <input type="text" placeholder="Usuario" required>
-                <input type="password" placeholder="Contraseña" required>
-                <input type="email" placeholder="Correo Electronico" required>
-                <input type="text" placeholder="Telefono">
-                <input type="submit" value="Registrarse">
-            </form>
-        </div>
+        
         <div class="reset-password">
             <a href="#">Olvide mi contraseña</a>
         </div>
-
+        
     </div>
+   
+</div>
+<div class="footer-login">
+    <%- include('./partials/footer') %>
+  </div>
     <%- include('./partials/jQuery') %>
     <%- include('./partials/scriptsBootstrap') %>
    </body>

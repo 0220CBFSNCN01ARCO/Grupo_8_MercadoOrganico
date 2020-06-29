@@ -1,52 +1,19 @@
 <!DOCTYPE html>
 <html>
     <%- include('./partials/head') %>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/stylesheets/style-cuenta.css">
+    <link rel="stylesheet" href="/stylesheets/style-login.css">
 <body>
-    <style>
-       body{
-        font-family: 'Montserrat', 'Poppins', 'Quicksand', sans-serif;
-        background: #D8EBB5;
- 
-       }
-        label{
-            width: 100px;
-            display: inline-block;
-            margin: 20px;
-        }
-        .formulario{
-        position: relative;
-        align-items: flex-start;
-        margin: 20px ;
-        padding: 10px;
-        height: 500px;
-        width: 600px;
-        background:  #2B580C;
-        box-shadow: 2px 20px 30px 10px rgba(8, 8, 8, 0.5);
-        display: flex;
-        justify-content: center;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-
-        }
-        .container-fluid{
-            display: flex;
-            justify-content: center;
-        }
-        .form2{
-            position: absolute;
-            top: 70px;
-        }
-        .button{    
-            position: absolute;
-             left: 100px;
-        }
-    
-    </style>
+   
     <div class="container-fluid">
+        <div class="brandlogin">
+            <a class="navbar-brand" href="/site/views/index.ejs">
+                <img class="logo-inicio" src="/images/imagenes-generales/logo-mercado-organico.png" width="80" height="80"
+                height="100" alt="" loading="lazy">
+            </a>
+          
+          
+        </div>
         <div class="formulario">
             <h2>Crear Cuenta</h2>
             
@@ -73,7 +40,8 @@
             </form>
         </div>
     </div>
-
-
+    <div class="footer-login">
+        <%- include('./partials/footer') %>
+      </div>
 </body>
 </html>

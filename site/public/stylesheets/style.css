@@ -9,18 +9,13 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-nav .navbar-brand {
-  border-radius: 50%;
-  width: 100px;
-}
+
+
 .navbar{
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: #E3E6DA;
   
-}
-.navbar a{
-  color: #2B580C;
 }
 
 marquee{

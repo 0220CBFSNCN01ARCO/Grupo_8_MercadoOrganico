@@ -5,18 +5,18 @@
     font-family: 'Montserrat', 'Poppins', 'Quicksand', sans-serif;
 }
 
-a{
-    color: #2B580C;
-    text-transform: none;
-  }
+
 .contenedor-form
 {
-    position: relative;
-    background: #639a67 ;
+    box-shadow:10px 10px 5px 0px rgba(1,1,1,.5);
+    left:30%;
+    top:80px;
+    position: absolute;
+    background: #8aa989 ;
     width: 100%;
     max-width: 500px;
     margin: 48px auto;
-    color: #2b580c;
+    color: #253628;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -33,14 +33,15 @@ a{
     font-size: 12px;
     line-height: 25px;
     text-align: center;
-    border-top: 2px solid #639a67;
-    border-bottom: 2px solid #639a67;
+    border-top: 2px solid #8aa989;
+    border-bottom: 2px solid #8aa989;
     transition: all .5s ease;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -ms-transition: all .5s ease;
     -o-transition: all .5s ease;
     cursor: pointer;
+    
 }
 
 .contenedor-form .toggle:hover{
@@ -63,7 +64,7 @@ a{
 .contenedor-form input[type="password"],
 .contenedor-form input[type="email"]{
  
- display: block;
+
     width: 100%;
     padding: 10px 15px;
     margin: 0 0 20px 0;
@@ -71,7 +72,7 @@ a{
     color: #fff;
     border: none;
     border-radius: 2px;
-    border-bottom: 4px solid #D9BF77;
+    border-bottom: 4px solid #C0CEB2;
     box-sizing: border-box;
     font-family: Roboto;
     font-size: 14px;
@@ -85,7 +86,7 @@ a{
 }
 
 .contenedor-form input[type="submit"] {
-    background: #D9BF77;
+    background: #C0CEB2;
     color: #FFF;
     width: 100%;
     border: none;
@@ -96,14 +97,15 @@ a{
     letter-spacing: 1px;
     cursor: pointer;
     transition: all .5s ease;
+    
 }
 
 .contenedor-form input[type="submit"]:hover {
-    background: rgb(83, 145, 42);
+    background: #4965ac;
 }
 
 .contenedor-form .reset-password {
-    background: #2B580C;
+    background: #253628;
     width: 100%;
     padding: 15px 0;
     text-align: center;
@@ -125,3 +127,22 @@ a{
 .contenedor-form .formulario:nth-child(2) {
     display: block;
 }
+
+
+
+.containerlogin{
+    position: relative;
+    background-color: #253628;
+    height: 300px;
+}
+
+div .brandlogin{
+    position: absolute;
+    margin:20px
+}
+.pt-4, .py-4 {
+    margin-top: 300px;
+    padding-top: 1.5rem!important;
+    background-color: transparent;
+}
+

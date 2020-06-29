@@ -2,11 +2,11 @@
 <html>
   <%- include('./partials/head') %>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <%- include('./partials/header') %>
       <%- include('./partials/carousel') %>
       <!-- Lógica para Mostrar los diferentes Productos -->
-      <div class="row">
+      <div class="container row">
         <% listadoProductos.forEach(producto => { %>
           <article class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 nav-item card">
             <div class="photo-container">
@@ -24,18 +24,11 @@
 
     </div>
     <%- include('./partials/scriptsBootstrap') %>
-    <script>
-      $(window).scroll(function(){
-          if($("#menu").offset().top > 50){
-              $("#menu").addClass("bg-inverse");
-        }else{
-            $("#menu").removeClass("bg-inverse")
-        }
-      })
-    </script>
+    
     <div>
       <%- include('./partials/footer') %>
     </div>
+    
   </body>
   
 </html>
