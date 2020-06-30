@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const alias = 'Users';
+    const alias = 'User';
     const columnas = {
         id: {
             type: DataTypes.INTEGER,
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     const config = {
-        tableName: 'usuarios', //nombre de la tabla
+        tableName: 'users', //nombre de la tabla
         timestamps: false
     };
 
