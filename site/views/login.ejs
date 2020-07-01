@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <%- include('./partials/head') %>
-    <link rel="stylesheet" href="/stylesheets/style-login.css">
+<%- include('./partials/head') %>
+
 <body>
+    <div class="container-fluid">
+        <%- include('./partials/header') %>
+        <br>
+        <br>
+        <br>
+        <div>
+            <h3 class="text-center font-weight-bolder">Iniciar Sesión</h3>
+        </div>
+        <!-- Login formulario -->
+        <div class="row justify-content-md-center">
+            <div class="col-md-8">
+                <form id="login-form" action="" method="post" class="form ">
+                    <div class="form-group ">
+                        <label class="form-label " for="email">Email</label>
+                        <input type="" class="form-control  " autocorrect="off" autocapitalize="off" name="email">
+                    </div>
 
-<div class="containerlogin">
-    <div class="brandlogin">
-        <a class="navbar-brand" href="/site/views/index.ejs">
-            <img class="logo-inicio" src="/images/imagenes-generales/logo-mercado-organico.png" width="80" height="80"
-            height="100" alt="" loading="lazy">
-        </a>
-      
-      
+                    <div class="form-group ">
+                        <label class="form-label " for="password">Contraseña</label>
+                        <input type="password" class="form-control  " autocorrect="off" autocapitalize="off" autocomplete="off" name="password">
+                            <div class="mt-4 text-center">
+                                <a href="#!" class="btn-link ">¿Olvidaste tu contraseña?</a>
+                            </div>
+                    </div>
+                    <input class="btn btn-primary btn-block boton-iniciarsesion" type="submit" value="INICIAR SESIÓN" name="">
+                    
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="contenedor-form">
-    
-        <div class="toggle">
-            <a href="/users/login/crearcuenta" style="text-decoration: none; color:#253628">Crear Cuenta</a>
-        </div>
-        <div class="formulario">
-        <h2>Iniciar Sesión</h2>
-        <form  action="">
-            <input type="text" placeholder="Usuario" required>
-            <input type="password" placeholder="Contraseña" required>
-            <input type="submit" value="Iniciar Sesión">
-        </form>
-
-        </div>
-        
-        <div class="reset-password">
-            <a href="#">Olvide mi contraseña</a>
-        </div>
-        
-    </div>
-   
-</div>
-<div class="footer-login">
-    <%- include('./partials/footer') %>
-  </div>
-    <%- include('./partials/jQuery') %>
+    <br>
+    <br>
+    <br>
     <%- include('./partials/scriptsBootstrap') %>
-   </body>
+
+    <div>
+        <%- include('./partials/footer') %>
+    </div>
+
+</body>
+
 </html>

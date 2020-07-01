@@ -3,7 +3,7 @@ body{
   margin: 0;
   padding: 0%;
   font-family: 'Montserrat', 'Poppins', 'Quicksand', sans-serif;
-  background-color: #EBEBE9;
+  background-color: white;
 }
 nav {
   display: flex;
@@ -175,4 +175,21 @@ footer {
   width:450px;
   height: 300px;
   color: white ;
+}
+
+
+/*---LOGIN--*/
+.boton-iniciarsesion{
+  background-color: #49654C;
+  border: #49654c;
+  border-radius: 30px;
+}
+
+.boton-iniciarsesion:hover{
+  background-color: #8aa989;
+  color:white
+}
+
+.btn-link{
+  color: black;
 }
