@@ -193,3 +193,14 @@ footer {
 .btn-link{
   color: black;
 }
+
+.form-control{
+  border-color: #8aa989;
+  border-radius: 15px;
+}
+
+.form-control:focus, input:focus, input[type]:focus { 
+  border-color: #49654c;
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset;
+  outline: 0 none;
+}
