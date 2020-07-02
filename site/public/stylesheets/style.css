@@ -4,6 +4,20 @@ body{
   font-family: 'Muli', sans-serif;
   background-color: white;
 }
+@media (min-width: 576px){
+  .form-inline .form-control {
+    display: inline-block;
+    width: 580px;
+    vertical-align: middle;
+}
+}
+.form-inline{
+  margin: 0px 11%;
+}
+.btn-outline-success{
+ 
+  border: 0px;
+}
 nav {
   display: flex;
   justify-content: space-between;
