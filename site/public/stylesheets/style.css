@@ -18,6 +18,9 @@ body{
  
   border: 0px;
 }
+.btn-outline-success:hover{
+  background-color: transparent;
+}
 nav {
   display: flex;
   justify-content: space-between;
