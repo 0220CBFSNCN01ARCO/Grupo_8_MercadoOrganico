@@ -1,11 +1,1 @@
-[
-    {
-        "id": 1,
-        "name": "SASAKS",
-        "brand": "Sin Marca",
-        "discount": 0,
-        "description": "lorem ipsum dolor sit amet consectetur adipiscing elit sed diam nonummy nibh euismod tincidunt ut",
-        "price": "150",
-        "image": "harina-de-centeno.jpg"
-    }
-]
+[{"id":1,"name":"SASAKS","brand":"Sin Marca","discount":0,"description":"lorem ipsum dolor sit amet consectetur adipiscing elit sed diam nonummy nibh euismod tincidunt ut","price":"150","image":"harina-de-centeno.jpg"},{"id":2,"name":"Yogurt","brand":"Yogurisimo","category":"Vegano","discount":0,"description":"Yogurt Experimental con sabor a Chocolate","price":"280","image":"imagen-producto-1593794847584.jpeg"},{"id":3,"name":"Jugo de Naranja","brand":"Citric","category":"Vegano","discount":0,"description":"Jugo Riquisimo","price":"81","image":"imagen-producto-1593795122802.png"}]
