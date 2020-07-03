@@ -18,9 +18,6 @@ const usersController = {
     card: (req, res) => {
         res.render('tarjeta', {title: 'Registrar Tarjeta'});
     },
-    crearCuenta: (req, res) => {
-        res.render('crearcuenta', {title: 'Crear Cuenta'});
-    },
     registrarCuenta: (req, res) => {
         const body = req.body;
         if(body.password != body.repeat_password){
@@ -31,11 +28,12 @@ const usersController = {
         //datos que llegan en la peticion
         const usuarioAGuardar = {
             id: nuevoID,
-            nombre: body.nombre_usuario,
+            nombre: body.nombre,
+            apellido: body.apellido,
             email: body.email,
             telefono: body.telefono,
             password: bcrypt.hashSync(body.password, 10),
-            avatar: req.file.filename
+            //avatar: req.file.filename
         };
         users.push(usuarioAGuardar);
         fs.writeFileSync('data/users.json', JSON.stringify(users)) + '\n';
