@@ -16,11 +16,15 @@ var upload = multer({ storage: storage })
 
 /* GET users listing. */
 router.get('/', usersController.root);
-router.get('/register', usersController.register);
+
 router.get('/login', usersController.login);
+
+router.get('/register', usersController.register);
+router.post('/register', usersController.registrarCuenta);
+
 router.get('/card', usersController.card);
 
-router.get('/login/crearcuenta', usersController.crearCuenta);
-router.post('/login/crearcuenta', upload.single('avatar'), usersController.registrarCuenta);
+// router.get('/login/crearcuenta', usersController.crearCuenta);
+// router.post('/login/crearcuenta', upload.single('avatar'), usersController.registrarCuenta);
 
 module.exports = router;
