@@ -16,9 +16,6 @@ const usersController = {
     formRegister: (req, res) => {
         res.render('register', {title: 'Registrar Usuario'});
     },
-    card: (req, res) => {
-        res.render('tarjeta', {title: 'Registrar Tarjeta'});
-    },
     register: (req, res) => {
         const body = req.body;
         if(body.password != body.repeat_password){
@@ -43,6 +40,9 @@ const usersController = {
             title: 'Registro exitoso',
             user: req.session.userLog
         });
+    },
+    card: (req, res) => {
+        res.render('tarjeta', {title: 'Registrar Tarjeta'});
     },
 };
 
