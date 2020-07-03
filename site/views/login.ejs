@@ -5,17 +5,13 @@
 <body>
     <div class="container-fluid">
         <%- include('./partials/header') %>
-        <br>
-        <br>
-        <br>
         <div>
             <h1 class="h2 h1-md font-weight-bolder text-center">Iniciar sesión</h1>
         </div>
-        
         <!-- Login formulario -->
         <div class="row justify-content-md-center">
             <div class="col-md-7 hola">
-                <form id="login-form" action="" method="post" class="form ">
+                <form id="login-form" action="" method="POST" class="form">
                     <div class="form-group hola">
                         <label class="form-label " for="email">Email</label>
                         <input type="" class="form-control" autocorrect="off" autocapitalize="off" name="email">
@@ -31,18 +27,17 @@
                             </div>
                     </div>
                     <input class="btn btn-primary btn-block boton-iniciarsesion" type="submit" value="INICIAR SESIÓN" name="">
-                    
+
                 </form>
             </div>
         </div>
     </div>
-   
-    <%- include('./partials/scriptsBootstrap') %>
 
     <div>
         <%- include('./partials/footer') %>
     </div>
 
+    <%- include('./partials/scriptsBootstrap') %>
 </body>
 
 </html>
