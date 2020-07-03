@@ -1,2 +1,1 @@
-[
-]
+[{"id":1,"name":"Vitamina C","brand":"Jamieson","category":"Suplemento","discount":0,"description":"Pastillas de Vitamina C ideales para combatir el COVID-19","price":"215","image":"imagen-producto-1593795565649.jpg"},{"id":2,"name":"Yogurt","brand":"Yogurisimo","category":"Celiaco","discount":0,"description":"Un yogurt experimental con sabor a café colombiano","price":"45","image":"imagen-producto-1593795616760.jpeg"},{"id":3,"name":"Jugo de Naranja","brand":"Citric","category":"Celiaco","discount":0,"description":"Un jugo de naranja de excelente calidad para combatir la gripe","price":"81","image":"imagen-producto-1593795655171.png"}]
