@@ -67,6 +67,15 @@ const productsController = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products));
         res.redirect('/products');
     },
+    confirmarEliminacion: (req, res) => {
+        let productoBuscado = products.find( (elemento) => {
+            return elemento.id == req.params.idProduct;
+        });
+        res.render('productDelete', {
+            title: 'Eliminar producto',
+            product: productoBuscado
+        });
+    },
     eliminarProducto: (req, res) => {
         let idProductoBuscado = req.params.id;
         let productosSinProductoBuscado = products.filter( product =>{
