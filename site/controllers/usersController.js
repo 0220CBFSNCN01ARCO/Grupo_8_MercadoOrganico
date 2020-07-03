@@ -10,7 +10,7 @@ const usersController = {
     login: (req, res) => {
         res.render('login', {
             title: 'Login',
-            user: req.session.userLog
+            // user: req.session.userLog
         });
     },
     formRegister: (req, res) => {
@@ -36,9 +36,9 @@ const usersController = {
         };
         users.push(usuarioAGuardar);
         fs.writeFileSync('data/users.json', JSON.stringify(users));
-        res.render('login', {
+        res.render('usuarioExitoso', {
             title: 'Registro exitoso',
-            user: req.session.userLog
+            // user: req.session.userLog
         });
     },
     card: (req, res) => {
