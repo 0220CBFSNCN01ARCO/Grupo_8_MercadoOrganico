@@ -22,5 +22,13 @@
         "email": "correo@correo.com",
         "telefono": "1165823833",
         "password": "$2b$10$pqhR8JCCjz9GmP6vP5GrW.H14Zr83fMWyr15AfOzRbrcW33HZmCm2"
+    },
+    {
+        "id": 4,
+        "nombre": "Prueba",
+        "apellido": "laPrueba",
+        "email": "prueba@correo.com",
+        "telefono": "42432209",
+        "password": "$2b$10$GKbs9bjrq1CJDV11SJWclektOyuhbNeV8nBKzaV0Ubul/vwksIfxq"
     }
 ]
