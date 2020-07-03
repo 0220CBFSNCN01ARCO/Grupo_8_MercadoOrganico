@@ -11,7 +11,10 @@ const usersController = {
         res.render('usuario', {title: 'Usuario'});
     },
     login: (req, res) => {
-        res.render('login', {title: 'Login'});
+        res.render('login', {
+            title: 'Login',
+            user: req.session.userLog
+        });
     },
     formRegister: (req, res) => {
         res.render('register', {title: 'Registrar Usuario'});
@@ -39,7 +42,10 @@ const usersController = {
         };
         users.push(usuarioAGuardar);
         fs.writeFileSync('data/users.json', JSON.stringify(users));
-        res.render('usuarioExitoso');
+        res.render('login', {
+            title: 'Registro exitoso',
+            user: req.session.userLog
+        });
     },
 };
 
