@@ -1,26 +1,23 @@
 <header>
-<!-- <div class="row" >
-  <nav id="menu" class="navbar navbar-toggler navbar-collapse navbar-expand-lg navbar-light fixed-top">
-
-    <div class="col-8 col-md-4 col-md-3 col-lg-3 text-center text-md-left">
-      <a class="navbar-brand" href="/"><img class="logo-inicio" src="/images/imagenes-generales/logo-mercado-organico.png" width="100"
-          height="100" alt="" loading="lazy"></a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <div class="input-group md-form form-sm form-2 pl-0">
-        <input class="form-control my-0 py-1 red-border" type="text" placeholder="¿Qué estas buscando?" aria-label="Search">
-        <div class="input-group-append">
-          <span class="input-group-text red lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
-              aria-hidden="true"></i></span>
-        </div>
-      </div>
-
-    </div>
-
-    <div>
+ 
+  <nav id="menu" class="navbar navbar-expand-lg navbar-light  navbar-light fixed-top" style="display: flex; justify-content: space-between;">
+    <a class="navbar-brand" href="/"><img class="logo-inicio" src="/images/imagenes-generales/logo-mercado-organico.png" width="100"
+      height="100" alt="" loading="lazy" style="padding: 10px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control my-0 py-1 red-border" type="text" placeholder="¿Qué estas buscando?"  aria-label="Search">
+        <button class="btn btn-lupa my-2 my-sm-0" type="submit"><div class="input-group-append">
+          <span class="input-group-text  lighten-3" id="basic-text1"><i class="fas fa-search "
+              ></i></span>
+        </div></button>
+      </form>
       <ul class="navbar-nav mr-auto links">
-
+  
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -32,70 +29,60 @@
             <a class="dropdown-item" href="#">Salir</a>
           </div>
         </li>
-
+  
         <li class="nav-item">
           <a class="nav-link" href="/site/views/contact.ejs">Contacto</a>
         </li>
-
+  
         <li class="nav-item">
           <a class="nav-link" href="/site/views/shoppingCart.ejs"><i class="fas fa-cart-plus"></i>Mi carrito</a>
         </li>
       </ul>
     </div>
   </nav>
-</div> -->
-
-<nav class="navbar navbar-expand-lg navbar-light  navbar-light fixed-top">
-  <a class="navbar-brand" href="/"><img class="logo-inicio" src="/images/imagenes-generales/logo-mercado-organico.png" width="100"
-    height="100" alt="" loading="lazy"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-   
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control my-0 py-1 red-border" type="text" placeholder="¿Qué estas buscando?"  aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><div class="input-group-append">
-        <span class="input-group-text red lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
-            aria-hidden="true"></i></span>
-      </div></button>
-    </form>
-    <ul class="navbar-nav mr-auto links">
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Usuario
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/users/login">Iniciar Sesión</a>
-          <a class="dropdown-item" href="#">Tarjetas</a>
-          <a class="dropdown-item" href="#">Salir</a>
-        </div>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="/site/views/contact.ejs">Contacto</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="/site/views/shoppingCart.ejs"><i class="fas fa-cart-plus"></i>Mi carrito</a>
-      </li>
+  
+  <div class="submenu">
+  <ul class="dropdowsubmenu">
+  
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+       Alimentos Naturales
+      </a>
+      <div class="dropdown-menu submenu-items" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Frutos Secos</a>
+        <a class="dropdown-item" href="#">Cereal & Granola</a>
+        <a class="dropdown-item" href="#">Mermeladas</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+       Suplementos Naturales
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Aceites Nutricionales</a>
+        <a class="dropdown-item" href="#">Suplementos Dietarios</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Alimentos Veganos
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Quesos</a>
+        <a class="dropdown-item" href="#">Lacteos</a>
+        
+      </div>
+    </li>
+  
+  
     </ul>
+   
   </div>
-</nav>
-
-
-
-
-
-
-
-
-
-
-  <marquee><img src="/images/icons/bike.png" alt=""> Habilitamos los Envíos! #QuedateEnCasa </marquee>
-
-
-</header>
+   <marquee><img src="/images/icons/bike.png" alt=""> Habilitamos los Envíos! #QuedateEnCasa </marquee>
+  
+  
+  </header>
+  

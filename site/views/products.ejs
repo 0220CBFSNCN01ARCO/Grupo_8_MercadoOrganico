@@ -2,9 +2,9 @@
 <html>
   <%- include('./partials/head') %>
   <body>
-    <div class="container">
+    <div class="container containerproducts">
       <%- include('./partials/header') %>
-
+      
       <!-- Lógica para Mostrar los diferentes Productos -->
       <div class="row">
         <% listadoProductos.forEach(producto => { %>
@@ -20,8 +20,10 @@
             </div>
           </article>
         <% }) %>
-      </div>
 
+        
+      </div>
+      
       <%- include('./partials/footer') %>
     </div>
     <%- include('./partials/scriptsBootstrap') %>
