@@ -18,3 +18,4 @@ dule.exports = (sequelize, DataTypes) => {
     const Brand = sequelize.define(alias, columnas, config);
     return Brand;
 }
+//hola
