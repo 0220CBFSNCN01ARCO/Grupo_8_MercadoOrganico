@@ -11,6 +11,16 @@
         <!-- Login formulario -->
         <div class="row justify-content-md-center">
             <div class="col-md-7 hola">
+                <% if (typeof errors != 'undefined') { %>
+                 <p style='color: red'>ERROR</p>
+                 <ul>
+                     <% for( let i = 0; i < errors.length; i++ ) { %>
+                        <li>
+                            <%= errors[i].msg %>
+                        </li>
+                     <% } %>
+                 </ul>
+                <% } %>
                 <form id="login-form" action="" method="POST" class="form">
                     <div class="form-group hola">
                         <label class="form-label " for="email">Email</label>
