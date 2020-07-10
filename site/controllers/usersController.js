@@ -66,34 +66,6 @@ const usersController = {
         req.session.usuarioLogeado = usuarioALogearse;
         res.redirect('success');
     },
-    formRegister: (req, res) => {
-        res.render('register', {title: 'Registrar Usuario'});
-    },
-    register: (req, res) => {
-        const body = req.body;
-        if(body.password != body.repeat_password){
-            return res.render('contrasenaNoCoincide');
-        };
-        console.log(req.file);
-        const cantidadUsuarios = users.length;
-        const nuevoID = cantidadUsuarios + 1;
-        //datos que llegan en la peticion
-        const usuarioAGuardar = {
-            id: nuevoID,
-            nombre: body.nombre,
-            apellido: body.apellido,
-            email: body.email,
-            telefono: body.telefono,
-            password: bcrypt.hashSync(body.password, 10),
-            avatar: req.file.filename,
-        };
-        users.push(usuarioAGuardar);
-        fs.writeFileSync('data/users.json', JSON.stringify(users));
-        res.render('login', {
-            title: 'Registro exitoso',
-            user: req.session.userLog
-        });
-    },
     card: (req, res) => {
         res.render('tarjeta', {title: 'Registrar Tarjeta'});
     },
