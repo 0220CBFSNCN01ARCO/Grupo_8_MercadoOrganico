@@ -31,9 +31,7 @@ const usersController = {
         };
         users.push(usuarioAGuardar);
         fs.writeFileSync('data/users.json', JSON.stringify(users));
-        res.render('login', {
-            title: 'Login'
-        });
+        res.redirect('/users/login');
     },
     login: (req, res) => {
         res.render('login', {
@@ -64,7 +62,9 @@ const usersController = {
             });
         };
         req.session.usuarioLogeado = usuarioALogearse;
-        res.redirect('success');
+        res.render('success', {
+            usuario: req.session.usuarioLogeado
+        });
     },
     card: (req, res) => {
         res.render('tarjeta', {title: 'Registrar Tarjeta'});
