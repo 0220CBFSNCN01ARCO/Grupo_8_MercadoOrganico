@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
 const multer = require('multer');
+const { validationResult } = require('express-validator');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -9,9 +10,16 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const usersController = {
     login: (req, res) => {
         res.render('login', {
-            title: 'Login',
-            user: req.session.userLog
+            title: 'Login'
         });
+    },
+    processLogin: (req, res) => {
+        let errors = validationResult(req);
+        if(!errors.isEmpty()){
+            return res.render('login', {
+                title: 'Login',
+                errors: errors.errors
+            })};
     },
     formRegister: (req, res) => {
         res.render('register', {title: 'Registrar Usuario'});
