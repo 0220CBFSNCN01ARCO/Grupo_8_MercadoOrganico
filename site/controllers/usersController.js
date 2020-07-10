@@ -23,7 +23,7 @@ const usersController = {
         for(let i = 0; i < users.length; i++){
             if(users[i].email == req.body.email){
                 if(bcrypt.compareSync(req.body.password, users[i].password)){
-                    let usuarioALogearse = users[i];
+                    var usuarioALogearse = users[i];
                     break;
                 };
             };
@@ -37,7 +37,7 @@ const usersController = {
             });
         };
         req.session.usuarioLogeado = usuarioALogearse;
-        res.redirect('Success');
+        res.redirect('success');
     },
     formRegister: (req, res) => {
         res.render('register', {title: 'Registrar Usuario'});
