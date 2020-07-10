@@ -20,6 +20,24 @@ const usersController = {
                 title: 'Login',
                 errors: errors.errors
             })};
+        for(let i = 0; i < users.length; i++){
+            if(users[i].email == req.body.email){
+                if(bcrypt.compareSync(req.body.password, users[i].password)){
+                    let usuarioALogearse = users[i];
+                    break;
+                };
+            };
+        };
+        if(usuarioALogearse == undefined){
+            return res.render('login', {
+                title: 'Login',
+                errors: [
+                    {msg: 'Usuario inválido'}
+                ]
+            });
+        };
+        req.session.usuarioLogeado = usuarioALogearse;
+        res.redirect('Success');
     },
     formRegister: (req, res) => {
         res.render('register', {title: 'Registrar Usuario'});
