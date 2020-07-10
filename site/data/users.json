@@ -57,5 +57,68 @@
         "telefono": "3516667777",
         "password": "$2b$10$wrNT.O5vGoyjTPh07aDjHefZ2ZZKK6F8BTHSVieSQRb8/vt46WTai",
         "avatar": "avatar-1593813686800.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "karina",
+        "apellido": "salvucci",
+        "email": "karinasalvucci@yahoo.com.ar",
+        "telefono": "3513896745",
+        "password": "$2b$10$t/jjVPLWT/Y.ZLz/d50YKemoiy0DsiTt/XaV7XRr6.Z4l9eXSEsES",
+        "avatar": "avatar-1594413645869.jpeg"
+    },
+    {
+        "id": 9,
+        "nombre": "jorge",
+        "apellido": "breda",
+        "email": "jorge@hotmail.com",
+        "telefono": "3517684567",
+        "password": "$2b$10$FBZsZ2ILsvqlBFTUQrwOOOU.Oi21QX2fw3eFWuyELZbxIQHpvQEx2",
+        "avatar": "avatar-1594413776210.png"
+    },
+    {
+        "id": 10,
+        "nombre": "valu",
+        "apellido": "salvucci",
+        "email": "valebreda177@hotmail.com",
+        "telefono": "3517684374",
+        "password": "$2b$10$WXSOfg3J8NUc6lbMoyWXFe4iNwBgUzO661BrsfOUUd8hq0P4jcZV6",
+        "avatar": "avatar-1594414501959.jpeg"
+    },
+    {
+        "id": 11,
+        "nombre": "micaela",
+        "apellido": "mansilla",
+        "email": "micamansilla@hotmail.com",
+        "telefono": "123455667",
+        "password": "$2b$10$UIsDxhoJ5uz/XhM.RzOSQOEkn/bN0IkExuv4ZNOJBiLTws2VFA4M.",
+        "avatar": "avatar-1594414596533.jpeg"
+    },
+    {
+        "id": 12,
+        "nombre": "carmen",
+        "apellido": "perez",
+        "email": "carmen@gmail.com",
+        "telefono": "122338227",
+        "password": "$2b$10$EN0uuAKz8ejRcWCnJ3skWOrxMuhO6JD9vmhdI0rQZulvxu3ZKX2ky",
+        "avatar": "avatar-1594415573128.jpeg"
+    },
+    {
+        "id": 13,
+        "nombre": "martha",
+        "apellido": "nielsen",
+        "email": "martha@gmail.com",
+        "telefono": "09876543",
+        "password": "$2b$10$V9ooygV/3Jvkhaym6HLBEuD6l5K1qD6AT.pyysVgqCmqem8fXdP1y",
+        "avatar": "avatar-1594416839052.png"
+    },
+    {
+        "id": 14,
+        "nombre": "manuel",
+        "apellido": "lopez",
+        "email": "manuel@gmail.com",
+        "telefono": "87654345678",
+        "password": "$2b$10$4cX1HuyWnHn15BR3Er0Fne3ASPDuELgO4aLIsXv375gVLyapnHFRW",
+        "avatar": "avatar-1594417155679.png"
     }
 ]

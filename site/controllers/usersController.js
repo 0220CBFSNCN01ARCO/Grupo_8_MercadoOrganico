@@ -64,9 +64,7 @@ const usersController = {
             });
         };
         req.session.usuarioLogeado = usuarioALogearse;
-        res.render('success', {
-            usuario: req.session.usuarioLogeado
-        });
+        res.redirect('success');
     },
     card: (req, res) => {
         res.render('tarjeta', {title: 'Registrar Tarjeta'});
