@@ -102,5 +102,23 @@
         "telefono": "122338227",
         "password": "$2b$10$EN0uuAKz8ejRcWCnJ3skWOrxMuhO6JD9vmhdI0rQZulvxu3ZKX2ky",
         "avatar": "avatar-1594415573128.jpeg"
+    },
+    {
+        "id": 13,
+        "nombre": "martha",
+        "apellido": "nielsen",
+        "email": "martha@gmail.com",
+        "telefono": "09876543",
+        "password": "$2b$10$V9ooygV/3Jvkhaym6HLBEuD6l5K1qD6AT.pyysVgqCmqem8fXdP1y",
+        "avatar": "avatar-1594416839052.png"
+    },
+    {
+        "id": 14,
+        "nombre": "manuel",
+        "apellido": "lopez",
+        "email": "manuel@gmail.com",
+        "telefono": "87654345678",
+        "password": "$2b$10$4cX1HuyWnHn15BR3Er0Fne3ASPDuELgO4aLIsXv375gVLyapnHFRW",
+        "avatar": "avatar-1594417155679.png"
     }
 ]
