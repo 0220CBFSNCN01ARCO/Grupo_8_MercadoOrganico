@@ -45,10 +45,11 @@ const usersController = {
                 title: 'Login',
                 errors: errors.errors
             })};
+        let usuarioALogearse;
         for(let i = 0; i < users.length; i++){
             if(users[i].email == req.body.email){
                 if(bcrypt.compareSync(req.body.password, users[i].password)){
-                    var usuarioALogearse = users[i];
+                    usuarioALogearse = users[i];
                     break;
                 };
             };
