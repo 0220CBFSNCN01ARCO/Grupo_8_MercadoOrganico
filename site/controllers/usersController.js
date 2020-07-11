@@ -25,6 +25,7 @@ const usersController = {
             nombre: body.nombre,
             apellido: body.apellido,
             email: body.email,
+            admin: false,
             telefono: body.telefono,
             password: bcrypt.hashSync(body.password, 10),
             avatar: req.file.filename,
