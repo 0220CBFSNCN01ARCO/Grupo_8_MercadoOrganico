@@ -20,6 +20,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         image: {
             type: DataTypes.INTEGER
+        },
+        admin: {
+            type: DataTypes.TYNYINT 
         }
     };
     const config = {
