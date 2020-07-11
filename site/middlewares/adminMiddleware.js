@@ -1,8 +1,11 @@
 function adminMiddleware(req, res, next) {
-    if(req.session.usuarioLogeado.admin){
-        return next();
+    if(res.session == undefined){
+        res.send('Acceso Denegado');
     };
-    return res.send('Solo se permite acceso a Admins');
+    if(!req.session.usuarioLogeado.admin){
+        return res.send('Acceso Denegado');
+    };
+    return next();
 };
 
 module.exports = adminMiddleware;
