@@ -8,10 +8,10 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const adminController = {
     root: (req, res) => {
-        res.render('adminView');
+        res.render('admin/adminView');
     },
     productList: (req, res) => {
-        res.render('adminProducts', {title: 'Productos', listadoProductos: products});
+        res.render('admin/adminProducts', {title: 'Productos', listadoProductos: products});
     }
 };
 
