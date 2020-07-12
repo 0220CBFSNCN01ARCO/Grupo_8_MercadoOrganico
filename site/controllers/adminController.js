@@ -11,7 +11,10 @@ const adminController = {
         res.render('admin/adminView');
     },
     productList: (req, res) => {
-        res.render('admin/adminProducts', {title: 'Productos', listadoProductos: products});
+        res.render('admin/adminProducts', {
+            title: 'Productos',
+            listadoProductos: products
+        });
     }
 };
 
