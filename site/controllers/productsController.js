@@ -7,20 +7,31 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 /* PRODUCTS CONTROLLER */
 const productsController = {
     root: (req, res, next) => {
-        res.render('products', {title: 'Productos', listadoProductos: products});
+        let usuario = req.session.usuarioLogeado;
+        res.render('products', {
+            title: 'Productos',
+            listadoProductos: products,
+            user: usuario
+        });
     },
     detallarProducto: (req, res, next) => {
+        let usuario = req.session.usuarioLogeado;
         const id = req.params.id;
         const productoSolicitado = products.find( producto => {
             return producto.id == id;
         });
         res.render('productDetail', {
             title: productoSolicitado.name,
-            producto: productoSolicitado
+            producto: productoSolicitado,
+            user: usuario
         });
     },
     agregarProducto: (req, res) => {
-        res.render('productAdd', {title: 'Agregar Producto'})
+        let usuario = req.session.usuarioLogeado;
+        res.render('productAdd', {
+            title: 'Agregar Producto',
+            user: usuario
+        })
     },
     registrarProducto: (req, res) => {
         const body = req.body;

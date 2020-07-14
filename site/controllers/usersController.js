@@ -9,7 +9,11 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
     formRegister: (req, res) => {
-        res.render('register', {title: 'Registrar Usuario'});
+        let usuario = req.session.usuarioLogeado;
+        res.render('register', {
+            title: 'Registrar Usuario',
+            user: usuario
+        });
     },
     register: (req, res) => {
         const body = req.body;
@@ -35,8 +39,10 @@ const usersController = {
         res.redirect('/users/login');
     },
     login: (req, res) => {
+        let usuario = req.session.usuarioLogeado;
         res.render('login', {
-            title: 'Login'
+            title: 'Login',
+            user: usuario
         });
     },
     processLogin: (req, res) => {
