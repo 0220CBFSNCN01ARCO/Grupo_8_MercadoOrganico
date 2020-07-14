@@ -8,7 +8,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const mainController = {
     root: (req, res, next) => {
         let usuario = req.session.usuarioLogeado;
-        res.render('index', {
+        return res.render('index', {
             title: 'Home',
             listadoProductos: products,
             user: usuario
