@@ -23,6 +23,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         admin: {
             type: DataTypes.TYNYINT 
+        },
+        mod: {
+            type: DataTypes.TYNYINT
         }
     };
     const config = {
