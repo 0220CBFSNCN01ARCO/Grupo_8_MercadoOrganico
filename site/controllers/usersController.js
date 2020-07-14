@@ -46,11 +46,13 @@ const usersController = {
         });
     },
     processLogin: (req, res) => {
+        let usuario = req.session.usuarioLogeado;
         let errors = validationResult(req);
         if(!errors.isEmpty()){
             return res.render('login', {
                 title: 'Login',
-                errors: errors.errors
+                errors: errors.errors,
+                user: usuario
             })};
         let usuarioALogearse;
         for(let i = 0; i < users.length; i++){
@@ -66,11 +68,12 @@ const usersController = {
                 title: 'Login',
                 errors: [
                     {msg: 'Usuario inválido'}
-                ]
+                ],
+                user: usuario
             });
         };
         req.session.usuarioLogeado = usuarioALogearse;
-        res.render('success', {
+        return res.render('success', {
             usuario: req.session.usuarioLogeado
         });
     },
