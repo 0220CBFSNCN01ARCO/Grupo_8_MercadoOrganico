@@ -7,7 +7,12 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 /* MAIN CONTROLLER */
 const mainController = {
     root: (req, res, next) => {
-        res.render('index', {title: 'Home', listadoProductos: products});
+        let usuario = req.session.usuarioLogeado;
+        return res.render('index', {
+            title: 'Home',
+            listadoProductos: products,
+            user: usuario
+        });
     },
 };
 

@@ -17,23 +17,25 @@
         </div></button>
       </form>
       <ul class="navbar-nav mr-auto links">
-  
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Usuario
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/users/login">Iniciar Sesión</a>
-            <a class="dropdown-item" href="#">Tarjetas</a>
-            <a class="dropdown-item" href="#">Salir</a>
-          </div>
-        </li>
-  
-        <li class="nav-item">
-          <a class="nav-link" href="/site/views/contact.ejs">Contacto</a>
-        </li>
-  
+
+        <% if (user != undefined) { %>
+         <li class="nav-item">
+           <button type="button" class="btn nav-link dropdown-toggle" data-toggle="dropdown" href="">
+             <%= user.nombre %>
+           </button>
+           <div class="dropdown-menu">
+             <a class="dropdown-item" href="/users/profile/<%= user.id %>">Perfil</a>
+             <a class="dropdown-item" href="/users/logout">Cerrar Sesión</a>
+           </div>
+         </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/login" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Registrarse
+            </a>
+          </li>
+        <% } %>
+
         <li class="nav-item">
           <a class="nav-link" href="/site/views/shoppingCart.ejs"><i class="fas fa-cart-plus"></i>Mi carrito</a>
         </li>

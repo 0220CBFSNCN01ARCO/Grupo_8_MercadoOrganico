@@ -28,6 +28,8 @@ router.post('/login', [
   check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres')
 ], usersController.processLogin);
 
+router.get('/logout', usersController.logout);
+
 router.get('/card', usersController.card);
 
 // router.get('/login/crearcuenta', usersController.crearCuenta);
