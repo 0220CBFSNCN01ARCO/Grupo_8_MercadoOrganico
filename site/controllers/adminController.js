@@ -17,6 +17,12 @@ const adminController = {
             title: 'Product Editor',
             listadoProductos: products
         });
+    },
+    userList: (req, res) => {
+        res.render('admin/adminUsers', {
+            title: 'Users Editor',
+            listadoUsuarios: users
+        });
     }
 };
 
