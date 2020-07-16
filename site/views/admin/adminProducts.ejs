@@ -13,9 +13,39 @@
     </div>
     <div>
         <% listadoProductos.forEach( product => { %>
-            <p><%= product.name %></p>
-            <p><%= product.price %></p>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Descuento</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Imagen</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><%= product.id %> </th>
+                    <td><%= product.name %></td>
+                    <td><%= product.brand %> </td>
+                    <td><%= product.category %> </td>
+                    <td><%= product.discount %> </td>
+                    <td><%= product.description %> </td>
+                    <td><%= product.price %> </td>
+                    <td><% product.image %> </td>
+                    
+                  </tr>
+                  
+                </tbody>
+              </table>
         <% }) %>
     </div>
 </body>
 </html>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
