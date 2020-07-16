@@ -12,7 +12,9 @@ body{
 }
 
 }
-
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
 .form-inline{
   margin: 0px 11%;
 }
@@ -42,6 +44,17 @@ nav {
 
 .logotipo {
   margin-right: auto;
+}
+.navbar-nav .dropdown-menu {
+  position: static;
+  float: none;
+  width: 17%;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  position: absolute;
+
+  left: 75%;
+  top: 72%;
 }
 
 /*Carousel--*/
@@ -112,7 +125,7 @@ footer {
 }
 
 .links{
-  color: #253628;
+  color: black;
 }
 
 .list-unstyled {
