@@ -6,43 +6,37 @@
     <title><%= title %></title>
 </head>
 <body>
+  <div class="container-fluid">
     <div>
         <header>
             <h2>Listado de productos</h2>
         </header>
     </div>
     <div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
         <% listadoProductos.forEach( product => { %>
-            <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Marca</th>
-                    <th scope="col">Categoria</th>
-                    <th scope="col">Descuento</th>
-                    <th scope="col">Descripcion</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Imagen</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row"><%= product.id %> </th>
-                    <td><%= product.name %></td>
-                    <td><%= product.brand %> </td>
-                    <td><%= product.category %> </td>
-                    <td><%= product.discount %> </td>
-                    <td><%= product.description %> </td>
-                    <td><%= product.price %> </td>
-                    <td><% product.image %> </td>
-                    
-                  </tr>
-                  
-                </tbody>
-              </table>
+          <tbody>
+            <tr>
+              <th scope="row"><%= product.id %> </th>
+              <td><%= product.name %></td>
+              <td><%= product.brand %> </td>
+              <td><%= product.category %> </td>
+              <td><%= product.price %> </td>
+            </tr>
+          </tbody>
         <% }) %>
+      </table>
     </div>
+  </div>
 </body>
 </html>
 
