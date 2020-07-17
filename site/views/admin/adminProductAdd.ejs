@@ -21,11 +21,9 @@
                 <div class="form-group">
                     <label for="categoría">Categoría</label>
                     <select class="form-control" name="categoria" id="categoria">
-                        <option>Suplemento</option>
-                        <option>Semillas</option>
-                        <option>Frutos Secos</option>
-                        <option>Vegano</option>
-                        <option>Celiaco</option>
+                        <% categories.forEach( unaCategoria => { %>
+                         <option> <%= unaCategoria %> </option>
+                        <% }) %>
                       </select>
                 </div>
 
