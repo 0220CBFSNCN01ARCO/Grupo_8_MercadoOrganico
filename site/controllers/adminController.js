@@ -53,19 +53,22 @@ const categorias = [
 const adminController = {
     root: (req, res) => {
         res.render('admin/adminView', {
-            title: 'ADMIN'
+            title: 'ADMIN',
+            user: req.session.usuarioLogeado
         });
     },
     productList: (req, res) => {
         res.render('admin/adminProducts', {
             title: 'Product Editor',
-            listadoProductos: products
+            listadoProductos: products,
+            user: req.session.usuarioLogeado
         });
     },
     userList: (req, res) => {
         res.render('admin/adminUsers', {
             title: 'Users Editor',
-            listadoUsuarios: users
+            listadoUsuarios: users,
+            user: req.session.usuarioLogeado
         });
     },
     createProduct: (req, res) => {
