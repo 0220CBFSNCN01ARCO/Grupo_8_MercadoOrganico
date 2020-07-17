@@ -7,6 +7,49 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+const categorias = [
+    'FRUTAS SECAS',
+    'ESPECIAS',
+    'FRUTAS DESHIDRATADAS Y GLASEADAS',
+    'LEGUMBRES',
+    'CEREALES',
+    'CEREALES APTO CELÍACOS',
+    'CEREALES APTO DIABÉTICOS',
+    'CONFITURAS',
+    'ACEINTUNAS',
+    'MIEL',
+    'BEBIDAS',
+    'ACEITES COMETOLÓGICOS',
+    'ACEITES AROMÁTICOS',
+    'ACEITES COMESTIBLES',
+    'ALGAS',
+    'CARAMELOS',
+    'CHOCOLATES',
+    'CALDOS',
+    'COSMETOLOGÍA',
+    'DULCES',
+    'DULCES APTO CELÍACOS',
+    'DULCES APTO DIABÉTICOS',
+    'SNACKS SALUDABLES',
+    'EDULCORANTES',
+    'ENLATADOS',
+    'FIDEOS',
+    'GALLETITAS',
+    'GALLETITAS APTA CELÍACOS',
+    'GRANOLA',
+    'HARIBAS',
+    'HIERBAS',
+    'INFUSIONES',
+    'JUGOS',
+    'MERMELADAS',
+    'PANES',
+    'REFRIGERADOS',
+    'SALES',
+    'SALSAS',
+    'SUPLEMENTOS DIETARIOS',
+    'YERBAS'
+];
+
 const adminController = {
     root: (req, res) => {
         res.render('admin/adminView', {
@@ -28,6 +71,7 @@ const adminController = {
     createProduct: (req, res) => {
         res.render('admin/adminProductAdd', {
             title: 'Agregar Producto',
+            categories: categorias,
             user: req.session.usuarioLogeado
         });
     },
@@ -57,6 +101,7 @@ const adminController = {
         res.render('admin/adminProductEdit', {
             title: productoAEditar.name,
             producto: productoAEditar,
+            categories: categorias,
             user: req.session.usuarioLogeado
         });
     },
