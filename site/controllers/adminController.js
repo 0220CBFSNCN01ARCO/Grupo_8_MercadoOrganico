@@ -25,6 +25,31 @@ const adminController = {
             listadoUsuarios: users
         });
     },
+    createProduct: (req, res) => {
+        let usuario = req.session.usuarioLogeado;
+        res.render('admin/adminProductAdd', {
+            title: 'Agregar Producto',
+            user: req.session.usuarioLogeado
+        });
+    },
+    registerProduct: (req, res) => {
+        const body = req.body;
+        const cantidadProductos = products.length;
+        const nuevoID = cantidadProductos + 1;
+        const nuevoProducto = {
+            id: nuevoID,
+            name: body.nombreProducto,
+            brand: body.marca,
+            category: body.categoria,
+            discount: 0,
+            description: body.descripcion,
+            price: body.precio,
+            image: req.file.filename,
+        };
+        products.push(nuevoProducto);
+        fs.writeFileSync('data/products.json', JSON.stringify(products));
+        res.redirect('/admin/products');
+    },
     editProduct: (req, res) => {
         let idProducto = req.params.id;
         let productoAEditar = products.find( producto => {
