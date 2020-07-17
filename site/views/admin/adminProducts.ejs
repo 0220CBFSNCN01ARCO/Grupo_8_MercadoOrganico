@@ -34,8 +34,8 @@
               <td><%= product.brand %> </td>
               <td><%= product.category %> </td>
               <td><%= product.price %> </td>
-              <td><a href="/admin/products/edit/<%= product.id %>">EDITAR</a></td>
-              <td><a href="/admin/products/delete/<%= product.id %>">ELIMINAR</a></td>
+              <td><a href="/admin/products/edit/<%= product.id %>"><button type="button" class="btn-secondary">EDITAR</button></a></td>
+              <td><a href="/admin/products/delete/<%= product.id %>"><button type="button" class="btn-secondary">ELIMINAR</button></a></td>
             </tr>
           </tbody>
         <% }) %>
