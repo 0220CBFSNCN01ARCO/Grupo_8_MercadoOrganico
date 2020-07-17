@@ -21,6 +21,8 @@
             <th scope="col">Marca</th>
             <th scope="col">Categoria</th>
             <th scope="col">Precio</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <% listadoProductos.forEach( product => { %>
@@ -31,6 +33,8 @@
               <td><%= product.brand %> </td>
               <td><%= product.category %> </td>
               <td><%= product.price %> </td>
+              <td><a href="/admin/products/edit/<%= product.id %>">EDITAR</a></td>
+              <td><a href="/admin/products/delete/<%= product.id %>">ELIMINAR</a></td>
             </tr>
           </tbody>
         <% }) %>
