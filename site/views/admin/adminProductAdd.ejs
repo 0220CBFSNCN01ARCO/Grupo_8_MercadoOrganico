@@ -21,6 +21,7 @@
                 <div class="form-group">
                     <label for="categoría">Categoría</label>
                     <select class="form-control" name="categoria" id="categoria">
+                        <option hidden disabled selected>Elegir Una Categoria</option>
                         <% categories.forEach( unaCategoria => { %>
                          <option> <%= unaCategoria %> </option>
                         <% }) %>
