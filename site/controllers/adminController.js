@@ -26,7 +26,6 @@ const adminController = {
         });
     },
     createProduct: (req, res) => {
-        let usuario = req.session.usuarioLogeado;
         res.render('admin/adminProductAdd', {
             title: 'Agregar Producto',
             user: req.session.usuarioLogeado
