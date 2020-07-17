@@ -50,7 +50,7 @@ const productsController = {
         products.push(nuevoProducto);
         fs.writeFileSync('data/products.json', JSON.stringify(products));
         res.redirect('/products');
-    }
+    },
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
     },
