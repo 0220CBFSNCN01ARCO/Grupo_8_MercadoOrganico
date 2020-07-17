@@ -50,52 +50,7 @@ const productsController = {
         products.push(nuevoProducto);
         fs.writeFileSync('data/products.json', JSON.stringify(products));
         res.redirect('/products');
-    },
-    editarProducto: (req, res) => {
-        let idProducto = req.params.idProduct;
-        let productoAEditar = products.find( producto => {
-            return producto.id == idProducto;
-        });
-        res.render('productEdit', {
-            title: productoAEditar.name,
-            producto: productoAEditar
-        });
-    },
-    actualizarProducto: (req, res) => {
-        const idProducto = req.params.idProduct;
-        console.log(idProducto)
-        const body = req.body;
-        products.map( producto => {
-            if(producto.id == idProducto){
-                producto.name = body.nombreProducto,
-                producto.brand = body.marca,
-                producto.category = body.categoria,
-                producto.description = body.descripcion,
-                producto.price = body.precio,
-                producto.image = req.file.filename
-            };
-        });
-        fs.writeFileSync(productsFilePath, JSON.stringify(products));
-        res.redirect('/products');
-    },
-    confirmarEliminacion: (req, res) => {
-        let productoBuscado = products.find( (elemento) => {
-            return elemento.id == req.params.idProduct;
-        });
-        res.render('productDelete', {
-            title: 'Eliminar producto',
-            product: productoBuscado
-        });
-    },
-    eliminarProducto: (req, res) => {
-        let idProductoBuscado = req.params.id;
-        let productosSinProductoBuscado = products.filter( product =>{
-            return product.id != idProductoBuscado;
-        });
-        let nuevosProductos = JSON.stringify(productosSinProductoBuscado,'utf-8');
-        fs.writeFileSync(productsFilePath, nuevosProductos);
-        res.redirect("/products")
-    },
+    }
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
     },
