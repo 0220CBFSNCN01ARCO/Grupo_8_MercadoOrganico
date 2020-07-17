@@ -4,17 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
+  <div class="container-fluid">
     <div>
         <header>
-            <h2>Listado de usuarios logueados</h2>
+            <h2>Listado de productos</h2>
         </header>
     </div>
     <div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Email</th>
+            <th scope="col">Administrador</th>
+          </tr>
+        </thead>
         <% listadoUsuarios.forEach( user => { %>
-            <p><%= user.nombre %></p>
+          <tbody>
+            <tr>
+              <th scope="row"><%= user.id %> </th>
+              <td><%= user.nombre %></td>
+              <td><%= user.apellido %> </td>
+              <td><%= user.email %> </td>
+              <td><%= user.admin %> </td>
+            </tr>
+          </tbody>
         <% }) %>
+      </table>
     </div>
+    <div>
+      <a type="button" class="btn btn-dark" href="/admin/products/create">Agregar Nuevo Producto</a>
+    </div>
+  </div>
+  <%- include('../partials/scriptsBootstrap') %>
 </body>
 </html>
