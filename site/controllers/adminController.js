@@ -1,3 +1,5 @@
+const db = require('../database/models');
+
 const fs = require('fs');
 const path = require('path');
 
@@ -6,6 +8,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+
 
 const categorias = [
     'FRUTAS SECAS',
@@ -37,7 +41,7 @@ const categorias = [
     'GALLETITAS',
     'GALLETITAS APTA CELÍACOS',
     'GRANOLA',
-    'HARIBAS',
+    'HARINAS',
     'HIERBAS',
     'INFUSIONES',
     'JUGOS',
@@ -47,7 +51,8 @@ const categorias = [
     'SALES',
     'SALSAS',
     'SUPLEMENTOS DIETARIOS',
-    'YERBAS'
+    'YERBAS',
+    'MILANESAS'
 ];
 
 const adminController = {

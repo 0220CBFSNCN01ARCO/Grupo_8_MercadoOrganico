@@ -22,10 +22,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER
         },
         admin: {
-            type: DataTypes.TYNYINT 
+            type: DataTypes.BOOLEAN 
         },
         mod: {
-            type: DataTypes.TYNYINT
+            type: DataTypes.BOOLEAN
         }
     };
     const config = {

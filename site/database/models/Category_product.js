@@ -20,4 +20,4 @@ module.exports = (sequelize, DataTypes) => {
 
     const Category_product = sequelize.define(alias, columnas, config);
     return Category_product;
-}
+};

@@ -1,4 +1,4 @@
-dule.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     const alias = 'Brand';
     const columnas = {
         id: {
@@ -17,5 +17,4 @@ dule.exports = (sequelize, DataTypes) => {
 
     const Brand = sequelize.define(alias, columnas, config);
     return Brand;
-}
-//hola
+};
