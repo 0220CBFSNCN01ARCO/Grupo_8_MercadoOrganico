@@ -15,6 +15,15 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
 
+
     const Brand = sequelize.define(alias, columnas, config);
+
+    Brand.associate = function (models) {
+        Brand.hasMany(models.Product, {
+            as: "products",
+            foreingKey: "id_brand"
+        })
+    }
+
     return Brand;
 };
