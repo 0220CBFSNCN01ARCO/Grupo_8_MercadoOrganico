@@ -108,8 +108,6 @@ nav {
 
 
 
-
-
 /*--Footer Style--*/
 
 footer {
@@ -263,4 +261,8 @@ strong {
 /*---USUARIO EXITOSO--*/
 .usuariook{
   color:red;
+}
+
+#avatar{
+  width: 10px;
 }
