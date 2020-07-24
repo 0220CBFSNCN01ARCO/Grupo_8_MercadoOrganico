@@ -23,7 +23,7 @@
                     <select class="form-control" name="categoria" id="categoria">
                         <option hidden disabled selected>Elegir Una Categoria</option>
                         <% categories.forEach( unaCategoria => { %>
-                         <option> <%= unaCategoria %> </option>
+                         <option value="<%= unaCategoria.id %> "> <%= unaCategoria.name %> </option>
                         <% }) %>
                       </select>
                 </div>

@@ -23,6 +23,11 @@ module.exports = (sequelize, DataTypes) => {
             as: "products",
             foreingKey: "id_brand"
         })
+
+        Brand.belongsToMany(models.Category, {
+            through: models.Brand_Category,
+            as: 'categories'
+        })
     }
 
     return Brand;

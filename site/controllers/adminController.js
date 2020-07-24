@@ -63,7 +63,8 @@ const adminController = {
             title: 'ADMIN',
             user: req.session.usuarioLogeado
         });
-    },
+    }, //funciona
+
     productList: (req, res) => {
         db.Product.findAll()
         .then(function(product){
@@ -73,17 +74,18 @@ const adminController = {
                 user: req.session.usuarioLogeado})
         }).catch((error) => {
             return res.send('Ocurrió un error')
-        });
+        }); //nofunciona
     },
 
     userList: (req, res) => {
         db.User.findAll()
-        .then(function(user){
+        .then(function(users){
             res.render('admin/adminUsers', {
                 title: 'Users Editor',
-                user: user,
+                users: users,
                 user: req.session.usuarioLogeado})
-        }).catch((error) => {
+        })
+        .catch((error) => {
             return res.send('Ocurrió un error')
         });
     },

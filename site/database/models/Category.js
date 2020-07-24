@@ -16,5 +16,17 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     const Category = sequelize.define(alias, columnas, config);
+
+
+    Category.associate = function(models) {
+        
+        Category.belongsToMany(models.Brand, {
+            through: models.Brand_category,
+            as: 'brands'
+        })
+    }
+
+
+
     return Category;
 }
