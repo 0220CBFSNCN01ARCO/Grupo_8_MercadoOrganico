@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     const config = {
-        tableName: 'brands_categories', //nombre de la tabla
+        tableName: 'category_products', //nombre de la tabla
         timestamps: false
     };
 

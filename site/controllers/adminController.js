@@ -29,6 +29,7 @@ const adminController = {
                 product: product,
                 user: req.session.usuarioLogeado})
         }).catch((error) => {
+            console.log(error);
             return res.send('Ocurrió un error')
         }); //nofunciona
     },
