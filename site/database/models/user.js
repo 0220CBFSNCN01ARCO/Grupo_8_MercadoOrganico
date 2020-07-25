@@ -20,12 +20,6 @@ module.exports = (sequelize, DataTypes) => {
         },
         image: {
             type: DataTypes.STRING,
-        },
-        admin: {
-            type: DataTypes.BOOLEAN 
-        },
-        mod: {
-            type: DataTypes.BOOLEAN
         }
     };
     const config = {

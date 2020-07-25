@@ -51,6 +51,7 @@ const adminController = {
         .then((category) => {
             res.render('admin/adminProductAdd', {
                 title: 'Agregar producto',
+                categories: category,
                 user: req.session.usuarioLogeado
             })
         })
@@ -70,8 +71,8 @@ const adminController = {
             return res.redirect('/admin/products')
         })
         .catch((error)=> {
-            return res.send('Ocurrió un error')
             console.log(error);
+            return res.send('Ocurrió un error')
         })
         
     },
