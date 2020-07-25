@@ -20,7 +20,7 @@ router.get('/', adminController.root);
 router.get('/products', adminController.productList);
 
 router.get('/products/create', adminController.createProduct);
-router.post('/products/create', upload.single('imagen-producto'), adminController.registerProduct);
+router.post('/products/create', upload.single('imagen-producto'), adminController.addProduct);
 
 router.get('/products/edit/:id', adminController.editProduct);
 router.put('/products/edit/:id', upload.single('imagen-producto'), adminController.updateProduct);

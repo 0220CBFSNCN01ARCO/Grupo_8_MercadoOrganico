@@ -5,9 +5,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoincrement: true,
+            allowNull: false,
         },
-        brands_names: {
-            type: DataTypes.STRING
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     };
     const config = {
@@ -19,15 +21,12 @@ module.exports = (sequelize, DataTypes) => {
     const Brand = sequelize.define(alias, columnas, config);
 
     Brand.associate = function (models) {
-        Brand.hasMany(models.Product, {
+        Brand.hasMany(models.Product, { //una marca tiene muchos productos
             as: "products",
             foreingKey: "id_brand"
         })
 
-        Brand.belongsToMany(models.Category, {
-            through: models.Brand_Category,
-            as: 'categories'
-        })
+       
     }
 
     return Brand;

@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoincrement: true,
         },
-        category_name: {
+        name: {
             type: DataTypes.STRING
         },
     };
@@ -17,12 +17,13 @@ module.exports = (sequelize, DataTypes) => {
 
     const Category = sequelize.define(alias, columnas, config);
 
-
-    Category.associate = function(models) {
-        
-        Category.belongsToMany(models.Brand, {
-            through: models.Brand_category,
-            as: 'brands'
+    Category.associate = function (models) {
+        Category.belongsToMany (models.Product, {
+            as: "products" ,
+            through: 'category_product',
+            foreingKey: 'id_categories',
+            otherKey: 'id_products',
+            timestamps: false
         })
     }
 

@@ -11,52 +11,6 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
-
-const categorias = [
-    'FRUTAS SECAS',
-    'ESPECIAS',
-    'FRUTAS DESHIDRATADAS Y GLASEADAS',
-    'LEGUMBRES',
-    'CEREALES',
-    'CEREALES APTO CELÍACOS',
-    'CEREALES APTO DIABÉTICOS',
-    'CONFITURAS',
-    'ACEINTUNAS',
-    'MIEL',
-    'BEBIDAS',
-    'ACEITES COMETOLÓGICOS',
-    'ACEITES AROMÁTICOS',
-    'ACEITES COMESTIBLES',
-    'ALGAS',
-    'CARAMELOS',
-    'CHOCOLATES',
-    'CALDOS',
-    'COSMETOLOGÍA',
-    'DULCES',
-    'DULCES APTO CELÍACOS',
-    'DULCES APTO DIABÉTICOS',
-    'SNACKS SALUDABLES',
-    'EDULCORANTES',
-    'ENLATADOS',
-    'FIDEOS',
-    'GALLETITAS',
-    'GALLETITAS APTA CELÍACOS',
-    'GRANOLA',
-    'HARINAS',
-    'HIERBAS',
-    'INFUSIONES',
-    'JUGOS',
-    'MERMELADAS',
-    'PANES',
-    'REFRIGERADOS',
-    'SALES',
-    'SALSAS',
-    'SUPLEMENTOS DIETARIOS',
-    'YERBAS',
-    'MILANESAS',
-    'VEGANOS'
-];
-
 const adminController = {
     root: (req, res) => {
         res.render('admin/adminView', {
@@ -66,11 +20,13 @@ const adminController = {
     }, //funciona
 
     productList: (req, res) => {
-        db.Product.findAll()
+        db.Product.findAll({
+            include: [{association: 'brandProduct'}, {association: 'categories'}]
+        })
         .then(function(product){
             res.render('admin/adminProducts', {
                 title: 'Product editor',
-                product:product,
+                product: product,
                 user: req.session.usuarioLogeado})
         }).catch((error) => {
             return res.send('Ocurrió un error')
@@ -85,19 +41,22 @@ const adminController = {
                 users: users,
                 user: req.session.usuarioLogeado})
         })
-        .catch((error) => {
+        .catch((errors) => {
+            console.log(errors);
             return res.send('Ocurrió un error')
         });
     },
-
     createProduct: (req, res) => {
-        res.render('admin/adminProductAdd', {
-            title: 'Agregar Producto',
-            categories: categorias,
-            user: req.session.usuarioLogeado
-        });
+        db.Category.findAll()
+        .then((category) => {
+            res.render('admin/adminProductAdd', {
+                title: 'Agregar producto',
+                user: req.session.usuarioLogeado
+            })
+        })
     },
-    registerProduct: (req, res) => {
+    
+    addProduct: (req, res) => {
         db.Product.create({
             name: req.body.nombreProducto,
             description: req.body.descripcion,
