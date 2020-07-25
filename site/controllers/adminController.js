@@ -35,7 +35,9 @@ const adminController = {
     },
 
     userList: (req, res) => {
-        db.User.findAll()
+        db.User.findAll({
+            include: [{association: 'products'}, {association: 'userType'}]
+        })
         .then(function(users){
             res.render('admin/adminUsers', {
                 title: 'Users Editor',
