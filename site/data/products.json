@@ -1,1 +1,72 @@
-[{"id":1,"name":"Yogurt Vegano","brand":"Haulani","category":"FRUTAS SECAS","discount":0,"description":"Yogurt vegano hecho a base de coco. Sabor frutos rojos.","price":"187","image":"imagen-producto-1595023465999.png"},{"id":2,"name":"Helado Vegano","brand":"Haulani","category":"Vegano","discount":0,"description":"Helado vegano hecho a base de coco sabor maracuya","price":"299","image":"imagen-producto-1594416163690.png"},{"id":3,"name":"Helado Vegano","brand":"Haulani","category":"Vegano","discount":0,"description":"Helado vegano hecho a base de coco sabor frutilla.","price":"299","image":"imagen-producto-1594416203373.png"},{"id":4,"name":"Almendras","brand":"s/marca","category":"Frutos Secos","discount":0,"description":"almendras por peso","price":"65","image":"imagen-producto-1594416234031.png"},{"id":5,"name":"Extracto de Vainilla Natural","brand":"El Castillo","category":"Semillas","discount":0,"description":"Extraco de Vainilla Natural El Castillo","price":"199","image":"imagen-producto-1595014255700.jpg"},{"id":6,"name":"Esencia de Almendras","brand":"El Castillo","category":"Frutos Secos","discount":0,"description":"Esencia de Almendras El Castillo","price":"169","image":"imagen-producto-1595014402400.jpg"},{"id":7,"name":"Pan de coco","brand":"recetas de la nena","category":"PANES","discount":0,"description":"Pan hecho a base de coco.","price":"149","image":"imagen-producto-1595023415753.png"}]
+[
+    {
+        "id": 1,
+        "name": "Yogurt Vegano",
+        "brand": "Haulani",
+        "category": "FRUTAS SECAS",
+        "discount": 0,
+        "description": "Yogurt vegano hecho a base de coco. Sabor frutos rojos.",
+        "price": "187",
+        "image": "imagen-producto-1595023465999.png"
+    },
+    {
+        "id": 2,
+        "name": "Helado Vegano",
+        "brand": "Haulani",
+        "category": "Vegano",
+        "discount": 0,
+        "description": "Helado vegano hecho a base de coco sabor maracuya",
+        "price": "299",
+        "image": "imagen-producto-1594416163690.png"
+    },
+    {
+        "id": 3,
+        "name": "Helado Vegano",
+        "brand": "Haulani",
+        "category": "Vegano",
+        "discount": 0,
+        "description": "Helado vegano hecho a base de coco sabor frutilla.",
+        "price": "299",
+        "image": "imagen-producto-1594416203373.png"
+    },
+    {
+        "id": 4,
+        "name": "Almendras",
+        "brand": "s/marca",
+        "category": "Frutos Secos",
+        "discount": 0,
+        "description": "almendras por peso",
+        "price": "65",
+        "image": "imagen-producto-1594416234031.png"
+    },
+    {
+        "id": 5,
+        "name": "Extracto de Vainilla Natural",
+        "brand": "El Castillo",
+        "category": "Semillas",
+        "discount": 0,
+        "description": "Extraco de Vainilla Natural El Castillo",
+        "price": "199",
+        "image": "imagen-producto-1595014255700.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Esencia de Almendras",
+        "brand": "El Castillo",
+        "category": "Frutos Secos",
+        "discount": 0,
+        "description": "Esencia de Almendras El Castillo",
+        "price": "169",
+        "image": "imagen-producto-1595014402400.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Pan de coco",
+        "brand": "recetas de la nena",
+        "category": "PANES",
+        "discount": 0,
+        "description": "Pan hecho a base de coco.",
+        "price": "149",
+        "image": "imagen-producto-1595023415753.png"
+    }
+]

@@ -1,90 +1,96 @@
 <header>
 
-  <nav id="menu" class="navbar navbar-expand-lg navbar-light  navbar-light fixed-top" style="display: flex; justify-content: space-between;">
-    <a class="navbar-brand" href="/"><img class="logo-inicio" src="/images/imagenes-generales/logo-mercado-organico.png" width="100"
-      height="100" alt="" loading="lazy" style="padding: 10px;">
+  <nav id="menu" class="navbar navbar-expand-lg navbar-light  navbar-light fixed-top"
+    style="display: flex; justify-content: space-between;">
+    <a class="navbar-brand" href="/"><img class="logo-inicio" src="/images/imagenes-generales/logo-mercado-organico.png"
+        width="100" height="100" alt="" loading="lazy" style="padding: 10px;">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control my-0 py-1 red-border" type="text" placeholder="¿Qué estas buscando?"  aria-label="Search">
-        <button class="btn btn-lupa my-2 my-sm-0" type="submit"><div class="input-group-append">
-          <span class="input-group-text  lighten-3" id="basic-text1"><i class="fas fa-search"></i></span>
-        </div>
+        <input class="form-control my-0 py-1 red-border" type="text" placeholder="¿Qué estas buscando?"
+          aria-label="Search">
+        <button class="btn btn-lupa my-2 my-sm-0" type="submit">
+          <div class="input-group-append">
+            <span class="input-group-text  lighten-3" id="basic-text1"><i class="fas fa-search"></i></span>
+          </div>
         </button>
       </form>
 
       <ul class="navbar-nav mr-auto links">
 
         <% if (user != undefined) { %>
-         <li class="nav-item">
-           <button type="button" class="btn nav-link dropdown-toggle" data-toggle="dropdown" href="">
-            <div id='avatar'><%-user.avatar[0]%> </div>Hola <%= user.nombre %>
-           </button>
-           <div class="dropdown-menu">
-             <a class="dropdown-item" href="/users/profile/<%= user.id %>">Perfil</a>
-             <a class="dropdown-item" href="/users/logout">Cerrar Sesión</a>
-           </div>
-         </li>
-         <li class="nav-item">
+        <li class="nav-item">
+          <button type="button" class="btn nav-link dropdown-toggle" data-toggle="dropdown" href="">
+            <img src='/site/public/images/usersAvatar/avatar-1593793582692.jpg' alt=''
+              style='border-radius:10px; width:5vw' class='bar-sm justify-content-center'>Hola <%= user.nombre %>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/users/profile/<%= user.id %>">Perfil</a>
+            <a class="dropdown-item" href="/users/logout">Cerrar Sesión</a>
+          </div>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/site/views/shoppingCart.ejs"><i class="fas fa-cart-plus"></i></a>
         </li>
         <% } else { %>
-          <li class="nav-item">
-            <a class="nav-link" href="/users/login" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              Iniciar Sesión
-            </a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/login" id="navbarDropdown" role="button" aria-haspopup="true"
+            aria-expanded="false">
+            Iniciar Sesión
+          </a>
+        </li>
         <% } %>
 
-      
+
       </ul>
     </div>
   </nav>
 
   <div class="submenu">
-  <ul class="dropdowsubmenu">
+    <ul class="dropdowsubmenu">
 
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-       Alimentos Naturales
-      </a>
-      <div class="dropdown-menu submenu-items" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">Frutos Secos</a>
-        <a class="dropdown-item" href="#">Cereal & Granola</a>
-        <a class="dropdown-item" href="#">Mermeladas</a>
-      </div>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-       Suplementos Naturales
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">Aceites Nutricionales</a>
-        <a class="dropdown-item" href="#">Suplementos Dietarios</a>
-      </div>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Alimentos Veganos
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">Quesos</a>
-        <a class="dropdown-item" href="#">Lacteos</a>
-      </div>
-    </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Alimentos Naturales
+        </a>
+        <div class="dropdown-menu submenu-items" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Frutos Secos</a>
+          <a class="dropdown-item" href="#">Cereal & Granola</a>
+          <a class="dropdown-item" href="#">Mermeladas</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Suplementos Naturales
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Aceites Nutricionales</a>
+          <a class="dropdown-item" href="#">Suplementos Dietarios</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Alimentos Veganos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Quesos</a>
+          <a class="dropdown-item" href="#">Lacteos</a>
+        </div>
+      </li>
 
     </ul>
 
   </div>
 
-   <marquee ><img src="/images/icons/moto.jpg" width="40px" alt=""> Habilitamos los Envíos! #QuedateEnCasa </marquee>
+  <marquee><img src="/images/icons/moto.jpg" width="40px" alt=""> Habilitamos los Envíos! #QuedateEnCasa </marquee>
 
 </header>

@@ -1,7 +1,49 @@
 <html>
     <body>
-        <p>Registro Exitoso</p>
-        <p>El usuario es: <%= usuario.nombre %></p>
-        <a href="/">Volver al Inicio</a>
+        <style>
+            .container{
+                text-align: center;
+                margin-top: 30px;
+            }
+            p{
+                font-size: 30px;
+                color: #49654c;
+            }
+        
+a {
+    text-decoration: none;
+    color: #8aa989;
+    font-size: 20px;
+}
+            button {
+    background-color: #49654c;
+    border: none;
+    width: 200px;
+    height: 30px;
+    border-radius: 4px;
+}
+            body{
+  margin: 0;
+  padding: 0%;
+  font-family: 'Muli', sans-serif;
+  background-color: white;
+}
+        </style>
+        <div class="container">
+
+             
+            <p>Registro Exitoso!</p>
+            <p>Bienvenido a</p> 
+            <img class="logo-inicio" src="/images/imagenes-generales/logo-mercado-organico.png"
+            width="200" height="200" alt="" loading="lazy" style="padding: 10px;">
+            
+            <p>El usuario es: <%= usuario.nombre %></p>
+<button class="boton"><a href="/">Volver al Inicio</a></button>
+            
+        </div>
+            
+           
+          
+       
     </body>
 </html>
