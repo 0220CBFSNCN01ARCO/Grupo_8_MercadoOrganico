@@ -12,6 +12,14 @@ body{
 }
 
 }
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    /* right: 20px; */
+    left: 74%;
+    top: 75px;
+    /* position: relative; */
+}}
 .navbar-light .navbar-nav .nav-link {
   color: black;
 }
@@ -45,17 +53,8 @@ nav {
 .logotipo {
   margin-right: auto;
 }
-.navbar-nav .dropdown-menu {
-  position: static;
-  float: none;
-  width: 17%;
-}
-.navbar-expand-lg .navbar-nav .dropdown-menu {
-  position: absolute;
 
-  left: 75%;
-  top: 72%;
-}
+
 
 /*Carousel--*/
 
@@ -105,8 +104,6 @@ nav {
   margin: auto;
   padding: 5px;
 }
-
-
 
 
 
@@ -261,3 +258,4 @@ strong {
   font-size: 60px; 
   line-height: 100px; 
 }
+/*---USUARIO EXITOSO--*/

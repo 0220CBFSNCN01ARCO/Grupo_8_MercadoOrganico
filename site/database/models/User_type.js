@@ -11,10 +11,18 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     const configuracion = {
-        tableName: 'products', /* Nombre de la Tabla */
+        tableName: 'user_type', /* Nombre de la Tabla */
         timestamps: false
     };
 
     const User_type = sequelize.define(alias, columnas, configuracion);
+
+    User_type.associate = function(models) {
+        User_type.hasMany(models.User, {
+            as: 'users',
+            foreignKey: 'id_type'
+        })
+    }
+
     return User_type;
 };

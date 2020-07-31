@@ -7,25 +7,19 @@ module.exports = (sequelize, DataTypes) => {
             autoincrement: true,
         },
         name: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
         },
         last_name: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING,
         },
         email: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING,
         },
         password: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING,
         },
         image: {
-            type: DataTypes.INTEGER
-        },
-        admin: {
-            type: DataTypes.TYNYINT 
-        },
-        mod: {
-            type: DataTypes.TYNYINT
+            type: DataTypes.STRING,
         }
     };
     const config = {
@@ -39,10 +33,17 @@ module.exports = (sequelize, DataTypes) => {
         User.belongsToMany(models.Product, {
             as: 'products',
             through: 'user_product',
-            ForeingKey: 'id_user',
+            foreignKey: 'id_user',
             otherKey: 'id_product',
             timestamps: false
-        });
+        })
+        
+        User.belongsTo(models.User_type, {
+            as: 'userType',
+            foreignKey: 'id_type'
+        })
     }
+
+    
     return User;
 }

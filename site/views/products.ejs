@@ -4,7 +4,7 @@
   <body>
     <div class="container containerproducts">
       <%- include('./partials/header') %>
-      
+     
       <!-- Lógica para Mostrar los diferentes Productos -->
       <div class="row">
         <% listadoProductos.forEach(producto => { %>
@@ -19,6 +19,7 @@
               <a class="btn btn-secondary" href="/products/detail/<%= producto.id %>">Ver más</a>
             </div>
           </article>
+          
         <% }) %>
 
         

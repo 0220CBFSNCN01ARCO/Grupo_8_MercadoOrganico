@@ -26,16 +26,16 @@
             <th scope="col"></th>
           </tr>
         </thead>
-        <% listadoProductos.forEach( product => { %>
+        <% product.forEach( products => { %>
           <tbody>
             <tr>
-              <th scope="row"><%= product.id %> </th>
-              <td><%= product.name %></td>
-              <td><%= product.brand %> </td>
-              <td><%= product.category %> </td>
-              <td><%= product.price %> </td>
-              <td><a href="/admin/products/edit/<%= product.id %>"><button type="button" class="btn-secondary">EDITAR</button></a></td>
-              <td><a href="/admin/products/delete/<%= product.id %>"><button type="button" class="btn-secondary">ELIMINAR</button></a></td>
+              <th scope="row"><%= products.id %> </th>
+              <td><%= products.name %></td>
+              <td><%= products.brand %> </td>
+              <td><%= products.category %> </td>
+              <td><%= products.price %> </td>
+              <td><a href="/admin/products/edit/<%= products.id %>"><button type="button" class="btn-secondary">EDITAR</button></a></td>
+              <td><a href="/admin/products/delete/<%= products.id %>"><button type="button" class="btn-secondary">ELIMINAR</button></a></td>
             </tr>
           </tbody>
         <% }) %>

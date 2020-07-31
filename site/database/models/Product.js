@@ -4,13 +4,14 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoincrement: true,
+            allowNull: false
         },
         name: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
         },
         description: {
-            type: dataTypes.STRING
+            type: dataTypes.TEXT
         },
         image: {
             type: dataTypes.STRING
@@ -35,16 +36,21 @@ module.exports = (sequelize, dataTypes) => {
 
     const Product = sequelize.define(alias, columnas, configuracion);
 
-    Product.associate = function(models) {
-        Product.belongsToMany(models.User, {
-            as: 'users',
-            through: 'user_product',
-            ForeingKey: 'id_product',
-            otherKey: 'id_user',
-            timestamps: false
+    Product.associate = function (models) {
+        Product.belongsTo(models.Brand, { //un producto pertenece a una marca
+            as: "brandProduct",
+            foreignKey: "id_brand"
+        })
+
+        Product.belongsToMany(models.Category, {
+            as: 'categories',
+            through: 'category_products',
+            foreignKey: 'id_products', //datos de tabla pivot
+            otherKey: 'id_categories',
+            timestamps: false,
         })
     }
 
-
+    
     return Product;
 };

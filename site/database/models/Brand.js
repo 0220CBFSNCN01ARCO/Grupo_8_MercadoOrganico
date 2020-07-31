@@ -1,13 +1,15 @@
-dule.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     const alias = 'Brand';
     const columnas = {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoincrement: true,
+            allowNull: false,
         },
-        brands_names: {
-            type: DataTypes.STRING
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     };
     const config = {
@@ -15,7 +17,17 @@ dule.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
 
+
     const Brand = sequelize.define(alias, columnas, config);
+
+    Brand.associate = function (models) {
+        Brand.hasMany(models.Product, { //una marca tiene muchos productos
+            as: "products",
+            foreignKey: "id_brand"
+        })
+
+       
+    }
+
     return Brand;
-}
-//hola
+};

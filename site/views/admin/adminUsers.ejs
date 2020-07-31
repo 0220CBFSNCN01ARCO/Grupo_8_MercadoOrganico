@@ -24,12 +24,12 @@
             <th scope="col">Administrador</th>
           </tr>
         </thead>
-        <% listadoUsuarios.forEach( user => { %>
+        <% users.forEach( user => { %>
           <tbody>
             <tr>
-              <th scope="row"><%= user.id %> </th>
-              <td><%= user.nombre %></td>
-              <td><%= user.apellido %> </td>
+              <th scope="row"><%= users.id %> </th>
+              <td><%= user.name %></td>
+              <td><%= user.last_name %> </td>
               <td><%= user.email %> </td>
               <td><%= user.admin %> </td>
             </tr>

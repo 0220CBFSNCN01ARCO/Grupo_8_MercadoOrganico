@@ -10,7 +10,7 @@
 
                 <div class="form-group">
                     <label for="nombre-producto">Nombre del Producto</label>
-                    <input type="text" class="form-control" name="nombreProducto" id="nombre-producto">
+                    <input type="text" class="form-control" name="nombreProducto" id="nombre-producto" placeholder="Ingrese nombre del producto">
                 </div>
 
                 <div class="form-group">
@@ -23,10 +23,11 @@
                     <select class="form-control" name="categoria" id="categoria">
                         <option hidden disabled selected>Elegir Una Categoria</option>
                         <% categories.forEach( unaCategoria => { %>
-                         <option> <%= unaCategoria %> </option>
+                         <option value="<%= unaCategoria.id %> "> <%= unaCategoria.name %> </option>
                         <% }) %>
                       </select>
                 </div>
+
 
                 <div class="form-group">
                     <label for="descripcion">Descripción</label>
@@ -36,6 +37,11 @@
                 <div class="form-group">
                     <label for="precio">Precio</label>
                     <input type="number" class="form-control" name="precio" id="precio">
+                </div>
+
+                <div class="form-group">
+                    <label for="precio">Descuento</label>
+                    <input type="number" class="form-control" name="descuento" id="precio">
                 </div>
 
                 <!-- FALTA INSERTAR IMAGEN -->
@@ -52,3 +58,6 @@
         <%- include('../partials/scriptsBootstrap') %>
     </body>
 </html>
+
+
+

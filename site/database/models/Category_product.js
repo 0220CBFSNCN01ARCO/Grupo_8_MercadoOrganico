@@ -14,10 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     const config = {
-        tableName: 'brands_categories', //nombre de la tabla
+        tableName: 'category_products', //nombre de la tabla
         timestamps: false
     };
 
     const Category_product = sequelize.define(alias, columnas, config);
     return Category_product;
-}
+};

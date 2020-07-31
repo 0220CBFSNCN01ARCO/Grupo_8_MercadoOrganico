@@ -11,7 +11,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const adminController = require('./routes/admin');
-const adminMiddleware = require('./middlewares/adminMiddleware');
+//const adminMiddleware = require('./middlewares/adminMiddleware');
 
 var app = express();
 
@@ -30,7 +30,7 @@ app.use(session({secret: 'secret'}));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
-app.use('/admin', adminMiddleware, adminController);
+app.use('/admin', adminController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
