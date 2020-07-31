@@ -3,6 +3,7 @@ const db = require('../database/models')
 const fs = require('fs');
 const path = require('path');
 const productsController = require('./productsController');
+const Product = require('../database/models/Product');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -31,12 +32,12 @@ const adminController = {
         }).catch((error) => {
             console.log(error);
             return res.send('Ocurrió un error')
-        }); //nofunciona
+        }); //funciona
     },
 
     userList: (req, res) => {
         db.User.findAll({
-            include: [ 'products',  'userType']
+            include: [ 'products', 'userType']
         })
         .then(function(users){
             res.render('admin/adminUsers', {
@@ -47,7 +48,7 @@ const adminController = {
         .catch((errors) => {
             console.log(errors);
             return res.send('Ocurrió un error')
-        });
+        }); //funciona aunque no muestra nada
     },
     createProduct: (req, res) => {
         db.Category.findAll()
@@ -62,7 +63,6 @@ const adminController = {
     
     addProduct: (req, res) => {
         db.Product.create({
-            id: 50,
             name: req.body.nombreProducto,
             description: req.body.descripcion,
             price: req.body.precio,
@@ -80,17 +80,19 @@ const adminController = {
         })
         
     },
-    editProduct: (req, res) => {
-        let idProducto = req.params.id;
-        let productoAEditar = products.find( producto => {
-            return producto.id == idProducto;
-        });
-        res.render('admin/adminProductEdit', {
-            title: productoAEditar.name,
-            producto: productoAEditar,
-            categories: categorias,
-            user: req.session.usuarioLogeado
-        });
+    editProduct: async (req, res) => {
+        try {
+            const productoEditar = await db.Product.findByPk(req.params.id)
+            const categorias = await db.Category.findAll()
+            return res.render('admin/adminProductEdit', {
+                title: 'editar producto',
+                producto: productoEditar,
+                categories: categorias,
+                user: req.session.usuarioLogeado
+            })
+        }catch (error) {
+            return res.send('ocurrio un error')
+        }
     },
     updateProduct: (req, res) => {
         const idProducto = req.params.id;

@@ -39,13 +39,13 @@ module.exports = (sequelize, dataTypes) => {
     Product.associate = function (models) {
         Product.belongsTo(models.Brand, { //un producto pertenece a una marca
             as: "brandProduct",
-            foreingKey: "id_brand"
+            foreignKey: "id_brand"
         })
 
         Product.belongsToMany(models.Category, {
             as: 'categories',
             through: 'category_products',
-            foreingKey: 'id_products', //datos de tabla pivot
+            foreignKey: 'id_products', //datos de tabla pivot
             otherKey: 'id_categories',
             timestamps: false,
         })
