@@ -50,17 +50,22 @@ const adminController = {
             return res.send('Ocurrió un error')
         }); //funciona aunque no muestra nada
     },
-    createProduct: (req, res) => {
-        db.Category.findAll()
-        .then((category) => {
-            res.render('admin/adminProductAdd', {
-                title: 'Agregar producto',
-                categories: category,
+
+    createProduct: async (req, res) => {
+        try {
+            const categorias = await db.Category.findAll()
+            const marcas = await db.Brand.findAll()
+            return res.render('admin/adminProductAdd', {
+                title: 'Agregar Producto',
+                categories: categorias,
+                brands: marcas,
                 user: req.session.usuarioLogeado
             })
-        })
+        }catch(error) {
+            return res.send('Ha ocurrido un error!')
+        }
     },
-    
+
     addProduct: (req, res) => {
         db.Product.create({
             name: req.body.nombreProducto,
@@ -95,7 +100,6 @@ const adminController = {
         }
     },
     updateProduct: (req, res) => {
-        const idProducto = req.params.id;
         db.Product.update({
             name: req.body.nombreProducto,
             description: req.body.descripcion,
@@ -106,7 +110,7 @@ const adminController = {
             discount: 0,
         }, {
             where: {
-                id: idProducto
+                id: req.params.id
             }
         }).then(()=> {
             return res.redirect(`admin/adminProductEdit/${idProducto}`);
