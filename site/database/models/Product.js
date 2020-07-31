@@ -44,7 +44,7 @@ module.exports = (sequelize, dataTypes) => {
 
         Product.belongsToMany(models.Category, {
             as: 'categories',
-            through: 'category_product',
+            through: 'category_products',
             foreingKey: 'id_products', //datos de tabla pivot
             otherKey: 'id_categories',
             timestamps: false,

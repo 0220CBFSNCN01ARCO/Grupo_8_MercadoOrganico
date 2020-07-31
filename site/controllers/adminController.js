@@ -21,7 +21,7 @@ const adminController = {
 
     productList: (req, res) => {
         db.Product.findAll({
-            include: [{association: 'brandProduct'}, {association: 'categories'}]
+            include: ['brandProduct', 'categories']
         })
         .then(function(product){
             res.render('admin/adminProducts', {
@@ -36,7 +36,7 @@ const adminController = {
 
     userList: (req, res) => {
         db.User.findAll({
-            include: [{association: 'products'}, {association: 'userType'}]
+            include: [ 'products',  'userType']
         })
         .then(function(users){
             res.render('admin/adminUsers', {
@@ -62,11 +62,12 @@ const adminController = {
     
     addProduct: (req, res) => {
         db.Product.create({
+            id: 50,
             name: req.body.nombreProducto,
             description: req.body.descripcion,
             price: req.body.precio,
-            id_brand: req.body.marca,
-            id_category: req.body.categoria,
+            id_brand: 1,
+            id_category: Number(req.body.categoria),
             discount: req.body.descuento,
             image: req.file.filename,
         })
