@@ -3,11 +3,11 @@
         "id": 1,
         "name": "Yogurt Vegano",
         "brand": "Haulani",
-        "category": "Vegano",
+        "category": "FRUTAS SECAS",
         "discount": 0,
         "description": "Yogurt vegano hecho a base de coco. Sabor frutos rojos.",
-        "price": "189",
-        "image": "imagen-producto-1594416130590.png"
+        "price": "187",
+        "image": "imagen-producto-1595023465999.png"
     },
     {
         "id": 2,
@@ -58,5 +58,15 @@
         "description": "Esencia de Almendras El Castillo",
         "price": "169",
         "image": "imagen-producto-1595014402400.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Pan de coco",
+        "brand": "recetas de la nena",
+        "category": "PANES",
+        "discount": 0,
+        "description": "Pan hecho a base de coco.",
+        "price": "149",
+        "image": "imagen-producto-1595023415753.png"
     }
 ]
