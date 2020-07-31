@@ -21,7 +21,7 @@ const adminController = {
 
     productList: (req, res) => {
         db.Product.findAll({
-            include: [{association: 'brandProduct'}, {association: 'categories'}]
+            include: ['brandProduct', 'categories']
         })
         .then(function(product){
             res.render('admin/adminProducts', {
