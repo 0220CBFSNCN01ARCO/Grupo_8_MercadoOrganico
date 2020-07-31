@@ -15,8 +15,14 @@
 
                 <div class="form-group">
                     <label for="marca">Marca</label>
-                    <input type="text" class="form-control" name="marca" id="marca" value="<%=producto.marca%>">
+                    <select class="form-control" name="marca" id="marca" value="<%=producto.marca%>">
+                        <option hidden disabled selected>Elegir Una Marca</option>
+                        <% brands.forEach( unaMarca => { %>
+                         <option value="<%= unaMarca.id %> "> <%= unaMarca.name %> </option>
+                        <% }) %>
+                      </select>
                 </div>
+
 
                 <div class="form-group">
                     <label for="categoría">Categoría</label>
@@ -50,7 +56,7 @@
                     <input type="file" name="imagen-producto" class="form-control-file" id="Subirarchivo" accept="image/x-png,image/gif,image/jpeg" value="<%=producto.imagenProducto%>">
                 </div>
 
-                <button type="submit" class="btn btn-primary mb-2">Registrar Producto</button>
+                <button type="submit" class="btn btn-primary mb-2">Actualizar Producto</button>
 
             </form>
         </div>
