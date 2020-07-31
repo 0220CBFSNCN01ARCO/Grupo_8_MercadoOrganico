@@ -15,8 +15,8 @@
 
                 <div class="form-group">
                     <label for="marca">Marca</label>
-                    <select class="form-control" name="marca" id="marca" value="<%=producto.marca%>">
-                        <option hidden disabled selected>Elegir Una Marca</option>
+                    <select class="form-control" name="marca" id="marca" >
+                        <option value="<%=producto.marca%>">Elegir Una Marca</option>
                         <% brands.forEach( unaMarca => { %>
                          <option value="<%= unaMarca.id %> "> <%= unaMarca.name %> </option>
                         <% }) %>

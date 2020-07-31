@@ -17,19 +17,23 @@ const adminController = {
         });
     }, //funciona
 
-    productList: (req, res) => {
-        db.Product.findAll({
-            include: ['brandProduct', 'categories']
-        })
-        .then(function(product){
-            res.render('admin/adminProducts', {
-                title: 'Product editor',
-                product: product,
-                user: req.session.usuarioLogeado})
-        }).catch((error) => {
-            console.log(error);
+    productList: async (req, res) => {
+        try{
+            const productos = await db.Product.findAll({
+                include: ['brandProduct', 'categories']
+            })
+            const categorias = await db.Category.findAll()
+            const marcas = await db.Brand.findAll()
+            return res.render('admin/adminProducts', {
+                title: 'Product Editor',
+                productos: productos,
+                categories: categorias,
+                brands: marcas,
+                user: req.session.usuarioLogeado
+            })
+        } catch(error){
             return res.send('Ocurrió un error')
-        }); //funciona
+        }
     },
 
     userList: (req, res) => {
