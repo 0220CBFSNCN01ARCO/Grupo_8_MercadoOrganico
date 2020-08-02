@@ -16,7 +16,9 @@ const mainController = {
     },
 
     aboutUs: (req, res, next) => {
-        return res.render('information/aboutUs')
+        return res.render('information/aboutUs',{
+            title: 'Sobre nosotros'
+        })
     }
 };
 
