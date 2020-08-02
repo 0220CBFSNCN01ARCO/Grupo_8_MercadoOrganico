@@ -14,6 +14,10 @@ const mainController = {
             user: usuario
         });
     },
+
+    aboutUs: (req, res, next) => {
+        return res.render('information/aboutUs')
+    }
 };
 
 module.exports = mainController;

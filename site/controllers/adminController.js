@@ -3,9 +3,7 @@ const db = require('../database/models')
 const fs = require('fs');
 const path = require('path');
 const productsController = require('./productsController');
-
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const Product = require('../database/models/Product');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -19,19 +17,23 @@ const adminController = {
         });
     }, //funciona
 
-    productList: (req, res) => {
-        db.Product.findAll({
-            include: ['brandProduct', 'categories']
-        })
-        .then(function(product){
-            res.render('admin/adminProducts', {
-                title: 'Product editor',
-                product: product,
-                user: req.session.usuarioLogeado})
-        }).catch((error) => {
-            console.log(error);
+    productList: async (req, res) => {
+        try{
+            const productos = await db.Product.findAll({
+                include: ['brandProduct', 'categories']
+            })
+            const categorias = await db.Category.findAll()
+            const marcas = await db.Brand.findAll()
+            return res.render('admin/adminProducts', {
+                title: 'Product Editor',
+                productos: productos,
+                categories: categorias,
+                brands: marcas,
+                user: req.session.usuarioLogeado
+            })
+        } catch(error){
             return res.send('Ocurrió un error')
-        }); //nofunciona
+        }
     },
 
     userList: (req, res) => {
@@ -47,26 +49,31 @@ const adminController = {
         .catch((errors) => {
             console.log(errors);
             return res.send('Ocurrió un error')
-        });
+        }); //funciona aunque no muestra nada
     },
-    createProduct: (req, res) => {
-        db.Category.findAll()
-        .then((category) => {
-            res.render('admin/adminProductAdd', {
-                title: 'Agregar producto',
-                categories: category,
+
+    createProduct: async (req, res) => {
+        try {
+            const categorias = await db.Category.findAll()
+            const marcas = await db.Brand.findAll()
+            return res.render('admin/adminProductAdd', {
+                title: 'Agregar Producto',
+                categories: categorias,
+                brands: marcas,
                 user: req.session.usuarioLogeado
             })
-        })
+        }catch(error) {
+            return res.send('Ha ocurrido un error!')
+        }
     },
-    
+
     addProduct: (req, res) => {
         db.Product.create({
             name: req.body.nombreProducto,
             description: req.body.descripcion,
             price: req.body.precio,
-            id_brand: req.body.marca,
-            id_category: req.body.categoria,
+            id_brand: 1,
+            id_category: Number(req.body.categoria),
             discount: req.body.descuento,
             image: req.file.filename,
         })
@@ -79,20 +86,23 @@ const adminController = {
         })
         
     },
-    editProduct: (req, res) => {
-        let idProducto = req.params.id;
-        let productoAEditar = products.find( producto => {
-            return producto.id == idProducto;
-        });
-        res.render('admin/adminProductEdit', {
-            title: productoAEditar.name,
-            producto: productoAEditar,
-            categories: categorias,
-            user: req.session.usuarioLogeado
-        });
+    editProduct: async (req, res) => {
+        try {
+            const productoEditar = await db.Product.findByPk(req.params.id)
+            const categorias = await db.Category.findAll()
+            const marcas = await db.Brand.findAll()
+            return res.render('admin/adminProductEdit', {
+                title: 'editar producto',
+                producto: productoEditar,
+                categories: categorias,
+                brands: marcas,
+                user: req.session.usuarioLogeado
+            })
+        }catch (error) {
+            return res.send('ocurrio un error')
+        }
     },
     updateProduct: (req, res) => {
-        const idProducto = req.params.id;
         db.Product.update({
             name: req.body.nombreProducto,
             description: req.body.descripcion,
@@ -103,32 +113,41 @@ const adminController = {
             discount: 0,
         }, {
             where: {
-                id: idProducto
+                id: req.params.id
             }
         }).then(()=> {
-            return res.redirect(`admin/adminProductEdit/${idProducto}`);
+            return res.redirect(`admin/adminProductEdit/${id}`);
         }).catch((error) => {
             return res.send('Ocurrió un error');
         });
     },
     confirmDeleteProduct: (req, res) => {
-        let productoBuscado = products.find( (elemento) => {
-            return elemento.id == req.params.id;
-        });
-        res.render('admin/adminProductDelete', {
-            title: 'Eliminar producto',
-            product: productoBuscado,
-            user: req.session.usuarioLogeado
-        });
+        const idProducto = req.params.id;
+        db.Product.findByPk(idProducto)
+        .then((producto) => {
+            return res.render('admin/adminProductDelete', {
+                title: 'Eliminar producto',
+                producto: producto
+            })
+        })
+        .catch((error) => {
+            return res.send('Ocurrió un error')
+        }) 
     },
+
     deleteProduct: (req, res) => {
-        let idProductoBuscado = req.params.id;
-        let productosSinProductoBuscado = products.filter( product =>{
-            return product.id != idProductoBuscado;
-        });
-        let nuevosProductos = JSON.stringify(productosSinProductoBuscado,'utf-8');
-        fs.writeFileSync(productsFilePath, nuevosProductos);
-        res.redirect("/admin/products")
+        const idProducto = req.params.id;
+        db.Product.destroy({
+            where: {
+                id: idProducto
+            }
+        })
+        .then(() => {
+            return res.redirect('/admin/products')
+        })
+        .catch((error) => {
+            return res.send('Ocurrió un error')
+        })
     },
 };
 

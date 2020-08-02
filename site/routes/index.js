@@ -4,6 +4,6 @@ const mainController = require('../controllers/mainController');
 
 /* GET home page. */
 router.get('/', mainController.root);
-
+router.get('/aboutUs', mainController.aboutUs);
 
 module.exports = router;
