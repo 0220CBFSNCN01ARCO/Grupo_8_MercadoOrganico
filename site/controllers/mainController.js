@@ -15,9 +15,22 @@ const mainController = {
         });
     },
 
-    aboutUs: (req, res, next) => {
-        return res.render('information/aboutUs',{
-            title: 'Sobre nosotros'
+    aboutUs: (req, res) => {
+        return res.render('information/aboutUs', {
+            title: 'Sobre nosotros',
+            
+        });
+    },
+
+    termsAndConditions: (req, res) => {
+        return res.render('information/termsAndConditions', {
+            title: 'Términos y condiciones'
+        })
+    },
+
+    shippingInfo: (req, res) => {
+        return res.render('information/shippingInfo', {
+            title: 'Condiciones de envío'
         })
     }
 };
