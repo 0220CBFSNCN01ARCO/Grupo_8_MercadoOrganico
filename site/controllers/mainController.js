@@ -32,6 +32,12 @@ const mainController = {
         return res.render('information/shippingInfo', {
             title: 'Condiciones de envío'
         })
+    },
+
+    howToBuy: (req, res) => {
+        return res.render('information/comoComprar', {
+            title: "Como Comprar"
+        })
     }
 };
 
