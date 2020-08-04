@@ -8,51 +8,43 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 /* PRODUCTS CONTROLLER */
 const productsController = {
-    root: (req, res, next) => {
-        let usuario = req.session.usuarioLogeado;
-        res.render('products', {
-            title: 'Productos',
-            listadoProductos: products,
-            user: usuario
-        });
+    root:  async (req, res, next) => {
+        try {
+            const productos = await db.Product.findAll({
+                include: ['brandProduct', 'categories'],
+            })
+            const categorias = await db.Category.findAll()
+            const marcas = await db.Brand.findAll()
+            return res.render('index', {
+                title: 'Home',
+                products: productos,
+                categories: categorias,
+                brands: marcas,
+                user: req.session.usuarioLogeado
+            })
+        }catch(error) {
+            console.log(error)
+            return res.send('Ha ocurrido un error!')
+        }
     },
-    detallarProducto: (req, res, next) => {
-        let usuario = req.session.usuarioLogeado;
-        const id = req.params.id;
-        const productoSolicitado = products.find( producto => {
-            return producto.id == id;
-        });
-        res.render('productDetail', {
-            title: productoSolicitado.name,
-            producto: productoSolicitado,
-            user: usuario
-        });
+    detallarProducto: async (req, res, next) => {
+        try {
+            const detalleProducto = await db.Product.findByPk(req.params.id)
+            const categorias = await db.Category.findAll()
+            const marcas = await db.Brand.findAll()
+            res.render('productDetail', {
+                title: 'Detalle',
+                producto: detalleProducto,
+                categories: categorias,
+                brands: marcas,
+                user: req.session.usuarioLogeado
+            })
+        }catch (error) {
+            console.log(error)
+            res.send('ocurrio error')
+        }
     },
-    agregarProducto: (req, res) => {
-        let usuario = req.session.usuarioLogeado;
-        res.render('productAdd', {
-            title: 'Agregar Producto',
-            user: usuario
-        })
-    },
-    registrarProducto: (req, res) => {
-        const body = req.body;
-        const cantidadProductos = products.length;
-        const nuevoID = cantidadProductos + 1;
-        const nuevoProducto = {
-            id: nuevoID,
-            name: body.nombreProducto,
-            brand: body.marca,
-            category: body.categoria,
-            discount: 0,
-            description: body.descripcion,
-            price: body.precio,
-            image: req.file.filename,
-        };
-        products.push(nuevoProducto);
-        fs.writeFileSync('data/products.json', JSON.stringify(products));
-        res.redirect('/products');
-    },
+    
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
     },

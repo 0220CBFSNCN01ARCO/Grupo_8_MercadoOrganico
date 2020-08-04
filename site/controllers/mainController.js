@@ -3,7 +3,7 @@ const path = require('path');
 const db = require("../database/models");
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 
 /* MAIN CONTROLLER */
 const mainController = {
@@ -11,7 +11,7 @@ const mainController = {
         try {
             const productos = await db.Product.findAll({
                 include: ['brandProduct', 'categories'],
-                limit: 18,
+                limit: 12,
             })
             const categorias = await db.Category.findAll()
             const marcas = await db.Brand.findAll()
