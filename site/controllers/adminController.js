@@ -5,8 +5,6 @@ const path = require('path');
 const productsController = require('./productsController');
 const Product = require('../database/models/Product');
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
 const adminController = {

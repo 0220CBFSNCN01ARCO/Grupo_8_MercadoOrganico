@@ -1,8 +1,9 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs'); //
+const path = require('path'); //
 const bcrypt = require('bcrypt');
 const multer = require('multer');
 const { validationResult } = require('express-validator');
+const db = require('../database/models');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -15,6 +16,7 @@ const usersController = {
             user: usuario
         });
     },
+   
     register: (req, res) => {
         const body = req.body;
         if(body.password != body.repeat_password){
