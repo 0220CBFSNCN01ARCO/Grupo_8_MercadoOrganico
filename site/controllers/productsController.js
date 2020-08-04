@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 /* PRODUCTS CONTROLLER */
 const productsController = {
@@ -44,7 +43,7 @@ const productsController = {
             res.send('ocurrio error')
         }
     },
-    
+
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
     },
