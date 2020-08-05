@@ -5,9 +5,9 @@ const path = require('path');
 const productsController = require('./productsController');
 const Product = require('../database/models/Product');
 
-const obtenerMarca = (brands, product) => {
-    let marca = brands.find( brand => {
-        return brand.id == product.id;
+const obtenerResultado = (array, product) => {
+    let marca = array.find( value => {
+        return value.id == product.id;
     });
 
     return marca.name;
@@ -33,7 +33,7 @@ const adminController = {
                 productos: productos,
                 categories: categorias,
                 brands: marcas,
-                obtenerMarca,
+                obtenerResultado,
                 user: req.session.usuarioLogeado
             })
         } catch(error){
