@@ -20,9 +20,8 @@ const upload = multer({ storage: storage });
 
 router.get('/register', usersController.formRegister);
 router.post('/register', [
-  check('nombre').isLength({min: 0}),
-  check('email').isEmail(),
-  check('password').isLength({min: 8})
+  check('email').isEmail().withMessage('El email debe ser un email válido'),
+  check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres')
 ], upload.single('avatar'), usersController.register);
 
 router.get('/login', usersController.login);
