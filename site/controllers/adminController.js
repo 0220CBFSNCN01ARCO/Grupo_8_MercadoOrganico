@@ -5,8 +5,6 @@ const path = require('path');
 const productsController = require('./productsController');
 const Product = require('../database/models/Product');
 
-
-
 const adminController = {
     root: (req, res) => {
         res.render('admin/adminView', {
