@@ -44,7 +44,11 @@ const usersController = {
         fs.writeFileSync('data/users.json', JSON.stringify(users));
         res.redirect('/users/login');
     } else {
-        return res.render('register', {errors: errors.errors})
+        return res.render('register', {
+            title: 'Error',
+            user: req.session.usuarioLogeado,
+            errors: errors.errors
+        })
     }
     },
     
