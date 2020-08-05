@@ -17,10 +17,13 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 /* GET users listing. */
-//router.get('/', usersController.root);
 
 router.get('/register', usersController.formRegister);
-router.post('/register', upload.single('avatar'), usersController.register);
+router.post('/register', [
+  check('nombre').isLength({min: 0}),
+  check('email').isEmail(),
+  check('password').isLength({min: 8})
+], upload.single('avatar'), usersController.register);
 
 router.get('/login', usersController.login);
 router.post('/login', [

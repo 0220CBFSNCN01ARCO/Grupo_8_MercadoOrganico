@@ -19,6 +19,9 @@ const usersController = {
     },
    
     register: (req, res) => {
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()){
         const body = req.body;
         if(body.password != body.repeat_password){
             return res.render('contrasenaNoCoincide');
@@ -40,7 +43,11 @@ const usersController = {
         users.push(usuarioAGuardar);
         fs.writeFileSync('data/users.json', JSON.stringify(users));
         res.redirect('/users/login');
+    } else {
+        return res.render('register', {errors: errors.errors})
+    }
     },
+    
     login: (req, res) => {
         let usuario = req.session.usuarioLogeado;
         res.render('login', {

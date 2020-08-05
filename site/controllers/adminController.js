@@ -34,20 +34,19 @@ const adminController = {
         }
     },
 
-    userList: (req, res) => {
-        db.User.findAll({
-            include: [ 'products', 'userType']
-        })
-        .then(function(users){
-            res.render('admin/adminUsers', {
+    userList: async (req, res) => {
+        try {
+            const usuarios = await db.User.findAll({
+                include: ['products', 'userType']
+            })
+            return res.render('admin/adminUsers', {
                 title: 'Users Editor',
-                users: users,
-                user: req.session.usuarioLogeado})
-        })
-        .catch((errors) => {
-            console.log(errors);
+                users: usuarios,
+                user: req.session.usuarioLogeado
+            })
+        }catch (error) {
             return res.send('Ocurrió un error')
-        }); //funciona aunque no muestra nada
+        }
     },
 
     createProduct: async (req, res) => {
