@@ -31,25 +31,28 @@ const mainController = {
     aboutUs: (req, res) => {
         return res.render('information/aboutUs', {
             title: 'Sobre nosotros',
-            
+            user: req.session.usuarioLogeado
         });
     },
 
     termsAndConditions: (req, res) => {
         return res.render('information/termsAndConditions', {
-            title: 'Términos y condiciones'
+            title: 'Términos y condiciones',
+            user: req.session.usuarioLogeado
         })
     },
 
     shippingInfo: (req, res) => {
         return res.render('information/shippingInfo', {
-            title: 'Condiciones de envío'
+            title: 'Condiciones de envío',
+            user: req.session.usuarioLogeado
         })
     },
 
     howToBuy: (req, res) => {
         return res.render('information/comoComprar', {
-            title: "Como Comprar"
+            title: "Como Comprar",
+            user: req.session.usuarioLogeado
         })
     }
 };
