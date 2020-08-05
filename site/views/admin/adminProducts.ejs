@@ -31,7 +31,7 @@
             <tr>
               <th scope="row"><%= product.id %> </th>
               <td><%= product.name %></td>
-              <td><%= product.brand %> </td> <!-- Arreglar -->
+              <td><%= obtenerMarca(brands, product) %> </td>
               <td><%= product.category %> </td> <!-- Arreglar -->
               <td><%= product.price %> </td>
               <td><a href="/admin/products/edit/<%= product.id %>"><button type="button" class="btn-secondary">EDITAR</button></a></td>
