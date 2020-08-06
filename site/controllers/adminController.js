@@ -9,7 +9,9 @@ const obtenerResultado = (array, product) => {
     let marca = array.find( value => {
         return value.id == product.id;
     });
-
+    if(!marca){
+        return 'Sin Marca';
+    };
     return marca.name;
 };
 
