@@ -5,12 +5,24 @@ const path = require('path');
 const productsController = require('./productsController');
 const Product = require('../database/models/Product');
 
-const obtenerResultado = (array, product) => {
-    let marca = array.find( value => {
-        return value.id == product.id;
+const obtenerMarca = (brands, product) => {
+    let marca = brands.find( brand => {
+        return brand.id == product.id;
     });
-
+    if(!marca){
+        return 'Sin Marca';
+    };
     return marca.name;
+};
+
+const obtenerCategoria = (categories, product) => {
+    let categoria = categories.find( category => {
+        return category.id == product.id;
+    });
+    if(!categoria){
+        return 'Sin Categoria';
+    };
+    return categoria.name;
 };
 
 const adminController = {
@@ -33,7 +45,8 @@ const adminController = {
                 productos: productos,
                 categories: categorias,
                 brands: marcas,
-                obtenerResultado,
+                obtenerMarca,
+                obtenerCategoria,
                 user: req.session.usuarioLogeado
             })
         } catch(error){
