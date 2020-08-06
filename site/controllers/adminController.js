@@ -5,6 +5,14 @@ const path = require('path');
 const productsController = require('./productsController');
 const Product = require('../database/models/Product');
 
+const obtenerResultado = (array, product) => {
+    let marca = array.find( value => {
+        return value.id == product.id;
+    });
+
+    return marca.name;
+};
+
 const adminController = {
     root: (req, res) => {
         res.render('admin/adminView', {
@@ -25,6 +33,7 @@ const adminController = {
                 productos: productos,
                 categories: categorias,
                 brands: marcas,
+                obtenerResultado,
                 user: req.session.usuarioLogeado
             })
         } catch(error){

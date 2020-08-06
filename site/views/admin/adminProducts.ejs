@@ -31,8 +31,8 @@
             <tr>
               <th scope="row"><%= product.id %> </th>
               <td><%= product.name %></td>
-              <td><%= product.brand %> </td> <!-- Arreglar -->
-              <td><%= product.category %> </td> <!-- Arreglar -->
+              <td><%= obtenerResultado(brands, product) %> </td>
+              <td><%= obtenerResultado(categories, product) %> </td>
               <td><%= product.price %> </td>
               <td><a href="/admin/products/edit/<%= product.id %>"><button type="button" class="btn-secondary">EDITAR</button></a></td>
               <td><a href="/admin/products/delete/<%= product.id %>"><button type="button" class="btn-secondary">ELIMINAR</button></a></td>
