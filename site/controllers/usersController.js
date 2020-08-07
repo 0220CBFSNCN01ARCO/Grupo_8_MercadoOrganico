@@ -48,36 +48,6 @@ const usersController = {
         }
     },
 
-    /* addUser: function (req, res, next) {
-        const errors = validationResult(req);
-        if (errors.isEmpty()) {
-          db.Users.create({
-            name: req.body.name,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10),
-            avatar: req.file.originalname,
-            idCategoryUser: 2,
-            phoneNumber: null,
-            country: null
-          })
-          res.redirect('/users/login');
-        } else {
-          const userToReload = {
-            name: req.body.name,
-            lastName: req.body.lastName,
-            email: req.body.email
-          }
-          return res.render('register', {
-            title: 'Register',
-            errors: errors.errors,
-            userToReload: userToReload,
-            user: req.session.userLogueado,
-            cart: req.session.cart
-          })
-        }
-      },*/
-
     login: (req, res) => {
         let usuario = req.session.usuarioLogeado;
         res.render('login', {
