@@ -17,6 +17,7 @@
       <h5><%- error.msg %></h5>
       <% })%>
     </div>
+    <% } %>
     <!-- Formulario de Registracion -->
     <div class="row justify-content-md-center">
       <div class="col-md-7">
@@ -24,19 +25,22 @@
           <div class="form-group">
             <label class="form-label " for="nombre">Nombre</label>
             <input type="text" class="form-control" autocorrect="off" autocapitalize="off" name="nombre"
-              placeholder="Ingrese su Nombre" required value=<%- userToReload.name %>>
+              placeholder="Ingrese su Nombre" required 
+              value="<% !userToReload ? '' : userToReload.name %>">
           </div>
 
           <div class="form-group">
             <label class="form-label " for="apellido">Apellido</label>
             <input type="text" class="form-control" autocorrect="off" autocapitalize="off" name="apellido"
-              placeholder="Ingrese su Apellido" required value=<%- userToReload.lastName %>>
+              placeholder="Ingrese su Apellido" required 
+              value="<% !userToReload ? '' : userToReload.last_name %>">
           </div>
 
           <div class="form-group">
             <label class="form-label " for="email">Email</label>
             <input type="email" class="form-control" autocorrect="off" autocapitalize="off" name="email"
-              placeholder="Ingrese su e-mail" required value=<%- userToReload.email %>>
+              placeholder="Ingrese su e-mail" required 
+              value="<% !userToReload ? '' : userToReload.email %>">
           </div>
 
           <div class="form-group ">
@@ -62,56 +66,6 @@
       </div>
     </div>
   </div>
-  <% } else { %>
-  <div class="row justify-content-md-center">
-    <div class="col-md-7">
-      <form action="" method="POST" class="form" enctype="multipart/form-data">
-
-        <div class="form-group">
-          <label class="form-label" for="nombre">Nombre</label>
-          <input type="text" class="form-control" autocorrect="off" autocapitalize="off" name="nombre"
-            placeholder="Ingrese su Nombre" required>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label " for="apellido">Apellido</label>
-          <input type="text" class="form-control" autocorrect="off" autocapitalize="off" name="apellido"
-            placeholder="Ingrese su Apellido" required>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label " for="email">Email</label>
-          <input type="email" class="form-control" autocorrect="off" autocapitalize="off" name="email"
-            placeholder="Ingrese su e-mail" required>
-        </div>
-
-        <div class="form-group ">
-          <label class="form-label " for="password">Contraseña</label>
-          <input type="password" class="form-control" autocorrect="off" autocapitalize="off" autocomplete="off"
-            name="password" placeholder="Ingrese una contraseña" required>
-          <div class="form-group ">
-            <label class="form-label " for="repeat_password">Repetir Contraseña</label>
-            <input type="password" class="form-control" autocorrect="off" autocapitalize="off" autocomplete="off"
-              name="repeat_password" placeholder="Repita la contraseña" required>
-          </div>
-          <br>
-        </div>
-
-        <div>
-          <label for="avatar">Avatar</label>
-          <input type="file" name="avatar" id="avatar" accept="image/x-png,image/gif,image/jpeg">
-        </div>
-
-        <input class="btn btn-primary btn-block boton-iniciarsesion" type="submit" value="REGISTRARSE" name="">
-
-      </form>
-    </div>
-  </div>
-</div>
-  <% } %>
-  </div>
-
-
   <div>
     <%- include('./partials/footer') %>
   </div>

@@ -108,11 +108,19 @@ const adminController = {
             const productoEditar = await db.Product.findByPk(req.params.id)
             const categorias = await db.Category.findAll()
             const marcas = await db.Brand.findAll()
+            let marcaDeProducto = marcas.find( unaMarca => {
+                return productoEditar.id_brand == unaMarca.id;
+            });
+            let categoriaDeProducto = categorias.find( unaCategoria => {
+                return productoEditar.id_brand == unaCategoria.id;
+            });
             return res.render('admin/adminProductEdit', {
                 title: 'editar producto',
                 producto: productoEditar,
-                categories: categorias,
+                categoriaDeProducto,
+                marcaDeProducto,
                 brands: marcas,
+                categories: categorias,
                 user: req.session.usuarioLogeado
             })
         }catch (error) {
@@ -120,6 +128,8 @@ const adminController = {
         }
     },
     updateProduct: (req, res) => {
+        let idProducto = req.params.id;
+        console.log(req.body);
         db.Product.update({
             name: req.body.nombreProducto,
             description: req.body.descripcion,
@@ -130,10 +140,10 @@ const adminController = {
             discount: 0,
         }, {
             where: {
-                id: req.params.id
+                id: idProducto
             }
         }).then(()=> {
-            return res.redirect(`admin/adminProductEdit/${id}`);
+            return res.redirect('/admin/products');
         }).catch((error) => {
             return res.send('Ocurrió un error');
         });

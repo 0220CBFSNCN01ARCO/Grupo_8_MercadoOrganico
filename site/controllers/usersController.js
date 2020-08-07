@@ -11,42 +11,74 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
     formRegister: (req, res) => {
-        let usuario = req.session.usuarioLogeado;
+        let userToReload;
         res.render('register', {
             title: 'Registrar Usuario',
-            user: usuario
+            user: req.session.usuarioLogeado,
+            userToReload
         });
     },
 
     register: (req, res) => {
         let errors = validationResult(req);
-
-        if (errors.isEmpty()) {
-            db.User.create({
-                name: req.body.nombre,
-                last_name: req.body.apellido,
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 10),
-                imagen: req.file.filename,
-                id_type: 2,
-                admin: false,
-            })
-            res.redirect('/users/login');
-        } else {
+        console.log(errors);
+        if(!errors.isEmpty()){
             const userToReload = {
-                name: req.body.nombre,
-                las_name: req.body.apellido,
-                email: req.body.email
-            }
-            return res.render('register', {
-                title: 'Register',
-                errors: errors.errors,
-                userToReload: userToReload,
-                user: req.session.usuarioLogeado,
-                cart: req.session.cart
-            })
-        }
+            name: req.body.nombre,
+            last_name: req.body.apellido,
+            email: req.body.email
+        };
+        return res.render('register', {
+            title: 'Register',
+            errors: errors.errors,
+            userToReload: userToReload,
+            user: req.session.usuarioLogeado
+        });
+       };
+    console.log(req.body);
+    db.User.create({
+         name: req.body.nombre,
+         last_name: req.body.apellido,
+         email: req.body.email,
+         password: bcrypt.hashSync(req.body.password, 10),
+         image: req.file.filename,
+         id_type: 2
+     }).then( () => {
+         res.redirect('/users/login');
+     }).catch( err => {
+         console.error(err);
+         res.send('ERROR!');
+     });
     },
+    /* addUser: function (req, res, next) {
+        const errors = validationResult(req);
+        if (errors.isEmpty()) {
+          db.Users.create({
+            name: req.body.name,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
+            avatar: req.file.originalname,
+            idCategoryUser: 2,
+            phoneNumber: null,
+            country: null
+          })
+          res.redirect('/users/login');
+        } else {
+          const userToReload = {
+            name: req.body.name,
+            lastName: req.body.lastName,
+            email: req.body.email
+          }
+          return res.render('register', {
+            title: 'Register',
+            errors: errors.errors,
+            userToReload: userToReload,
+            user: req.session.userLogueado,
+            cart: req.session.cart
+          })
+        }
+      },*/
 
     login: (req, res) => {
         let usuario = req.session.usuarioLogeado;

@@ -6,17 +6,17 @@
             <%- include('../partials/header') %>
         </div>
         <div class="container">
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="?_method=PUT" method="POST" enctype="multipart/form-data">
 
                 <div class="form-group">
                     <label for="nombre-producto">Nombre del Producto</label>
-                    <input type="text" class="form-control" name="nombreProducto" value="<%=producto.nombreProducto%>" id="nombre-producto" placeholder="Ingrese nombre del producto" value="<%=producto.nombreProducto%>">
+                    <input type="text" class="form-control" name="nombreProducto" value="<%=producto.name%>" id="nombre-producto" placeholder="Ingrese nombre del producto">
                 </div>
 
                 <div class="form-group">
                     <label for="marca">Marca</label>
                     <select class="form-control" name="marca" id="marca" >
-                        <option value="<%=producto.marca%>">Elegir Una Marca</option>
+                        <option value="<%=producto.id_brand%>"> <%= marcaDeProducto.name %> </option>
                         <% brands.forEach( unaMarca => { %>
                          <option value="<%= unaMarca.id %> "> <%= unaMarca.name %> </option>
                         <% }) %>
@@ -27,7 +27,7 @@
                 <div class="form-group">
                     <label for="categoría">Categoría</label>
                     <select class="form-control" name="categoria" id="categoria" value="<%=producto.categoria%>">
-                        <option hidden disabled selected>Elegir Una Categoria</option>
+                        <option value="<% producto.id_category %>"> <%= categoriaDeProducto.name %> </option>
                         <% categories.forEach( unaCategoria => { %>
                          <option value="<%= unaCategoria.id %> "> <%= unaCategoria.name %> </option>
                         <% }) %>
@@ -37,17 +37,17 @@
 
                 <div class="form-group">
                     <label for="descripcion">Descripción</label>
-                    <textarea class="form-control" name="descripcion" id="" cols="30" rows="10" value="<%=producto.descripcion%>"></textarea>
+                    <textarea class="form-control" name="descripcion" id="" cols="30" rows="10" value="<%=producto.description%>"></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="precio">Precio</label>
-                    <input type="number" class="form-control" name="precio" id="precio" value="<%=producto.precio%>">
+                    <input type="number" class="form-control" name="precio" id="precio" value="<%=producto.price%>">
                 </div>
 
                 <div class="form-group">
                     <label for="precio">Descuento</label>
-                    <input type="number" class="form-control" name="descuento" id="precio" value="<%=producto.descuento%>">
+                    <input type="number" class="form-control" name="descuento" id="precio" value="<%=producto.discount%>">
                 </div>
 
                 <!-- FALTA INSERTAR IMAGEN -->
