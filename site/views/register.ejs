@@ -26,16 +26,28 @@
           <div class="form-group">
             <!-- NOMBRE -->
             <label class="form-label" for="nombre">Nombre</label>
-            <input type="text" class="form-control" name="nombre" placeholder="Ingrese su Nombre" required
-              value="<% !userToReload ? '' : userToReload.name %>">
+            <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre" required
+              value=
+              <% if(!userToReload) { %>
+                <%= '' %>
+              <% } else { %>
+                <%= `${userToReload.name}` %>
+              <% } %>
+                >
 
           </div>
 
           <div class="form-group">
             <!-- APELLIDO -->
             <label class="form-label " for="apellido">Apellido</label>
-            <input type="text" class="form-control" name="apellido" placeholder="Ingrese su Apellido" required
-              value="<% !userToReload ? '' : userToReload.last_name %>">
+            <input type="text" class="form-control" name="apellido" placeholder="Ingrese su apellido" required
+              value=
+              <% if(!userToReload) { %>
+                <%= '' %>
+              <% } else { %>
+                <%= `${userToReload.last_name}` %>
+              <% } %>
+                >
 
           </div>
 
@@ -43,7 +55,13 @@
             <!-- EMAIL -->
             <label class="form-label " for="email">Email</label>
             <input type="email" class="form-control" name="email" placeholder="Ingrese su e-mail" required
-              value="<% !userToReload ? '' : userToReload.email %>">
+              value=
+              <% if(!userToReload) { %>
+                <%=  %>
+              <% } else { %>
+                <%= `${userToReload.email}` %>
+              <% } %>
+                >
 
           </div>
 
