@@ -186,6 +186,11 @@ footer {
   border-radius: 30px;
 }
 
+.iniciar-sesion{
+  position: relative;
+  left: 160px;
+}
+
 .boton-iniciarsesion:hover{
   background-color: #8aa989;
   color:white
