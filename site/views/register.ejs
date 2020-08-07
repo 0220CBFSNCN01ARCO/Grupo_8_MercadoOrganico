@@ -22,42 +22,68 @@
     <div class="row justify-content-md-center">
       <div class="col-md-7">
         <form id="login-form" action="" method="POST" class="form" enctype="multipart/form-data">
+
           <div class="form-group">
-            <label class="form-label " for="nombre">Nombre</label>
-            <input type="text" class="form-control" autocorrect="off" autocapitalize="off" name="nombre"
-              placeholder="Ingrese su Nombre" required 
-              value="<% !userToReload ? '' : userToReload.name %>">
+            <!-- NOMBRE -->
+            <label class="form-label" for="nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre" required
+              value=
+              <% if(!userToReload) { %>
+                <%= '' %>
+              <% } else { %>
+                <%= `${userToReload.name}` %>
+              <% } %>
+                >
+
           </div>
 
           <div class="form-group">
+            <!-- APELLIDO -->
             <label class="form-label " for="apellido">Apellido</label>
-            <input type="text" class="form-control" autocorrect="off" autocapitalize="off" name="apellido"
-              placeholder="Ingrese su Apellido" required 
-              value="<% !userToReload ? '' : userToReload.last_name %>">
+            <input type="text" class="form-control" name="apellido" placeholder="Ingrese su apellido" required
+              value=
+              <% if(!userToReload) { %>
+                <%= '' %>
+              <% } else { %>
+                <%= `${userToReload.last_name}` %>
+              <% } %>
+                >
+
           </div>
 
           <div class="form-group">
+            <!-- EMAIL -->
             <label class="form-label " for="email">Email</label>
-            <input type="email" class="form-control" autocorrect="off" autocapitalize="off" name="email"
-              placeholder="Ingrese su e-mail" required 
-              value="<% !userToReload ? '' : userToReload.email %>">
+            <input type="email" class="form-control" name="email" placeholder="Ingrese su e-mail" required
+              value=
+              <% if(!userToReload) { %>
+                <%=  %>
+              <% } else { %>
+                <%= `${userToReload.email}` %>
+              <% } %>
+                >
+
           </div>
 
           <div class="form-group ">
+            <!-- PASSWORD -->
             <label class="form-label " for="password">Contraseña</label>
-            <input type="password" class="form-control" autocorrect="off" autocapitalize="off" autocomplete="off"
-              name="password" placeholder="Ingrese una contraseña" required>
-            <div class="form-group ">
-              <label class="form-label " for="repeat_password">Repetir Contraseña</label>
-              <input type="password" class="form-control" autocorrect="off" autocapitalize="off" autocomplete="off"
-                name="repeat_password" placeholder="Repita la contraseña" required>
-            </div>
-            <br>
+            <input type="password" class="form-control" name="password" placeholder="Ingrese una contraseña" required>
+
           </div>
 
-          <div>
+          <div class="form-group ">
+            <!-- REPETIR PASSWORD -->
+            <label class="form-label " for="repeat_password">Repetir Contraseña</label>
+            <input type="password" class="form-control" autocorrect="off" name="repeat_password" placeholder="Repita la contraseña" required>
+
+          </div>
+
+          <div class="form-gropu">
+            <!-- AVATAR -->
             <label for="avatar">Avatar</label>
             <input type="file" name="avatar" id="avatar" accept="image/x-png,image/gif,image/jpeg">
+
           </div>
 
           <input class="btn btn-primary btn-block boton-iniciarsesion" type="submit" value="REGISTRARSE" name="">
