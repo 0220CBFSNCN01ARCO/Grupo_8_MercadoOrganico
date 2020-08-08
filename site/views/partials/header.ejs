@@ -25,7 +25,7 @@
       <ul class="navbar-nav mr-auto links">
 
         <% if (user != undefined) { %>
-          <li><img src="/images/usersAvatar/<%= user.avatar || '404.png'%>" alt="" style='border-radius: 10px; width: 3vw;'class='bar-sm justify-content-center'></li>
+          <li><img src="/images/usersAvatar/<%= user.image || '404.png'%>" alt="" style='border-radius: 10px; width: 3vw;'class='bar-sm justify-content-center'></li>
         <li class="nav-item">
           <button type="button" class="btn nav-link dropdown-toggle" data-toggle="dropdown" href="">
            Hola <%= user.name %>
