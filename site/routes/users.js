@@ -4,7 +4,7 @@ const usersController = require('../controllers/usersController');
 const multer = require('multer');
 const path = require('path');
 const {check, validationResult, body} = require('express-validator');
-const usersMiddleware = require('../middlewares/usersMiddleware');
+const {loginMiddleware, emailExistente} = require('../middlewares/usersMiddleware');
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -19,22 +19,18 @@ const upload = multer({ storage: storage });
 
 /* GET users listing. */
 
-router.get('/register', usersController.formRegister);
-router.post('/register', upload.single('avatar'), usersController.register);
+router.get('/register', loginMiddleware ,usersController.formRegister);
+router.post('/register', [
+  check('nombre').isLength({min: 1}).withMessage('Debe ingresar un nombre'),
+  check('email').isEmail().withMessage('El email debe ser un email válido'),
+  check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres')
+], upload.single('avatar'), usersController.register);
 
-// [
-//   check('nombre').isLength({min: 1}).withMessage('Debe ingresar un nombre'),
-//   check('email').isEmail().withMessage('El email debe ser un email válido'),
-//   check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres')
-// ]
-
-router.get('/login', usersMiddleware, usersController.login);
-router.post('/login', usersController.processLogin);
-
-// [
-//   check('email').isEmail().withMessage('Email inválido'),
-//   check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres')
-// ]
+router.get('/login', loginMiddleware, usersController.login);
+router.post('/login', [
+  check('email').isEmail().withMessage('Email inválido'),
+  check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres')
+], usersController.processLogin);
 
 router.get('/logout', usersController.logout);
 
