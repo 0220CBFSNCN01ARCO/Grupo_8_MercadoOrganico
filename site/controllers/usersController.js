@@ -22,6 +22,7 @@ const usersController = {
     register: (req, res) => {
         let errors = validationResult(req);
         console.log(errors);
+        console.log(req.body);
         if(!errors.isEmpty()){
             const userToReload = {
             name: req.body.nombre,
@@ -35,7 +36,6 @@ const usersController = {
             user: req.session.usuarioLogeado
         });
        };
-    console.log(req.body);
     db.User.create({
          name: req.body.nombre,
          last_name: req.body.apellido,
@@ -44,10 +44,10 @@ const usersController = {
          image: req.file.filename,
          id_type: 2
      }).then( () => {
-         res.redirect('/users/login');
+         return res.redirect('/users/login');
      }).catch( err => {
          console.error(err);
-         res.send('ERROR!');
+         return res.send('ERROR!');
      });
     },
     /* addUser: function (req, res, next) {
