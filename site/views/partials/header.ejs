@@ -31,7 +31,11 @@
            Hola <%= user.name %>
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="/users/profile/<%= user.id %>">Perfil</a>
+            <% if (user.id_type != 1) { %>
+              <a class="dropdown-item" href="/users/profile/<%= user.id %>">Perfil</a>
+            <% } else { %>
+              <a class="dropdown-item" href="/admin">ADMIN</a>
+            <% } %>
             <a class="dropdown-item" href="/users/logout">Cerrar Sesión</a>
           </div>
         </li>
