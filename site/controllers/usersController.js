@@ -58,38 +58,34 @@ const usersController = {
             user: usuario
         });
     },
-    processLogin: (req, res) => {
-        let usuario = req.session.usuarioLogeado;
-        let errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.render('login', {
-                title: 'Login',
-                errors: errors.errors,
-                user: usuario
-            })
-        };
-        let usuarioALogearse;
-        for (let i = 0; i < users.length; i++) {
-            if (users[i].email == req.body.email) {
-                if (bcrypt.compareSync(req.body.password, users[i].password)) {
-                    usuarioALogearse = users[i];
-                    break;
+    processLogin: async (req, res) => {
+        try {
+            let usuarios = await db.User.findAll();
+            let usuarioALogearse;
+            for(let i=0; i < usuarios.length; i++){
+                if(usuarios[i].email == req.body.email){
+                    if(bcrypt.compareSync(req.body.password, usuarios[i].password)){
+                        usuarioALogearse = usuarios[i];
+                        break;
+                    };
                 };
             };
-        };
-        if (usuarioALogearse == undefined) {
-            return res.render('login', {
-                title: 'Login',
-                errors: [
-                    { msg: 'Usuario inválido' }
-                ],
-                user: usuario
+            if (usuarioALogearse == undefined) {
+                return res.render('login', {
+                    title: 'Login',
+                    errors: [
+                        { msg: 'Usuario inválido' }
+                    ],
+                    user: usuario
+                });
+            };
+            req.session.usuarioLogeado = usuarioALogearse;
+            return res.render('success', {
+                usuario: req.session.usuarioLogeado
             });
+        } catch (error) {
+            return res.send('Ocurrió un error');
         };
-        req.session.usuarioLogeado = usuarioALogearse;
-        return res.render('success', {
-            usuario: req.session.usuarioLogeado
-        });
     },
     logout: (req, res) => {
         req.session.destroy()
