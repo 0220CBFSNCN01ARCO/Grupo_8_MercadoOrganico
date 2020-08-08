@@ -17,6 +17,7 @@ const upload = multer({ storage: storage });
 
 router.get('/', adminController.root);
 
+//PRODUCTS
 router.get('/products', adminController.productList);
 
 router.get('/products/create', adminController.createProduct);
@@ -28,6 +29,14 @@ router.put('/products/edit/:id', upload.single('imagen-producto'), adminControll
 router.get('/products/delete/:id', adminController.confirmDeleteProduct);
 router.delete('/products/delete/:id', adminController.deleteProduct);
 
+//USERS
 router.get('/users', adminController.userList);
+
+router.get('/users/edit/:id', adminController.editUser);
+router.put('/users/edit/:id', adminController.updateUser);
+
+router.get('/users/delete/:id', adminController.confirmDeleteUser);
+router.delete('/users/delete/:id', adminController.deleteUser);
+
 
 module.exports = router;

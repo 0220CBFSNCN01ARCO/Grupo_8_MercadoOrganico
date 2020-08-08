@@ -54,21 +54,6 @@ const adminController = {
         }
     },
 
-    userList: async (req, res) => {
-        try {
-            const usuarios = await db.User.findAll({
-                include: ['products', 'userType']
-            })
-            return res.render('admin/adminUsers', {
-                title: 'Users Editor',
-                users: usuarios,
-                user: req.session.usuarioLogeado
-            })
-        }catch (error) {
-            return res.send('Ocurrió un error')
-        }
-    },
-
     createProduct: async (req, res) => {
         try {
             const categorias = await db.Category.findAll()
@@ -103,6 +88,7 @@ const adminController = {
         })
         
     },
+
     editProduct: async (req, res) => {
         try {
             const productoEditar = await db.Product.findByPk(req.params.id)
@@ -127,6 +113,7 @@ const adminController = {
             return res.send('ocurrio un error')
         }
     },
+
     updateProduct: (req, res) => {
         let idProducto = req.params.id;
         console.log(req.body);
@@ -148,6 +135,7 @@ const adminController = {
             return res.send('Ocurrió un error');
         });
     },
+
     confirmDeleteProduct: (req, res) => {
         const idProducto = req.params.id;
         db.Product.findByPk(idProducto)
@@ -171,6 +159,85 @@ const adminController = {
         })
         .then(() => {
             return res.redirect('/admin/products')
+        })
+        .catch((error) => {
+            return res.send('Ocurrió un error')
+        })
+    },
+
+    userList: async (req, res) => {
+        try {
+            const usuarios = await db.User.findAll({
+                include: ['products', 'userType']
+            })
+            return res.render('admin/adminUsers', {
+                title: 'Users Editor',
+                users: usuarios,
+                user: req.session.usuarioLogeado
+            })
+        }catch (error) {
+            return res.send('Ocurrió un error')
+        }
+    },
+
+    editUser: async (req, res) => {
+        try {
+            const usuarioEditar = await db.User.findByPk(req.params.id, {
+                include: ['products','userType']
+            })
+            return res.render('admin/adminUserEdit', {
+                title: 'Editar usuario',
+                usuario: usuarioEditar,
+                user: req.session.usuarioLogeado
+            })
+        }catch (error) {
+            return res.send('ocurrio un error')
+        }
+    },
+
+    updateUser: (req, res) =>{
+        let idUsuario = req.params.id;
+        console.log(req.body);
+        db.User.update({
+            name: req.body.nombre,
+            apellido: req.body.apellido,
+            email: req.body.email,
+            //avatar: req.file.filename
+        }, {
+            where: {
+                id: idUsuario
+            }
+        }).then(()=> {
+            return res.redirect('/admin/users');
+        }).catch((error) => {
+            return res.send('Ocurrió un error');
+        });
+    },
+
+    confirmDeleteUser: (req, res) => {
+        const idUser = req.params.id;
+        db.User.findByPk(idUser)
+        .then((user) => {
+            return res.render('admin/adminUserDelete', {
+                title: 'Eliminar usuario',
+                usuario: user
+            })
+        })
+        .catch((error) => {
+            console.log(error);
+            return res.send('Ocurrió un error al intentar eliminar el usuario')
+        }) 
+    },
+
+    deleteUser: (req, res) => {
+        const idUser = req.params.id;
+        db.User.destroy({
+            where: {
+                id: idUser
+            }
+        })
+        .then(() => {
+            return res.redirect('/admin/users')
         })
         .catch((error) => {
             return res.send('Ocurrió un error')

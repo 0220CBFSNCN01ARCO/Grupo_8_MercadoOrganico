@@ -22,11 +22,29 @@ const usersController = {
     register: (req, res) => {
         let errors = validationResult(req);
         console.log(errors);
+<<<<<<< HEAD
         console.log(req.body);
         if(!errors.isEmpty()){
+=======
+        if (!errors.isEmpty()) {
+>>>>>>> 822f286170f270c2529fd04446f115d5152488e2
             const userToReload = {
+                name: req.body.nombre,
+                last_name: req.body.apellido,
+                email: req.body.email
+            };
+            return res.render('register', {
+                title: 'Register',
+                errors: errors.errors,
+                userToReload: userToReload,
+                user: req.session.usuarioLogeado
+            });
+        };
+        console.log(req.body);
+        db.User.create({
             name: req.body.nombre,
             last_name: req.body.apellido,
+<<<<<<< HEAD
             email: req.body.email
         };
         return res.render('register', {
@@ -56,29 +74,19 @@ const usersController = {
           db.Users.create({
             name: req.body.name,
             lastName: req.body.lastName,
+=======
+>>>>>>> 822f286170f270c2529fd04446f115d5152488e2
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
-            avatar: req.file.originalname,
-            idCategoryUser: 2,
-            phoneNumber: null,
-            country: null
-          })
-          res.redirect('/users/login');
-        } else {
-          const userToReload = {
-            name: req.body.name,
-            lastName: req.body.lastName,
-            email: req.body.email
-          }
-          return res.render('register', {
-            title: 'Register',
-            errors: errors.errors,
-            userToReload: userToReload,
-            user: req.session.userLogueado,
-            cart: req.session.cart
-          })
-        }
-      },*/
+            image: req.file.filename,
+            id_type: 2
+        }).then(() => {
+            res.redirect('/users/login');
+        }).catch(err => {
+            console.error(err);
+            res.send('ERROR AL REGISTRARSE!');
+        });
+    },
 
     login: (req, res) => {
         let usuario = req.session.usuarioLogeado;
