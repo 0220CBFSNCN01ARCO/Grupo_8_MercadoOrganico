@@ -22,12 +22,7 @@ const usersController = {
     register: (req, res) => {
         let errors = validationResult(req);
         console.log(errors);
-<<<<<<< HEAD
-        console.log(req.body);
-        if(!errors.isEmpty()){
-=======
         if (!errors.isEmpty()) {
->>>>>>> 822f286170f270c2529fd04446f115d5152488e2
             const userToReload = {
                 name: req.body.nombre,
                 last_name: req.body.apellido,
@@ -44,38 +39,6 @@ const usersController = {
         db.User.create({
             name: req.body.nombre,
             last_name: req.body.apellido,
-<<<<<<< HEAD
-            email: req.body.email
-        };
-        return res.render('register', {
-            title: 'Register',
-            errors: errors.errors,
-            userToReload: userToReload,
-            user: req.session.usuarioLogeado
-        });
-       };
-    db.User.create({
-         name: req.body.nombre,
-         last_name: req.body.apellido,
-         email: req.body.email,
-         password: bcrypt.hashSync(req.body.password, 10),
-         image: req.file.filename,
-         id_type: 2
-     }).then( () => {
-         return res.redirect('/users/login');
-     }).catch( err => {
-         console.error(err);
-         return res.send('ERROR!');
-     });
-    },
-    /* addUser: function (req, res, next) {
-        const errors = validationResult(req);
-        if (errors.isEmpty()) {
-          db.Users.create({
-            name: req.body.name,
-            lastName: req.body.lastName,
-=======
->>>>>>> 822f286170f270c2529fd04446f115d5152488e2
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
             image: req.file.filename,
