@@ -40,7 +40,6 @@ module.exports = (sequelize, DataTypes) => {
             otherKey: 'id_product',
             timestamps: false
         })
-        
         User.belongsTo(models.User_type, {
             as: 'userType',
             foreignKey: 'id_type'
