@@ -23,7 +23,16 @@ router.get('/register', loginMiddleware ,usersController.formRegister);
 router.post('/register', upload.single('avatar'),[
   check('nombre').isLength({min: 1}).withMessage('Debe ingresar un nombre'),
   check('email').isEmail().withMessage('El email debe ser un email válido'),
-  check('password').isLength({min: 6}).withMessage('La contraseña debe tener al menos 8 caracteres')
+  check('password')
+    .isLength({min: 6})
+    .custom( (pass, {req}) => {
+      if(pass != req.body.repeat_password){
+        throw new Error('Las Passwords no coinciden')
+      } else {
+        return pass
+      }
+    })
+    .withMessage('La contraseña debe tener al menos 8 caracteres')
 ], usersController.register);
 
 router.get('/login', loginMiddleware, usersController.login);
