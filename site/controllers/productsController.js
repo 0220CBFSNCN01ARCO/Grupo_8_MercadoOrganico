@@ -1,10 +1,5 @@
 const db = require('../database/models');
 
-const fs = require('fs');
-const path = require('path');
-
-const productsFilePath = path.join(__dirname, '../data/products.json');
-
 /* PRODUCTS CONTROLLER */
 const productsController = {
     root:  async (req, res, next) => {

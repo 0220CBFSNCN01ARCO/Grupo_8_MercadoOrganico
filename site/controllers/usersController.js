@@ -6,9 +6,6 @@ const multer = require('multer');
 const { check, validationResult, body } = require('express-validator');
 const db = require('../database/models');
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
 const usersController = {
     formRegister: (req, res) => {
         let userToReload;
@@ -50,12 +47,10 @@ const usersController = {
             res.send('ERROR AL REGISTRARSE!');
         });
     },
-
     login: (req, res) => {
-        let usuario = req.session.usuarioLogeado;
         res.render('login', {
             title: 'Login',
-            user: usuario
+            user: req.session.usuarioLogeado
         });
     },
     processLogin: async (req, res) => {

@@ -1,9 +1,4 @@
-const db = require('../database/models')
-
-const fs = require('fs');
-const path = require('path');
-const productsController = require('./productsController');
-const Product = require('../database/models/Product');
+const db = require('../database/models');
 
 const obtenerMarca = (brands, product) => {
     let marca = brands.find( brand => {

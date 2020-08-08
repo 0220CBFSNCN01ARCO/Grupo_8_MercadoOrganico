@@ -1,9 +1,4 @@
-const fs = require('fs');
-const path = require('path');
 const db = require("../database/models");
-
-const productsFilePath = path.join(__dirname, '../data/products.json');
-
 
 /* MAIN CONTROLLER */
 const mainController = {
