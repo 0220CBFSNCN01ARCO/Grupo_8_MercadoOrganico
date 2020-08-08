@@ -81,9 +81,7 @@ const adminController = {
             console.log(error);
             return res.send('Ocurrió un error')
         })
-        
     },
-
     editProduct: async (req, res) => {
         try {
             const productoEditar = await db.Product.findByPk(req.params.id)
