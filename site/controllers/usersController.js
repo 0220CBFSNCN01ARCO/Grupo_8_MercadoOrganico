@@ -42,7 +42,7 @@ const usersController = {
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
             image: req.file.filename,
-            id_type: 2
+            id_type: 0
         }).then(() => {
             res.redirect('/users/login');
         }).catch(err => {
