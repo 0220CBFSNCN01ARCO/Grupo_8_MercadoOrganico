@@ -38,7 +38,7 @@ router.post('/register', upload.single('avatar'),[
 router.get('/login', loginMiddleware, usersController.login);
 router.post('/login', [
   check('email').isEmail().withMessage('Email inválido'),
-  check('password').isLength({min: 6}).withMessage('La contraseña debe tener al menos 8 caracteres')
+  check('password').isLength({min: 6}).withMessage('La contraseña debe tener al menos 6 caracteres')
 ], usersController.processLogin);
 
 router.get('/logout', usersController.logout);
