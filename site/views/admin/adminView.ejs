@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-</head>
-<body>
-    <div class="contenedor-cuerpo">
-        <header id="encabezado">
-            <h1>VISTA DEL ADMINISTRADOR</h1>
-            <button type="submit">cerrar sesion</button>
-            </header>
-    </div>
-    <br>
-    <br>
-    
-    <div>
-        <a href="/admin/products">PRODUCTOS</a>
+<html>
+  <%- include('../partials/head') %>
+  <body>
+    <div class="container-fluid">
+        <%- include('../partials/header') %>
+        <section class="page-header">
+            <div class="row">
+                <div class="col">
+                    <h1 class="h2 h1-md text-center font-weight-bold">VISTA EXCLUSIVA DEL ADMINISTRADOR</h1>
+                    <div class="row justify-content-md-center">
+                        <button type="submit">cerrar sesion</button>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
         <br>
-        <a href="/admin/users">USUARIOS</a>
+        <br>
+        <br>
+        <section class="user-content pb-5">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-10">
+                        <h6 class="lead font-weight-bold">A donde se quiere dirigir?</h6>
+                        <br>
+                        <div>
+                            <button class="btn btn-outline-dark" onclick="window.location.href='/admin/products'">Mostrar todos los productos</button>
+                            <br>
+                            <button class="btn btn-outline-dark" onclick="window.location.href='/admin/users'">Mostrar todos los usuarios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
-</body>
+    <%- include('../partials/scriptsBootstrap') %>
+    <%- include('../partials/footer') %>
+  </body>
+  
 </html>

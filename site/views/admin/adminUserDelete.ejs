@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body class="container-fluid">
+    <form method="POST" action="?_method=DELETE">
+        <label for="title"> ¿Seguro que desea eliminar <%= usuario.nombre %> ? </label>
+
+        <input type="submit" value="Eliminar">
+    </form>
+    <%- include('../partials/scriptsBootstrap') %>
+</body>
+</html>

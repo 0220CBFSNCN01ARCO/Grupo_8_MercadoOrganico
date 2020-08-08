@@ -32,6 +32,8 @@
               <td><%= user.last_name %> </td>
               <td><%= user.email %> </td>
               <td><%= user.admin %> </td>
+              <td><a href="/admin/users/edit/<%= user.id %>"><button type="button" class="btn-secondary">EDITAR</button></a></td>
+              <td><a href="/admin/users/delete/<%= user.id %>"><button type="button" class="btn-secondary">ELIMINAR</button></a></td>
             </tr>
           </tbody>
         <% }) %>
