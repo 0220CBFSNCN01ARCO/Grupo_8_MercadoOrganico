@@ -22,33 +22,33 @@ const usersController = {
     register: (req, res) => {
         let errors = validationResult(req);
         console.log(errors);
-        if(!errors.isEmpty()){
+        if (!errors.isEmpty()) {
             const userToReload = {
+                name: req.body.nombre,
+                last_name: req.body.apellido,
+                email: req.body.email
+            };
+            return res.render('register', {
+                title: 'Register',
+                errors: errors.errors,
+                userToReload: userToReload,
+                user: req.session.usuarioLogeado
+            });
+        };
+        console.log(req.body);
+        db.User.create({
             name: req.body.nombre,
             last_name: req.body.apellido,
-            email: req.body.email
-        };
-        return res.render('register', {
-            title: 'Register',
-            errors: errors.errors,
-            userToReload: userToReload,
-            user: req.session.usuarioLogeado
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
+            image: req.file.filename,
+            id_type: 2
+        }).then(() => {
+            res.redirect('/users/login');
+        }).catch(err => {
+            console.error(err);
+            res.send('ERROR AL REGISTRARSE!');
         });
-       };
-    console.log(req.body);
-    db.User.create({
-         name: req.body.nombre,
-         last_name: req.body.apellido,
-         email: req.body.email,
-         password: bcrypt.hashSync(req.body.password, 10),
-         image: req.file.filename,
-         id_type: 2
-     }).then( () => {
-         res.redirect('/users/login');
-     }).catch( err => {
-         console.error(err);
-         res.send('ERROR AL REGISTRARSE!');
-     });
     },
 
     login: (req, res) => {
