@@ -4,7 +4,14 @@
   <body>
     <div class="container containerproducts">
       <%- include('./partials/header') %>
-     
+      <% if(listadoProductos.length == 0) {%>
+        <div class="alert alert-danger text-center" role="alert">
+          <% errors.forEach(error => {%>
+          <h5><%- error.msg %></h5>
+          <% })%>
+        </div>
+        <button class="btn"><a href="/">Volver al Inicio</a></button>
+        <% } %>
       <!-- Lógica para Mostrar los diferentes Productos -->
       <div class="row">
         <% listadoProductos.forEach(producto => { %>
@@ -19,12 +26,8 @@
               <a class="btn btn-secondary" href="/products/detail/<%= producto.id %>">Ver más</a>
             </div>
           </article>
-          
         <% }) %>
-
-        
       </div>
-      
       <%- include('./partials/footer') %>
     </div>
     <%- include('./partials/scriptsBootstrap') %>
