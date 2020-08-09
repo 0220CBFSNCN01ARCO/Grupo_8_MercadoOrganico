@@ -2,7 +2,7 @@ const db = require('../database/models');
 
 const obtenerMarca = (brands, product) => {
     let marca = brands.find( brand => {
-        return brand.id == product.id;
+        return brand.id == product.id_brand;
     });
     if(!marca){
         return 'Sin Marca';
@@ -12,7 +12,7 @@ const obtenerMarca = (brands, product) => {
 
 const obtenerCategoria = (categories, product) => {
     let categoria = categories.find( category => {
-        return category.id == product.id;
+        return category.id == product.id_category;
     });
     if(!categoria){
         return 'Sin Categoria';
