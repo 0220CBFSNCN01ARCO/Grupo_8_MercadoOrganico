@@ -32,6 +32,7 @@ class Carrito {
         </td>
         `;
         listaProductos.appendChild(fila);
+        this.guardarProductosLocalStorage(producto);
     };
 
     eliminarProducto(e){
@@ -50,5 +51,23 @@ class Carrito {
             listaProductos.removeChild(listaProductos.firstChild);
         };
         return false;
-    }
+    };
+
+    guardarProductosLocalStorage(producto){
+        let productos;
+        productos = this.obtenerProductosLocalStorage();
+        productos.push(producto);
+        localStorage.setItem('productos', JSON.stringify(productos));
+    };
+
+    obtenerProductosLocalStorage(){
+        let productosLS;
+        if(localStorage.getItem('productos') === null){
+            productosLS = [];
+        } else {
+            productosLS = JSON.parse(localStorage.getItem('productos'));
+        };
+        return productosLS;
+
+    };
 };
