@@ -41,9 +41,31 @@
             <a class="dropdown-item" href="/users/logout">Cerrar Sesión</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/cart"><i class="fas fa-cart-plus"></i>  Mi carrito</a>
-        </li>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                  <img src="images/imagenes-generales/cart.png" class="nav-link dropdown-toggle img-fluid" height="70px"
+                      width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false"></img>
+                  <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                      <table id="lista-carrito" class="table">
+                          <thead>
+                              <tr>
+                                  <th>Imagen</th>
+                                  <th>Nombre</th>
+                                  <th>Precio</th>
+                                  <th></th>
+                              </tr>
+                          </thead>
+                          <tbody></tbody>
+                      </table>
+
+                      <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                      <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar Compra</a>
+                  </div>
+              </li>
+          </ul>
+      </div>
         <% } else { %>
         <li class="nav-item">
           <a class="nav-link iniciar-sesion" href="/users/login" id="navbarDropdown" role="button" aria-haspopup="true"
