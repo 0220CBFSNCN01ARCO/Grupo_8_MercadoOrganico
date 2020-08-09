@@ -38,7 +38,22 @@ const productsController = {
             res.send('ocurrio error')
         }
     },
-
+    buscar: async (req, res) => {
+        let busqueda = req.body.buscar;
+        let resultados = await db.Producto.findAll({
+            where: {
+                name: {[db.Sequelize.Op.like]: `%${busqueda}%`}
+            }
+        });
+        if(!resultados){
+            return res.send(`No se encontraron resultados para la busqueda ${busqueda}`);
+        };
+        return res.render('products', {
+            title: 'Resultados',
+            listadoProductos: resultados,
+            user: req.session.usuarioLogeado
+        })
+    },
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
     },
