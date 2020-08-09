@@ -39,20 +39,25 @@ const productsController = {
         }
     },
     buscar: async (req, res) => {
-        let busqueda = req.body.buscar;
-        let resultados = await db.Product.findAll({
-            where: {
-                name: {[db.Sequelize.Op.like]: `%${busqueda}%`}
-            }
-        });
-        if(!resultados){
-            return res.send(`No se encontraron resultados para la busqueda ${busqueda}`);
-        };
-        return res.render('products', {
-            title: 'Resultados',
-            listadoProductos: resultados,
-            user: req.session.usuarioLogeado
-        })
+        try {
+            let busqueda = req.body.buscar;
+            let resultados = await db.Product.findAll({
+                where: {
+                    name: {[db.Sequelize.Op.like]: `%${busqueda}%`}
+                }
+            });
+            let errors = [
+                {msg: 'No se encontraron resultados para su busqueda'}
+            ];
+            return res.render('products', {
+                title: 'Resultados',
+                listadoProductos: resultados,
+                errors: errors,
+                user: req.session.usuarioLogeado
+            })
+        } catch (error) {
+            return res.send('Ocurrió un error');
+        }
     },
     carrito: (req, res) => {
         res.render('shoppingCart', {title: 'Carrito de Compras'})
