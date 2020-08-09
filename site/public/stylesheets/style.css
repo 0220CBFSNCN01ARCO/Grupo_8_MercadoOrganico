@@ -278,3 +278,8 @@ strong {
   line-height: 100px; 
 }
 /*---USUARIO EXITOSO--*/
+
+.carrito-compras{
+  position: absolute;
+  left: -50px;
+}

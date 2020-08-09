@@ -17,9 +17,9 @@
         <input name="buscar" class="form-control my-0 py-1 red-border" type="text" placeholder="¿Qué estas buscando?">
 
         <button class="btn btn-lupa my-2 my-sm-0" type="submit">
-        <div class="input-group-append">
-          <span class="input-group-text  lighten-3" id="basic-text1"><i class="fas fa-search"></i></span>
-        </div>
+          <div class="input-group-append">
+            <span class="input-group-text  lighten-3" id="basic-text1"><i class="fas fa-search"></i></span>
+          </div>
         </button>
 
       </form>
@@ -27,45 +27,40 @@
       <ul class="navbar-nav mr-auto links">
 
         <% if (user != undefined) { %>
-          <li><img src="/images/usersAvatar/<%= user.image || '404.png'%>" alt="" style='border-radius: 10px; width: 3vw;'class='bar-sm justify-content-center'></li>
+        <li><img src="/images/usersAvatar/<%= user.image || '404.png'%>" alt="" style='border-radius: 10px; width: 3vw;'
+            class='bar-sm justify-content-center'></li>
         <li class="nav-item">
           <button type="button" class="btn nav-link dropdown-toggle" data-toggle="dropdown" href="">
-           Hola <%= user.name %>!
+            Hola <%= user.name %>!
           </button>
           <div class="dropdown-menu">
             <% if (user.id_type != 1) { %>
-              <a class="dropdown-item" href="/users/profile/<%= user.id %>">Perfil</a>
+            <a class="dropdown-item" href="/users/profile/<%= user.id %>">Perfil</a>
             <% } else { %>
-              <a class="dropdown-item" href="/admin">ADMIN</a>
+            <a class="dropdown-item" href="/admin">Administrador</a>
             <% } %>
             <a class="dropdown-item" href="/users/logout">Cerrar Sesión</a>
           </div>
         </li>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-              <li class="nav-item dropdown">
-                  <img src="images/imagenes-generales/cart.png" class="nav-link dropdown-toggle img-fluid" height="70px"
-                      width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-                      aria-expanded="false"></img>
-                  <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
-                      <table id="lista-carrito" class="table">
-                          <thead>
-                              <tr>
-                                  <th>Imagen</th>
-                                  <th>Nombre</th>
-                                  <th>Precio</th>
-                                  <th></th>
-                              </tr>
-                          </thead>
-                          <tbody></tbody>
-                      </table>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle img-fluid" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"> <i class="fas fa-cart-plus"></i>  Mi carrito</a>
+          <div id="carrito" class="dropdown-menu carrito-compras" aria-labelledby="navbarCollapse">
+            <table id="lista-carrito" class="table">
+              <thead>
+                <tr>
+                  <th>Imagen</th>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+                  <th></th>
+                </tr>
+              </thead>
+            </table>
 
-                      <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
-                      <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar Compra</a>
-                  </div>
-              </li>
-          </ul>
-      </div>
+            <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+            <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar Compra</a>
+          </div>
+        </li>
+        
         <% } else { %>
         <li class="nav-item">
           <a class="nav-link iniciar-sesion" href="/users/login" id="navbarDropdown" role="button" aria-haspopup="true"
@@ -119,6 +114,7 @@
 
   </div>
 
-  <marquee><img src="/images/icons/moto.jpg" width="40px" alt=""> <Em>Envios con normalidad a todo el pais!</Em> </marquee>
+  <marquee><img src="/images/icons/food-delivery.png" width="40px" alt=""> Envios con normalidad a todo el pais!
+  </marquee>
 
 </header>
