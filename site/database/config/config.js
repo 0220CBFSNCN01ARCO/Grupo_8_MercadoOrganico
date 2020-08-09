@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "mercado_organico1",
+    "database": "mercado_organico",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
