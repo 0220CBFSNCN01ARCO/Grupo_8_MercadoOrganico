@@ -6,7 +6,7 @@
       <%- include('./partials/header') %>
       <%- include('./partials/carousel') %>
       <!-- Lógica para Mostrar los diferentes Productos -->
-      <div class="container row">
+      <div class="container row" id="lista-productos">
         <% products.forEach(producto => { %>
           <article class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 nav-item card">
             <div class="photo-container">
@@ -14,9 +14,10 @@
             </div>
             <div class="card-body">
               <h2 class="card-title font-weight-bold"> <%= producto.name %> </h2>
-              <h2> $<%= producto.price %></h2>
+              <h3 class="precio"> <span> $<%= producto.price %> </span></h3>
               <p class="card-text"> <%= producto.description %> </p>
               <a class="btn btn-secondary" href="/products/detail/<%= producto.id %>">Ver más</a>
+              <a id="getId" href="" class="btn btn-block btn-primary agregar-carrito" data-id="<%= producto.id %>">Comprar</a>
             </div>
           </article>
         <% }) %>
@@ -33,6 +34,8 @@
     <%- include('./partials/scriptsBootstrap') %>
     <div>
     <%- include('./partials/footer') %>
+    <script src="javascripts/carrito.js"></script>
+    <script src="javascripts/pedido.js"></script>
     </div>
   </body>
 </html>
