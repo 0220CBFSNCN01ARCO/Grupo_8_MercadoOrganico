@@ -71,7 +71,7 @@ const usersController = {
                     errors: [
                         { msg: 'Usuario inválido' }
                     ],
-                    user: usuario
+                    user: req.session.usuarioLogeado
                 });
             };
             req.session.usuarioLogeado = usuarioALogearse;
@@ -79,6 +79,7 @@ const usersController = {
                 usuario: req.session.usuarioLogeado
             });
         } catch (error) {
+            console.error(error);
             return res.send('Ocurrió un error');
         };
     },
