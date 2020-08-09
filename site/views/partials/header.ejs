@@ -28,7 +28,7 @@
           <li><img src="/images/usersAvatar/<%= user.image || '404.png'%>" alt="" style='border-radius: 10px; width: 3vw;'class='bar-sm justify-content-center'></li>
         <li class="nav-item">
           <button type="button" class="btn nav-link dropdown-toggle" data-toggle="dropdown" href="">
-           Hola <%= user.name %>
+           Hola <%= user.name %>!
           </button>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="/users/profile/<%= user.id %>">Perfil</a>
@@ -36,7 +36,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/site/views/shoppingCart.ejs"><i class="fas fa-cart-plus"></i></a>
+          <a class="nav-link" href="/cart"><i class="fas fa-cart-plus"></i>  Mi carrito</a>
         </li>
         <% } else { %>
         <li class="nav-item">
@@ -91,6 +91,6 @@
 
   </div>
 
-  <marquee><img src="/images/icons/moto.jpg" width="40px" alt=""> Habilitamos los Envíos! #QuedateEnCasa </marquee>
+  <marquee><img src="/images/icons/moto.jpg" width="40px" alt=""> <Em>Envios con normalidad a todo el pais!</Em> </marquee>
 
 </header>

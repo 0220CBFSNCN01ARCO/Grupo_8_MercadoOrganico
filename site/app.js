@@ -10,6 +10,7 @@ global.__basedir = __dirname
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
+const cartRouter = require('./routes/cart');
 const adminController = require('./routes/admin');
 const adminMiddleware = require('./middlewares/adminMiddleware');
 
@@ -30,6 +31,7 @@ app.use(session({secret: 'secret'}));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/cart', cartRouter);
 app.use('/admin', adminMiddleware ,adminController);
 
 // catch 404 and forward to error handler
