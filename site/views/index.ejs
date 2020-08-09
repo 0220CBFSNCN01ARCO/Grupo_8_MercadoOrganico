@@ -17,7 +17,7 @@
               <h3 class="precio"> <span> $<%= producto.price %> </span></h3>
               <p class="card-text"> <%= producto.description %> </p>
               <a class="btn btn-secondary" href="/products/detail/<%= producto.id %>">Ver más</a>
-              <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="<%= producto.id %>">Comprar</a>
+              <a id="getId" href="" class="btn btn-block btn-primary agregar-carrito" data-id="<%= producto.id %>">Comprar</a>
             </div>
           </article>
         <% }) %>
