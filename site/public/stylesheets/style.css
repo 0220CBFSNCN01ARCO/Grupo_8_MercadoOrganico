@@ -6,10 +6,23 @@ body{
 }
 
 #carrito {
+  position: absolute;
+  left: -250px;
   width:475px;
   height:300px;
   overflow-x:hidden;
   overflow-y:scroll;
+}
+
+.agregar-carrito{
+  background-color: #49654c;
+  border-color: #49654c;
+}
+
+.agregar-carrito:hover{
+  background-color: #8aa989;
+  border-color: #49654C;
+  color:white
 }
 
 @media (min-width: 576px){
@@ -286,8 +299,3 @@ strong {
   line-height: 100px; 
 }
 /*---USUARIO EXITOSO--*/
-
-.carrito-compras{
-  position: absolute;
-  left: -50px;
-}
