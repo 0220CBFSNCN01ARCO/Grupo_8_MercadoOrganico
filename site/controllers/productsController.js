@@ -40,7 +40,7 @@ const productsController = {
     },
     buscar: async (req, res) => {
         let busqueda = req.body.buscar;
-        let resultados = await db.Producto.findAll({
+        let resultados = await db.Product.findAll({
             where: {
                 name: {[db.Sequelize.Op.like]: `%${busqueda}%`}
             }
