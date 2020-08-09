@@ -47,7 +47,7 @@ const productsController = {
                 }
             });
             let errors = [
-                {msg: 'No se encontraron resultados para su busqueda'}
+                {msg: `No se encontraron resultados para la busqueda: ${busqueda}`}
             ];
             return res.render('products', {
                 title: 'Resultados',
