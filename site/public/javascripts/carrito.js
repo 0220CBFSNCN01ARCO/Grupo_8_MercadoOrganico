@@ -33,4 +33,22 @@ class Carrito {
         `;
         listaProductos.appendChild(fila);
     };
+
+    eliminarProducto(e){
+        e.preventDefault();
+        let producto, productoID;
+        if(e.target.classList.contains('borrar-producto')){
+            e.target.parentElement.parentElement.remove();
+            producto = e.target.parentElement.parentElement;
+            productoID = producto.querySelector('#getId').getAttribute('data-id');
+        };
+    };
+
+    vaciarCarrito(e){
+        e.preventDefault();
+        while(listaProductos.firstChild){
+            listaProductos.removeChild(listaProductos.firstChild);
+        };
+        return false;
+    }
 };
