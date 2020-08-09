@@ -4,7 +4,8 @@ const usersController = require('../controllers/usersController');
 const multer = require('multer');
 const path = require('path');
 const {check, validationResult, body} = require('express-validator');
-const {loginMiddleware, emailExistente} = require('../middlewares/usersMiddleware');
+const {loginMiddleware} = require('../middlewares/usersMiddleware');
+const models = require('../database/models');
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -22,14 +23,32 @@ const upload = multer({ storage: storage });
 router.get('/register', loginMiddleware ,usersController.formRegister);
 router.post('/register', upload.single('avatar'),[
   check('nombre').isLength({min: 1}).withMessage('Debe ingresar un nombre'),
-  check('email').isEmail().withMessage('El email debe ser un email válido'),
-  check('password').isLength({min: 6}).withMessage('La contraseña debe tener al menos 8 caracteres')
+  check('email').isEmail().withMessage('El email debe ser un email válido').custom( async (email) => {
+    let usuarioExistente = await models.User.findOne({
+      where: {
+        email: email
+      }
+    });
+    if(usuarioExistente){
+      return Promise.reject();
+    };
+  }).withMessage('El email ya está en uso'),
+  check('password')
+    .isLength({min: 6})
+    .custom( (pass, {req}) => {
+      if(pass != req.body.repeat_password){
+        throw new Error('Las Passwords no coinciden')
+      } else {
+        return pass
+      }
+    })
+    .withMessage('La contraseña debe tener al menos 8 caracteres'),
 ], usersController.register);
 
 router.get('/login', loginMiddleware, usersController.login);
 router.post('/login', [
   check('email').isEmail().withMessage('Email inválido'),
-  check('password').isLength({min: 6}).withMessage('La contraseña debe tener al menos 8 caracteres')
+  check('password').isLength({min: 6}).withMessage('La contraseña debe tener al menos 6 caracteres')
 ], usersController.processLogin);
 
 router.get('/logout', usersController.logout);
