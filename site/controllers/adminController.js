@@ -69,7 +69,7 @@ const adminController = {
             name: req.body.nombreProducto,
             description: req.body.descripcion,
             price: req.body.precio,
-            id_brand: 1,
+            id_brand: req.body.marca,
             id_category: Number(req.body.categoria),
             discount: req.body.descuento,
             image: req.file.filename,
