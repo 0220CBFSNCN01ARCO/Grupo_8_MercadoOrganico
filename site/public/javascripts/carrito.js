@@ -12,7 +12,7 @@ class Carrito {
         const infoProducto = {
             imagen: producto.querySelector('img').src,
             titulo: producto.querySelector('h2').textContent,
-            precio: producto.querySelector('.precio span').textcContent,
+            precio: producto.querySelector('.precio span').textContent,
             id: producto.querySelector('#getId').getAttribute('data-id'),
             cantidad: 1
         };
