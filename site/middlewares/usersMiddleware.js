@@ -9,6 +9,4 @@ function loginMiddleware(req, res, next) {
     return next();
 };
 
-
-
 module.exports = {loginMiddleware};
