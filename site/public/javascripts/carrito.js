@@ -110,7 +110,9 @@ class Carrito {
 
     procesarPedido(e){
         e.preventDefault();
-        if(this.leerLocalStorage() != undefined){
+        let productosLS;
+        productosLS = this.obtenerProductosLocalStorage();
+        if(productosLS.length !== 0){
             location.href = 'cart';
         } else {
             Swal.fire({
