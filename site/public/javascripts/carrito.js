@@ -122,6 +122,29 @@ class Carrito {
         });
     };
 
+    leerLocalStorageCompra(){
+        let productosLS;
+        productosLS = this.obtenerProductosLocalStorage();
+        productosLS.forEach( (producto) => {
+            const fila = document.createElement('tr');
+            fila.innerHTML = `
+            <td>
+                <img src="${producto.imagen}" width=100>
+            </td>
+            <td>${producto.titulo}</td>
+            <td>${producto.precio}</td>
+            <td>
+                <input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}>
+            </td>
+            <td>${producto.precio * producto.cantidad}</td>
+            <td>
+                <a id="getId" href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
+            </td>
+            `;
+            listaProductos.appendChild(fila);
+        });
+    };
+
     vaciarLocalStorage(){
         localStorage.clear();
     };
