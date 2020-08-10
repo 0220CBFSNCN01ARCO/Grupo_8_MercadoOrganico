@@ -141,7 +141,7 @@ class Carrito {
                 <a id="getId" href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
             </td>
             `;
-            listaProductos.appendChild(fila);
+            listaCompra.appendChild(fila);
         });
     };
 
