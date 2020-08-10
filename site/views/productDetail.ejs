@@ -1,82 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-    <%- include('./partials/head') %>
-    <body>
-        <div class="container">
-            <%- include('./partials/header') %>
-            <!-- Detallar el producto -->
-            <div class="row productdetail">
-                <div class="col-sm-12 col-lg-4 col-xl-4">
-                    <div>
-                      <ul class="boton1">
-                        <li>
-                          <div class="btn-group">
-                          <button class="btn btn-outline-dark btn-sm dropdown-toggle botonancho" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PRODUCTOS
-                          </button>
-                          <div class="dropdown-menu">
-                            cereales
-                            especias
-                            frutas
-                            frutos secos
-                            granola
-                          </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
+<html>
+<%- include('./partials/head') %>
 
-                    <div>
-                      <ul class="boton2">
-                        <li>
-                          <div class="btn-group">
-                          <button class="btn btn-outline-dark btn-sm dropdown-toggle botonancho" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            MARCAS
-                          </button>
-                          <div class="dropdown-menu">
-                            Beepure
-                            Felices las vacas
-                          </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <ul class="boton3">
-                        <li>
-                          <div class="btn-group">
-                          <button class="btn btn-outline-dark btn-sm dropdown-toggle botonancho" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            COSTOS DE ENVIO
-                          </button>
-                          <div class="dropdown-menu">
-                            ...
-                          </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-
-                </div>
-
-                    <div class="col-sm-12 col-lg-4  col-xl-4">
-                      <div class="card m-auto" style="width: 18rem;">
-                          <img src="/images/products/<%= producto.image %>" class="card-img-top" alt="...">
-                          </div>
-                        </div>
-
-                    <div class="col-sm-12 col-lg-4  col-xl-4">
-                      <h3 class="titulo font-weight-bold"><%= producto. name %></h3>
-                      <h6 class="contenido"> <%= producto.description %> </h6>
-                      <h5 class="price font-weight-bold"> $<%= producto.price %></h5>
-
-                      <button type="button" class="btn btn-outline-dark botoncomprar">
-                          <i class="fas fa-cart-plus"></i> COMPRAR
-                      </button>
-                    </div>
-            </div>
-            <%- include('./partials/footer') %>
+<body>
+  <div class="container-fluid">
+    <%- include('./partials/header') %>
+    <br>
+    <br>
+    <!-- Detallar el producto HAY Q CENTRAR EL DIV DE ABAJO CON CLASE ROW -->
+    <div id="producto-detalle" class="row">  
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="card m-auto" style="width: 18rem;">
+          <img src="/images/products/<%= producto.image %>" class="card-img-top" alt="...">
         </div>
-        <%- include('./partials/scriptsBootstrap') %>
-    </body>
+      </div>
+      
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <br>
+        <br>
+        <h3 class="titulo font-weight-bold"><%= producto. name %></h3>
+        <h6 class="contenido"> <%= producto.description %> </h6>
+        <h5 class="price font-weight-bold"> $<%= producto.price %></h5>
+        <br>
+        <br>
+        <br>
+        <a href="" class="btn btn-block btn-primary agregar-carrito"><i class="fas fa-cart-plus"></i> Agregar
+          al carrito</a>
+        
+      </div>
+    </div>
+    
+  </div>
+  <%- include('./partials/footer') %>
+  <%- include('./partials/scriptsBootstrap') %>
+</body>
+
 </html>
+

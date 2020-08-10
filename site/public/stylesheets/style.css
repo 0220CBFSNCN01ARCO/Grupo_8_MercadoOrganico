@@ -7,7 +7,7 @@ body{
 row
 #carrito {
   position: absolute;
-  left: -10px;
+  left: -20px;
   width:475px;
   height:300px;
   overflow-x: hidden;
@@ -134,13 +134,11 @@ nav {
 /*--Products Style Home --*/
 .card-img-top{
   
-  width: 200px;
-  height: 220px;
+  width: 290px;
+  height: 290px;
   margin: auto;
   padding: 5px;
 }
-
-
 
 
 /*--Footer Style--*/
@@ -291,6 +289,24 @@ strong {
   font-size: 60px; 
   line-height: 100px; 
 }
-/*---USUARIO EXITOSO--*/
+/*--shopping cart--*/
 
+#seguircomprando{
+  width: 120px;
+}
 
+#realizarcompra{
+  width: 120px;
+}
+
+/*--product detail--*/
+
+#producto-detalle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#imagen-detalle{
+  width: 20px;
+}
