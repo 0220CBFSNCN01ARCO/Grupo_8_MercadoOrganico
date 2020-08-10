@@ -9,44 +9,46 @@
             <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
         </div>
         <div class="row costos">
-            <table class="table" id="lista-compra">
-                <thead>
+            <div id="carrito" class="table-responsive">
+                <table class="table" id="lista-compra">
+                    <thead>
+                        <tr>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Sub Total</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
                     <tr>
-                        <th scope="col">Imagen</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Cantidad</th>
-                        <th scope="col">Sub Total</th>
-                        <th scope="col">Eliminar</th>
+                        <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
+                        <th scope="col">
+                            <p id="subtotal"></p>
+                        </th>
+                        <!-- <th scope="col"></th> -->
                     </tr>
-
-                </thead>
-                <tbody>
-
-                </tbody>
-                <tr>
-                    <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
-                    <th scope="col">
-                        <p id="subtotal"></p>
-                    </th>
-                    <!-- <th scope="col"></th> -->
-                </tr>
-                <tr>
-                    <th colspan="4" scope="col" class="text-right">IGV :</th>
-                    <th scope="col">
-                        <p id="igv"></p>
-                    </th>
-                    <!-- <th scope="col"></th> -->
-                </tr>
-                <tr>
-                    <th colspan="4" scope="col" class="text-right">TOTAL :</th>
-                    <th scope="col">
-                        <p id="total"></p>
-                    </th>
-                    <!-- <th scope="col"></th> -->
-                </tr>
-
-            </table>
+                    <tr>
+                        <th colspan="4" scope="col" class="text-right">IGV :</th>
+                        <th scope="col">
+                            <p id="igv"></p>
+                        </th>
+                        <!-- <th scope="col"></th> -->
+                    </tr>
+                    <tr>
+                        <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                        <th scope="col">
+                            <p id="total"></p>
+                        </th>
+                        <!-- <th scope="col"></th> -->
+                    </tr>
+                
+                </table>
+                </div>
             <div class="col-sm-12  botones">
                 <button type="button" class="btn btn-outline-dark boton1">SEGUIR COMPRANDO</button>
                 <button type="button" class="btn btn-outline-dark boton2">FINALIZAR COMPRA</button>
