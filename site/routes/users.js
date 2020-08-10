@@ -23,7 +23,7 @@ const upload = multer({ storage: storage });
 router.get('/register', loginMiddleware ,usersController.formRegister);
 router.post('/register', upload.single('avatar'),[
   check('nombre').isLength({min: 1}).withMessage('Debe ingresar un nombre'),
-  check('email').isEmail().withMessage('El email debe ser un email válido').custom( async (email) => {
+  body('email').isEmail().withMessage('El email debe ser un email válido').custom( async (email) => {
     let usuarioExistente = await models.User.findOne({
       where: {
         email: email
@@ -33,8 +33,8 @@ router.post('/register', upload.single('avatar'),[
       return Promise.reject();
     };
   }).withMessage('El email ya está en uso'),
-  check('password')
-    .isLength({min: 6})
+  body('password')
+    .isLength({min: 6}).withMessage('La contraseña debe tener al menos 6 caracteres')
     .custom( (pass, {req}) => {
       if(pass != req.body.repeat_password){
         throw new Error('Las Passwords no coinciden')
@@ -42,7 +42,6 @@ router.post('/register', upload.single('avatar'),[
         return pass
       }
     })
-    .withMessage('La contraseña debe tener al menos 8 caracteres'),
 ], usersController.register);
 
 router.get('/login', loginMiddleware, usersController.login);
