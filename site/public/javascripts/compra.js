@@ -9,5 +9,7 @@ function cargarEventos(){
 
     carrito.addEventListener('click', (e) => {
         compra.eliminarProducto(e);
-    })
+    });
+
+    compra.calcularTotal();
 };

@@ -63,6 +63,7 @@ class Carrito {
             productoID = producto.querySelector('#getId').getAttribute('data-id');
         };
         this.eliminarProductoLocalStorage(productoID);
+        this.calcularTotal();
     };
 
     vaciarCarrito(e){
@@ -166,5 +167,17 @@ class Carrito {
                 showConfirmButton: false
               })
         }
+    };
+
+    calcularTotal(){
+        let productosLS;
+        let total = 0;
+        productosLS = this.obtenerProductosLocalStorage();
+        for(let i = 0; i < productosLS.length; i++){
+            let precioFormated = Number(productosLS[i].precio.replace('$',''));
+            let elemento = Number(precioFormated * productosLS[i].cantidad);
+            total = total + elemento;
+        };
+        document.getElementById('total').innerHTML = `$ ${total.toFixed(2)}`;
     };
 };
