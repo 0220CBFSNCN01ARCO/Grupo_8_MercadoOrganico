@@ -107,4 +107,9 @@ class Carrito {
     vaciarLocalStorage(){
         localStorage.clear();
     };
+
+    procesarPedido(e){
+        e.preventDefault();
+        location.href = 'cart';
+    };
 };
