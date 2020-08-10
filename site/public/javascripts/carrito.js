@@ -139,7 +139,7 @@ class Carrito {
             </td>
             <td>$ ${precioFormated * producto.cantidad}</td>
             <td>
-                <a id="getId" href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
+                <a id="getId" href="#" class="borrar-producto fas fa-times-circle" style="font-size: 30px" data-id="${producto.id}"></a>
             </td>
             `;
             listaCompra.appendChild(fila);
