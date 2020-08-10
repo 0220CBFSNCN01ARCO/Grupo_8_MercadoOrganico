@@ -7,7 +7,7 @@ body{
 
 #carrito {
   position: absolute;
-  left: -250px;
+  left: -210%;
   width:475px;
   height:300px;
   overflow-x:hidden;
