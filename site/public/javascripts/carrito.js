@@ -126,6 +126,7 @@ class Carrito {
         let productosLS;
         productosLS = this.obtenerProductosLocalStorage();
         productosLS.forEach( (producto) => {
+            let precioFormated = Number(producto.precio.replace('$',''));
             const fila = document.createElement('tr');
             fila.innerHTML = `
             <td>
@@ -136,9 +137,9 @@ class Carrito {
             <td>
                 <input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}>
             </td>
-            <td>${producto.precio * producto.cantidad}</td>
+            <td>$ ${precioFormated * producto.cantidad}</td>
             <td>
-                <a id="getId" href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
+                <a id="getId" href="#" class="borrar-producto fas fa-times-circle" style="font-size: 30px" data-id="${producto.id}"></a>
             </td>
             `;
             listaCompra.appendChild(fila);
