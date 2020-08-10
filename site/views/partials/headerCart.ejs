@@ -14,7 +14,7 @@
   
         <form class="form-inline my-2 my-lg-0" action="/search" method="POST">
   
-          <input name="buscar" class="form-control my-0 py-1 red-border" type="text" placeholder="¿Qué estas buscando?">
+          <input id="barra-busqueda" name="buscar" class="form-control my-0 py-1 red-border" type="text" placeholder="¿Qué estas buscando?">
   
           <button class="btn btn-lupa my-2 my-sm-0" type="submit">
             <div class="input-group-append">
@@ -24,7 +24,7 @@
   
         </form>
   
-        <ul class="navbar-nav mr-auto links">
+        <ul id="elementos-header" class="navbar-nav mr-auto links">
   
           <% if (user != undefined) { %>
           <li><img src="/images/usersAvatar/<%= user.image || '404.png'%>" alt="" style='border-radius: 10px; width: 3vw;'

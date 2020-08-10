@@ -7,7 +7,7 @@ body{
 row
 #carrito {
   position: absolute;
-  left: -210%;
+  left: -10px;
   width:475px;
   height:300px;
   overflow-x: hidden;
@@ -30,16 +30,29 @@ row
 }
 
 
-/* ver de borrar */
+/*--- Header--*/
 
+/* ESTA OKEY */
+.navbar{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #E3E6DA;
+  box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+}
 
-/* ver de borrar */
-
-
-
-/* ver de borrar */
 .navbar-light .navbar-nav .nav-link {
   color: black;
+}
+
+#elementos-header{
+  position: absolute;
+  right: 200px;
+}
+
+#barra-busqueda{
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ver de borrar */
@@ -50,7 +63,6 @@ row
 
 /* ver de borrar */
 .btn-outline-success{
- 
   border: 0px;
 }
 
@@ -66,15 +78,6 @@ nav {
 }
 
 /* ver de borrar */
-.navbar{
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background-color: #E3E6DA;
-  box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
-  
-}
-
-/* ver de borrar */
 .dropdown-menu{
   background-color: #D8EBB5;
 }
@@ -87,7 +90,6 @@ nav {
 
 
 /*Carousel  ESTA OKEY--*/
-
 .container1{
   padding: 0px;
   margin-bottom: 50px;
@@ -248,13 +250,6 @@ color:#49654c;
 text-decoration: none;
 }
 
-/*---carrusel infinito--*/
-
-
-
-.carruselproductos{
-  background-color: black;
-}
 
 #C {
   position: absolute;
@@ -297,3 +292,5 @@ strong {
   line-height: 100px; 
 }
 /*---USUARIO EXITOSO--*/
+
+

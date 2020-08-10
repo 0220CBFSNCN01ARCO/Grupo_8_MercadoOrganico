@@ -1,7 +1,6 @@
 <header>
 
-  <nav id="menu" class="navbar navbar-expand-lg navbar-light  navbar-light fixed-top"
-    style="display: flex; justify-content: space-between;">
+  <nav id="menu" class="navbar navbar-expand-lg navbar-light  navbar-light fixed-top">
     <a class="navbar-brand" href="/"><img class="logo-inicio" src="/images/imagenes-generales/logo-mercado-organico.png"
         width="100" height="100" alt="" loading="lazy" style="padding: 10px;">
     </a>
@@ -14,7 +13,7 @@
 
       <form class="form-inline my-2 my-lg-0" action="/search" method="POST">
 
-        <input name="buscar" class="form-control my-0 py-1 red-border" type="text" placeholder="¿Qué estas buscando?">
+        <input id="barra-busqueda" name="buscar" class="form-control my-0 py-1 red-border" type="text" placeholder="¿Qué estas buscando?">
 
         <button class="btn btn-lupa my-2 my-sm-0" type="submit">
           <div class="input-group-append">
@@ -24,12 +23,14 @@
 
       </form>
 
-      <ul class="navbar-nav mr-auto links">
+      <ul id="elementos-header" class="navbar-nav mr-auto links">
 
         <% if (user != undefined) { %>
-        <li><img src="/images/usersAvatar/<%= user.image || '404.png'%>" alt="" style='border-radius: 10px; width: 3vw;'
-            class='bar-sm justify-content-center'></li>
-        <li class="nav-item">
+        <li id="avatar-header">
+          <img src="/images/usersAvatar/<%= user.image || '404.png'%>" alt="" style='border-radius: 10px; width: 3vw;'
+            class='bar-sm justify-content-center'>
+        </li>
+        <li id="hola-header" class="nav-item">
           <button type="button" class="btn nav-link dropdown-toggle" data-toggle="dropdown" href="">
             Hola <%= user.name %>!
           </button>
@@ -42,8 +43,9 @@
             <a class="dropdown-item" href="/users/logout">Cerrar Sesión</a>
           </div>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle img-fluid" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"> <i class="fas fa-cart-plus"></i>  Mi carrito</a>
+        <li id="carrito-header" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle img-fluid" href="#" id="dropdown01" data-toggle="dropdown"
+            aria-haspopup="true"> <i class="fas fa-cart-plus"></i> Mi carrito</a>
           <div id="carrito" class="dropdown-menu carrito-compras" aria-labelledby="navbarCollapse">
             <table id="lista-carrito" class="table">
               <thead>
@@ -52,8 +54,8 @@
                   <th>Nombre</th>
                   <th>Precio</th>
                   <th></th>
-                  <tbody></tbody>
-                </tr>
+              <tbody></tbody>
+              </tr>
               </thead>
             </table>
 
@@ -61,7 +63,7 @@
             <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar Compra</a>
           </div>
         </li>
-        
+
         <% } else { %>
         <li class="nav-item">
           <a class="nav-link iniciar-sesion" href="/users/login" id="navbarDropdown" role="button" aria-haspopup="true"
