@@ -3,11 +3,13 @@
 <%- include('./partials/head') %>
 
 <body>
+
   <div class="container-fluid">
     <%- include('./partials/header') %>
     <%- include('./partials/carousel') %>
     <!-- Lógica para Mostrar los diferentes Productos -->
-    <div class="container row" id="lista-productos">
+    <div class="container" id="lista-productos">
+    <section class="row">
       <% products.forEach(producto => { %>
       <article class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 nav-item card">
         <div class="photo-container">
@@ -25,8 +27,12 @@
         </div>
       </article>
       <% }) %>
-    </div>
+    </section>
+  </div>
     <br>
+    <br>
+    <br>
+
     <div class="container">
       <div class="row justify-content-md-center">
         <div>
@@ -35,14 +41,14 @@
         </div>
       </div>
     </div>
-  </div>
-  <%- include('./partials/scriptsBootstrap') %>
-  <div>
+
     <%- include('./partials/footer') %>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <%- include('./partials/scriptsBootstrap') %>
+
     <script src="javascripts/carrito.js"></script>
     <script src="javascripts/pedido.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   </div>
 </body>
 
-</html> 
+</html>

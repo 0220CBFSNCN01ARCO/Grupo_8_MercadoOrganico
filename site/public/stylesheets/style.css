@@ -29,40 +29,43 @@ row
   color:white
 }
 
-@media (min-width: 576px){
-  .form-inline .form-control {
-    display: inline-block;
-    width: 580px;
-    vertical-align: middle;
-}
 
-}
-@media (min-width: 992px){
-.navbar-expand-lg .navbar-nav .dropdown-menu {
-    position: absolute;
-    /* right: 20px; */
-    left: 74%;
-    top: 75px;
-    /* position: relative; */
-}}
+/* ver de borrar */
+
+
+/* ver de borrar */
+
+
+
+/* ver de borrar */
 .navbar-light .navbar-nav .nav-link {
   color: black;
 }
+
+/* ver de borrar */
+
 .form-inline{
   margin: 0px 11%;
 }
+
+/* ver de borrar */
 .btn-outline-success{
  
   border: 0px;
 }
+
+/* ver de borrar */
 .btn-outline-success:hover{
   background-color: transparent;
 }
+
+/* ver de borrar */
 nav {
   display: flex;
   justify-content: space-between;
 }
 
+/* ver de borrar */
 .navbar{
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -71,17 +74,19 @@ nav {
   
 }
 
+/* ver de borrar */
 .dropdown-menu{
   background-color: #D8EBB5;
 }
 
+/* ver de borrar */
 .logotipo {
   margin-right: auto;
 }
 
 
 
-/*Carousel--*/
+/*Carousel  ESTA OKEY--*/
 
 .container1{
   padding: 0px;
@@ -89,6 +94,8 @@ nav {
 }
 
 
+
+/* ver de borrar */
 /*--- Style Products Detail--*/
 .card{
   border: none;
@@ -96,6 +103,7 @@ nav {
  
 }
 
+/* ver de borrar */
 .row {
     margin: auto;
     display: flex;
@@ -107,21 +115,6 @@ nav {
   height: 220px;
   display: flex;
   justify-content: center;
-}
-@media (max-width: 700px){
-  /* .photo-container img{
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-  } */
-  article div{
-    width: 130px;
-    height: 130px;
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap2;
-  }
 }
 
 /*--Style ShoppingCart--*/
