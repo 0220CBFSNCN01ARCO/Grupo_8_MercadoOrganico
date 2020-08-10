@@ -293,11 +293,28 @@ strong {
 
 #seguircomprando{
   width: 120px;
+  background-color: #49654c;
+  border-color: #49654c;
 }
 
-#realizarcompra{
+#procesar-compra{
   width: 120px;
+  background-color: #49654c;
+  border-color: #49654c;
 }
+
+#seguircomprando:hover{
+  background-color: #8aa989;
+  border-color: #49654C;
+  color:white
+}
+
+#procesar-compra:hover{
+  background-color: #8aa989;
+  border-color: #49654C;
+  color:white
+}
+
 
 /*--product detail--*/
 
@@ -309,4 +326,26 @@ strong {
 
 #imagen-detalle{
   width: 20px;
+}
+
+#todos-productos{
+  color: black;
+  background-color: #c0ceb2;
+  border-color: black;
+}
+
+#todos-productos:hover{
+  background-color: #8aa989;
+  border-color: #c0ceb2;
+  color:white
+}
+
+#vaciar-carrito{
+  background-color: #49654c;
+  border-color: #49654c;
+}
+
+#procesar-pedido{
+  background-color: #49654c;
+  border-color: #49654c;
 }
