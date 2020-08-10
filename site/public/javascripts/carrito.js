@@ -52,6 +52,7 @@ class Carrito {
         while(listaProductos.firstChild){
             listaProductos.removeChild(listaProductos.firstChild);
         };
+        this.vaciarLocalStorage();
         return false;
     };
 
@@ -101,5 +102,9 @@ class Carrito {
             `;
             listaProductos.appendChild(fila);
         });
+    };
+
+    vaciarLocalStorage(){
+        localStorage.clear();
     };
 };
