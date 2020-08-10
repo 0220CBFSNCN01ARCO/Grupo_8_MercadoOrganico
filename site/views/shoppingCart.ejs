@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<% include partials/head %> 
-
+<%- include('./partials/head') %>
 <body>
-   
-    <div class="container">
-        <% include partials/header %> 
-        
-        <div class="container2">
-            <div class="row">
-                <div class="col-12">Carrito de Compras</div>
-            </div>
-            <div class="row costos">
-                <div class="col-sm-12 col-lg-3  col-xl-3 texto">
-                    <img src="../public/images/BEEPURE_Granola-Frasco.jpg" alt="..." width="150px">
-                    <p>Granola artesanal Beepure x 300gr.</p>
-                </div>
+<div class="container">
+    <%- include('./partials/header') %>
+    <div class="container2">
+        <div class="row">
+            <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
+        </div>
+        <div class="row costos">
+            <table class="table" id="lista-compra">
+                <thead>
+                    <tr>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Sub Total</th>
+                        <th scope="col">Eliminar</th>
+                    </tr>
 
-                <div class="col-sm-12 col-lg-3  col-xl-3 texto">Cantidad
-                    <p>Numero</p>  
-                </div>
-                <div class="col-sm-12 col-lg-3  col-xl-3 texto">Precio
-                    <p>Numero</p>
-                </div>
-                <div class="col-sm-12 col-lg-3  col-xl-3 texto">Subtotal
-                    <p>Numero</p>
-                </div>
+                </thead>
+                <tbody>
 
-                <div class="col-12">
-                    <p class="text-right clasetotal">Total: <span id="total"></span>&#36; 279,99</p>
-                </div>
+                </tbody>
+                <tr>
+                    <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
+                    <th scope="col">
+                        <p id="subtotal"></p>
+                    </th>
+                    <!-- <th scope="col"></th> -->
+                </tr>
+                <tr>
+                    <th colspan="4" scope="col" class="text-right">IGV :</th>
+                    <th scope="col">
+                        <p id="igv"></p>
+                    </th>
+                    <!-- <th scope="col"></th> -->
+                </tr>
+                <tr>
+                    <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                    <th scope="col">
+                        <p id="total"></p>
+                    </th>
+                    <!-- <th scope="col"></th> -->
+                </tr>
 
-                <div class="col-sm-12  botones">
-                    <button type="button" class="btn btn-outline-dark boton1">SEGUIR COMPRANDO</button>
-                    <button type="button" class="btn btn-outline-dark boton2">FINALIZAR COMPRA</button>
-                    
-                        <button type="button" class="btn btn-outline-dark botonborrar">
-                            <i class="fas fa-trash-alt"></i> 
-                        </button>       
-                    </div>
+            </table>
+            <div class="col-sm-12  botones">
+                <button type="button" class="btn btn-outline-dark boton1">SEGUIR COMPRANDO</button>
+                <button type="button" class="btn btn-outline-dark boton2">FINALIZAR COMPRA</button>
+                <button type="button" class="btn btn-outline-dark botonborrar">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
             </div>
         </div>
-
-        
-         
-            
-    
-
-           
-<% include partials/footer %> 
+    </div>
+    <%- include('./partials/footer') %>
 </div>
-
-<% include partials/scriptsBootstrap %> 
-
+<%- include('./partials/scriptsBootstrap') %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="javascripts/carrito.js"></script>
+<script src="javascripts/compra.js"></script>
 </body>
 </html>
