@@ -110,6 +110,17 @@ class Carrito {
 
     procesarPedido(e){
         e.preventDefault();
-        location.href = 'cart';
+        if(this.leerLocalStorage() != undefined){
+            location.href = 'cart';
+        } else {
+            Swal.fire({
+                type: 'info',
+                title: 'Oops...',
+                text: 'Su carrito está vacio!',
+                icon: 'error',
+                timer: 2500,
+                showConfirmButton: false
+              })
+        }
     };
 };
