@@ -19,7 +19,6 @@ function cargarEventos(){
 
 function procesarCompra(e){
     e.preventDefault();
-
     if(compra.obtenerProductosLocalStorage().length === 0){
         Swal.fire({
             type: 'error',
@@ -31,5 +30,16 @@ function procesarCompra(e){
           }).then( () => {
               window.location = '/';
           });
-    }
+    } else if(compra.obtenerProductosLocalStorage().length !== 0){
+        Swal.fire({
+            title: 'Buen Trabajo!',
+            text: 'Compra Finalizada',
+            icon: 'success',
+            timer: 3000,
+            showConfirmButton: false
+          }).then(() => {
+              compra.vaciarLocalStorage();
+              window.location = '/';
+          });
+    };
 }
