@@ -1,6 +1,7 @@
 const compra = new Carrito();
 const listaCompra = document.querySelector('#lista-compra tbody');
 const carrito = document.getElementById('carrito');
+const procesarCompraBtn = document.getElementById('procesar-compra');
 
 cargarEventos();
 
@@ -12,4 +13,23 @@ function cargarEventos(){
     });
 
     compra.calcularTotal();
+
+    procesarCompraBtn.addEventListener('click', procesarCompra);
 };
+
+function procesarCompra(e){
+    e.preventDefault();
+
+    if(compra.obtenerProductosLocalStorage().length === 0){
+        Swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text: 'No hay productos, seleccione alguno',
+            icon: 'error',
+            timer: 2500,
+            showConfirmButton: false
+          }).then( () => {
+              window.location = '/';
+          });
+    }
+}
