@@ -191,9 +191,10 @@ class Carrito {
             let actualizarMontos = document.querySelectorAll('#subtotales');
             productosLS = this.obtenerProductosLocalStorage();
             productosLS.forEach(function (productoLS, index) {
+                let precioFormated = Number(productosLS[index].precio.replace('$',''));
                 if (productoLS.id === id) {
                     productoLS.cantidad = cantidad;
-                    actualizarMontos[index].innerHTML = Number(cantidad * productosLS[index].precio);
+                    actualizarMontos[index].innerHTML = `$ ${Number(cantidad * precioFormated)}`;
                 }
             });
             localStorage.setItem('productos', JSON.stringify(productosLS));
