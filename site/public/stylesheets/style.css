@@ -4,7 +4,7 @@ body{
   font-family: 'Muli', sans-serif;
   background-color: white;
 }
-
+row
 #carrito {
   position: absolute;
   left: -210%;
@@ -101,6 +101,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
 }
+
 .photo-container img{
   width: 200px;
   height: 220px;
@@ -122,7 +123,6 @@ nav {
     flex-wrap: wrap2;
   }
 }
-
 
 /*--Style ShoppingCart--*/
 .container2{

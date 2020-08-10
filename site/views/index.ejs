@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <%- include('./partials/head') %>
-  <body>
-    <div class="container-fluid">
-      <%- include('./partials/header') %>
-      <%- include('./partials/carousel') %>
-      <!-- Lógica para Mostrar los diferentes Productos -->
-      <div class="container row" id="lista-productos">
-        <% products.forEach(producto => { %>
-          <article class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 nav-item card">
-            <div class="photo-container">
-              <img class="card-img-top" src="/images/products/<%= producto.image %>" alt="Imagen del Producto">
-            </div>
-            <div class="card-body">
-              <h2 class="card-title font-weight-bold"> <%= producto.name %> </h2>
-              <h3 class="precio"> <span> $<%= producto.price %> </span></h3>
-              <p class="card-text"> <%= producto.description %> </p>
-              <a class="btn btn-secondary" href="/products/detail/<%= producto.id %>">Ver más</a>
-              <br>
-              <br>
-              <a id="getId" href="" class="btn btn-block btn-primary agregar-carrito" data-id="<%= producto.id %>">Agregar al carrito</a>
-            </div>
-          </article>
-        <% }) %>
-      </div>
-      <br>
-      <div class="container">
-        <div class="row justify-content-md-center">
-            <div>
-              <button class="btn btn-outline-dark" onclick="window.location.href='/products'">Mostrar todos los productos</button>
-            </div>
+<%- include('./partials/head') %>
+
+<body>
+  <div class="container-fluid">
+    <%- include('./partials/header') %>
+    <%- include('./partials/carousel') %>
+    <!-- Lógica para Mostrar los diferentes Productos -->
+    <div class="container row" id="lista-productos">
+      <% products.forEach(producto => { %>
+      <article class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 nav-item card">
+        <div class="photo-container">
+          <img class="card-img-top" src="/images/products/<%= producto.image %>" alt="Imagen del Producto">
         </div>
+        <div class="card-body">
+          <h2 class="card-title font-weight-bold"> <%= producto.name %> </h2>
+          <h3 class="precio"> <span> $<%= producto.price %> </span></h3>
+          <p class="card-text"> <%= producto.description %> </p>
+          <a class="btn btn-secondary" href="/products/detail/<%= producto.id %>">Ver más</a>
+          <br>
+          <br>
+          <a id="getId" href="" class="btn btn-block btn-primary agregar-carrito" data-id="<%= producto.id %>">Agregar
+            al carrito</a>
+        </div>
+      </article>
+      <% }) %>
     </div>
+    <br>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div>
+          <button class="btn btn-outline-dark" onclick="window.location.href='/products'">Mostrar todos los
+            productos</button>
+        </div>
+      </div>
     </div>
-    <%- include('./partials/scriptsBootstrap') %>
-    <div>
+  </div>
+  <%- include('./partials/scriptsBootstrap') %>
+  <div>
     <%- include('./partials/footer') %>
     <script src="javascripts/carrito.js"></script>
     <script src="javascripts/pedido.js"></script>
-    </div>
-  </body>
-</html>
+  </div>
+</body>
+
+</html> 
