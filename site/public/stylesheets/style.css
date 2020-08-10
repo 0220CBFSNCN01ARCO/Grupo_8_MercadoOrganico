@@ -19,6 +19,7 @@ row
 }
 
 .agregar-carrito{
+  color: white;
   background-color: #49654c;
   border-color: #49654c;
 }
@@ -348,4 +349,30 @@ strong {
 #procesar-pedido{
   background-color: #49654c;
   border-color: #49654c;
+}
+
+/* VISTA DEL ADMIN */
+
+#mostrartodosproductos{
+  color: white;
+  background-color: #49654c;
+  border-color: #49654c;
+}
+
+.mostrartodosproductos:hover{
+  background-color: #8aa989;
+  border-color: #49654C;
+  color:white
+}
+
+#mostrartodosusuarios{
+  color: white;
+  background-color: #49654c;
+  border-color: #49654c;
+}
+
+.mostrartodosusuarios:hover{
+  background-color: #8aa989;
+  border-color: #49654C;
+  color:white
 }
