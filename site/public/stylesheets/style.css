@@ -4,7 +4,7 @@ body{
   font-family: 'Muli', sans-serif;
   background-color: white;
 }
-
+costos
 #carrito {
   position: absolute;
   left: -210%;
@@ -118,10 +118,13 @@ nav {
   }
 }
 
-
 /*--Style ShoppingCart--*/
 .container2{
   margin: 60px 0px;
+}
+.costos{
+  display: flex;
+  justify-content: end;
 }
 
 #productname{
