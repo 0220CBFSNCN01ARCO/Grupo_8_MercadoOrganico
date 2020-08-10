@@ -16,7 +16,25 @@ class Carrito {
             id: producto.querySelector('#getId').getAttribute('data-id'),
             cantidad: 1
         };
-        this.insertarCarrito(infoProducto);
+        let productosLS;
+        productosLS = this.obtenerProductosLocalStorage();
+        productosLS.forEach( (productoLS) => {
+            if(productoLS.id === infoProducto.id){
+                productosLS = productoLS.id;
+            };
+        });
+        if(productosLS === infoProducto.id){
+            Swal.fire({
+                type: 'info',
+                title: 'Oops...',
+                text: 'El producto ya está en el carrito',
+                icon: 'error',
+                timer: 2500,
+                showConfirmButton: false
+              })
+        } else {
+            this.insertarCarrito(infoProducto);
+        };
     };
 
     insertarCarrito(producto){
